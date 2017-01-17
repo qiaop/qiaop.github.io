@@ -1686,7 +1686,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff05b;
+  background: #01e803;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2228,6 +2228,19 @@ a.search-result {
 .site-uv::after {
   content: "|";
   padding-left: 10px;
+}
+.post-spread {
+  margin-top: 20px;
+  text-align: center;
+}
+.bdshare-slide-button-box a {
+  border: none;
+}
+.bdsharebuttonbox {
+  display: inline-block;
+}
+.bdsharebuttonbox a {
+  border: none;
 }
 .use-motion .post {
   opacity: 0;
