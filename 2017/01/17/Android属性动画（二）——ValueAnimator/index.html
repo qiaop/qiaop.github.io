@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="life," />
+  <meta name="keywords" content="Android,csdn," />
 
 
 
@@ -84,19 +84,20 @@
 
 
 
-<meta name="description" content="过年了
-快过年了…给爹妈买了些年货送回去…快到家老远就看到老爹在扫猪圈…要说老爷子在乡下也没什么事，猪圈整理的干干净净…我和媳妇偷偷的走过去，准备给老头一个惊喜…只见我爹扫完，翻身就骑上了一头花猪，把扫把往手里一礅，腿使劲一夹，冲着对面的猪大声咆哮道“虞姬，本王来救你”…… 我去，媳妇当时就笑喷了…我爹这才发现我们，翻身下了猪，脸色大囧的道“从小的霸王梦”…">
+<meta name="description" content="前面我们了解了比较常用的ObjectAnimator，它继承自ValueAnimator，这篇我们研究属性动画最核心的一个类ValueAnimator。属性动画的实现机制是通过对目标对象进行赋值并修改其属性来实现的，而初始值和结束值之间的平滑的过渡就是ValueAnimator来实现的。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2017年第一篇">
-<meta property="og:url" content="http://www.codepeng.cn/2017/01/14/2017年第一篇/index.html">
+<meta property="og:title" content="Android属性动画（二）——ValueAnimator">
+<meta property="og:url" content="http://www.codepeng.cn/2017/01/17/Android属性动画（二）——ValueAnimator/index.html">
 <meta property="og:site_name" content="codepeng的blog">
-<meta property="og:description" content="过年了
-快过年了…给爹妈买了些年货送回去…快到家老远就看到老爹在扫猪圈…要说老爷子在乡下也没什么事，猪圈整理的干干净净…我和媳妇偷偷的走过去，准备给老头一个惊喜…只见我爹扫完，翻身就骑上了一头花猪，把扫把往手里一礅，腿使劲一夹，冲着对面的猪大声咆哮道“虞姬，本王来救你”…… 我去，媳妇当时就笑喷了…我爹这才发现我们，翻身下了猪，脸色大囧的道“从小的霸王梦”…">
-<meta property="og:updated_time" content="2017-01-17T04:31:39.000Z">
+<meta property="og:description" content="前面我们了解了比较常用的ObjectAnimator，它继承自ValueAnimator，这篇我们研究属性动画最核心的一个类ValueAnimator。属性动画的实现机制是通过对目标对象进行赋值并修改其属性来实现的，而初始值和结束值之间的平滑的过渡就是ValueAnimator来实现的。">
+<meta property="og:image" content="http://img.blog.csdn.net/20160927101029556">
+<meta property="og:image" content="http://img.blog.csdn.net/20160927104631580">
+<meta property="og:image" content="http://img.blog.csdn.net/20160927140600185">
+<meta property="og:updated_time" content="2017-01-17T07:44:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2017年第一篇">
-<meta name="twitter:description" content="过年了
-快过年了…给爹妈买了些年货送回去…快到家老远就看到老爹在扫猪圈…要说老爷子在乡下也没什么事，猪圈整理的干干净净…我和媳妇偷偷的走过去，准备给老头一个惊喜…只见我爹扫完，翻身就骑上了一头花猪，把扫把往手里一礅，腿使劲一夹，冲着对面的猪大声咆哮道“虞姬，本王来救你”…… 我去，媳妇当时就笑喷了…我爹这才发现我们，翻身下了猪，脸色大囧的道“从小的霸王梦”…">
+<meta name="twitter:title" content="Android属性动画（二）——ValueAnimator">
+<meta name="twitter:description" content="前面我们了解了比较常用的ObjectAnimator，它继承自ValueAnimator，这篇我们研究属性动画最核心的一个类ValueAnimator。属性动画的实现机制是通过对目标对象进行赋值并修改其属性来实现的，而初始值和结束值之间的平滑的过渡就是ValueAnimator来实现的。">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160927101029556">
 
 
 
@@ -124,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://www.codepeng.cn/2017/01/14/2017年第一篇/"/>
+  <link rel="canonical" href="http://www.codepeng.cn/2017/01/17/Android属性动画（二）——ValueAnimator/"/>
 
 
 
 
 
-  <title> 2017年第一篇 | codepeng的blog </title>
+  <title> Android属性动画（二）——ValueAnimator | codepeng的blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -278,7 +279,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.codepeng.cn/2017/01/14/2017年第一篇/">
+  <link itemprop="mainEntityOfPage" href="http://www.codepeng.cn/2017/01/17/Android属性动画（二）——ValueAnimator/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="codepeng">
@@ -302,7 +303,7 @@
             
             
               
-                2017年第一篇
+                Android属性动画（二）——ValueAnimator
               
             
           </h1>
@@ -317,8 +318,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-14T13:28:00+08:00">
-                2017-01-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-17T15:32:51+08:00">
+                2017-01-17
               </time>
             
 
@@ -328,6 +329,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -336,8 +359,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/01/14/2017年第一篇/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/14/2017年第一篇/" itemprop="commentCount"></span>
+                <a href="/2017/01/17/Android属性动画（二）——ValueAnimator/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/17/Android属性动画（二）——ValueAnimator/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -347,7 +370,7 @@
 
           
           
-             <span id="/2017/01/14/2017年第一篇/" class="leancloud_visitors" data-flag-title="2017年第一篇">
+             <span id="/2017/01/17/Android属性动画（二）——ValueAnimator/" class="leancloud_visitors" data-flag-title="Android属性动画（二）——ValueAnimator">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -374,9 +397,21 @@
       
 
       
-        <h3 id="过年了"><a href="#过年了" class="headerlink" title="过年了"></a>过年了</h3><blockquote>
-<p>快过年了…给爹妈买了些年货送回去…快到家老远就看到老爹在扫猪圈…要说老爷子在乡下也没什么事，猪圈整理的干干净净…我和媳妇偷偷的走过去，准备给老头一个惊喜…只见我爹扫完，翻身就骑上了一头花猪，把扫把往手里一礅，腿使劲一夹，冲着对面的猪大声咆哮道“虞姬，本王来救你”…… 我去，媳妇当时就笑喷了…我爹这才发现我们，翻身下了猪，脸色大囧的道“从小的霸王梦”…</p>
-</blockquote>
+        <p>前面我们了解了比较常用的ObjectAnimator，它继承自ValueAnimator，这篇我们研究属性动画最核心的一个类ValueAnimator。<br>属性动画的实现机制是通过对目标对象进行赋值并修改其属性来实现的，而初始值和结束值之间的平滑的过渡就是ValueAnimator来实现的。</p>
+<a id="more"></a>
+<p>我们先来看看ValueAnimator怎么使用</p>
+<h2 id="ValueAnimator使用"><a href="#ValueAnimator使用" class="headerlink" title="ValueAnimator使用"></a>ValueAnimator使用</h2><p>ValueAnimator的使用方法非常简单，跟ObjectAnimator类似。</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ValueAnimator animator = ValueAnimator.ofFloat(<span class="number">0</span>f,<span class="number">1</span>f);</div><div class="line">animator.setDuration(<span class="number">3000</span>).start();</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20160927101029556" alt="方法"></p>
+<p>这是ValueAnimator 提供的方法，ofArgb是API21新添加的。使用方法都类似，PropertyValuesHolder我们上一篇文章已经介绍过了。<br>上面一段代码是将0f平滑过渡到1f，但是我们看不到效果，怎么知道它平滑过度了呢？添加监听。</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">ValueAnimator animator = ValueAnimator.ofFloat(<span class="number">0</span>f,<span class="number">1</span>f);</div><div class="line">animator.setDuration(<span class="number">3000</span>);</div><div class="line">animator.addUpdateListener(<span class="keyword">new</span> ValueAnimator.AnimatorUpdateListener() &#123;</div><div class="line">	@<span class="function">Override</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationUpdate</span>(<span class="params">ValueAnimator animation</span>) &#123;</div><div class="line">		<span class="keyword">float</span> <span class="keyword">value</span> = (<span class="keyword">float</span>) animation.getAnimatedValue();</div><div class="line">		Log.e(<span class="string">"TAG"</span>, <span class="string">"the animation value is "</span> + <span class="keyword">value</span>);</div><div class="line">	&#125;</div><div class="line">);</div><div class="line">animator.start();</div></pre></td></tr></table></figure>
+<p>在日志上我们看到这个值3s内平滑过渡了，到这里我想你已经明白了怎么去实现动画了。</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">ValueAnimator animator = ValueAnimator.ofFloat(<span class="number">0</span>f, <span class="number">1</span>f);</div><div class="line">animator.setDuration(<span class="number">3000</span>);</div><div class="line">animator.addUpdateListener(<span class="keyword">new</span> ValueAnimator.AnimatorUpdateListener() &#123;</div><div class="line">	@<span class="function">Override</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationUpdate</span>(<span class="params">ValueAnimator animation</span>) &#123;</div><div class="line">		<span class="keyword">float</span> <span class="keyword">value</span> = (<span class="keyword">float</span>) animation.getAnimatedValue();</div><div class="line">		textView.setAlpha(<span class="keyword">value</span>);</div><div class="line">	&#125;</div><div class="line">&#125;);</div><div class="line">animator.start();</div></pre></td></tr></table></figure>
+<p>看看效果<br><img src="http://img.blog.csdn.net/20160927104631580" alt="ValueAnimator"></p>
+<p>也就是说我们可以在<strong>onAnimationUpdate</strong> 这个监听里去做属性值的改变，相对于ObjectAnimator的用法，ValueAnimator更加灵活，不需要操作的对象属性一定要有set和get方法，可以根据当前动画的计算值来操作任何属性。<br>我们来看一个例子，还是一样用上一篇文章中我们自定义的PointView，看看ValueAnimator怎么实现动画。</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">ValueAnimator animator = ValueAnimator.ofFloat( <span class="number">100</span>f, <span class="number">500</span>f, <span class="number">100</span>f);</div><div class="line">animator.setDuration(<span class="number">2000</span>);</div><div class="line">animator.addUpdateListener(<span class="keyword">new</span> ValueAnimator.AnimatorUpdateListener() &#123;</div><div class="line">	@<span class="function">Override</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationUpdate</span>(<span class="params">ValueAnimator animation</span>) &#123;</div><div class="line">		<span class="keyword">float</span> <span class="keyword">value</span> = (<span class="keyword">float</span>) animation.getAnimatedValue();</div><div class="line">		pointView.setPointRadius(<span class="keyword">value</span>);<span class="comment">//设置半径属性值</span></div><div class="line">		pointView.setAlpha(<span class="number">1</span>f-<span class="keyword">value</span>*<span class="number">0.002</span>f);<span class="comment">//设置透明度</span></div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line">animator.start();</div></pre></td></tr></table></figure>
+<p>看看效果<br><img src="http://img.blog.csdn.net/20160927140600185" alt="ValueAnimator"></p>
+<p>我们可以实现同样的效果，而且更灵活改变它的透明度等等。</p>
 
       
     </div>
@@ -421,7 +456,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/life/" rel="tag"># life</a>
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+            <a href="/tags/csdn/" rel="tag"># csdn</a>
           
         </div>
       
@@ -430,14 +467,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/01/17/Android属性动画系列（一）——ObjectAnimator/" rel="next" title="Android属性动画系列（一）——ObjectAnimator">
+                <i class="fa fa-chevron-left"></i> Android属性动画系列（一）——ObjectAnimator
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/17/Android属性动画系列（一）——ObjectAnimator/" rel="prev" title="Android属性动画系列（一）——ObjectAnimator">
-                Android属性动画系列（一）——ObjectAnimator <i class="fa fa-chevron-right"></i>
+              <a href="/2017/01/17/Android属性动画（三）——TypeEvaluator（估值器）和Interpolator（插值器）/" rel="prev" title="Android属性动画（三）——TypeEvaluator（估值器）和Interpolator（插值器）">
+                Android属性动画（三）——TypeEvaluator（估值器）和Interpolator（插值器） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -486,8 +527,8 @@ var jiathis_config={
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/01/14/2017年第一篇/"
-           data-title="2017年第一篇" data-url="http://www.codepeng.cn/2017/01/14/2017年第一篇/">
+      <div class="ds-thread" data-thread-key="2017/01/17/Android属性动画（二）——ValueAnimator/"
+           data-title="Android属性动画（二）——ValueAnimator" data-url="http://www.codepeng.cn/2017/01/17/Android属性动画（二）——ValueAnimator/">
       </div>
     
   </div>
@@ -607,7 +648,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#过年了"><span class="nav-number">1.</span> <span class="nav-text">过年了</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ValueAnimator使用"><span class="nav-number">1.</span> <span class="nav-text">ValueAnimator使用</span></a></li></ol></div>
             
 
           </div>
