@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Android," />
 
 
 
@@ -84,15 +84,26 @@
 
 
 
-<meta name="description" content="万军丛中取敌将首级，千万行里改关键代码">
-<meta property="og:type" content="website">
-<meta property="og:title" content="qiaop的blog">
-<meta property="og:url" content="http://www.codepeng.cn/index.html">
+<meta name="description" content="Property Animation（属性动画）是Android3.0引入的动画系统，功能非常强大几乎完全可以取代Tween 动画（补间动画），而且弥补了Tween动画的缺陷。它可以设置给任何Object，包括那些还没有渲染到屏幕上的对象。这种动画是可扩展的，可以让你自定义任何类型和属性的动画。
+属性动画的实现机制是通过对目标对象进行赋值并修改其属性来实现的。
+#ObjectAnimatorObj">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android属性动画系列（一）——ObjectAnimator">
+<meta property="og:url" content="http://www.codepeng.cn/2017/01/14/Android属性动画系列（一）——ObjectAnimator/index.html">
 <meta property="og:site_name" content="qiaop的blog">
-<meta property="og:description" content="万军丛中取敌将首级，千万行里改关键代码">
+<meta property="og:description" content="Property Animation（属性动画）是Android3.0引入的动画系统，功能非常强大几乎完全可以取代Tween 动画（补间动画），而且弥补了Tween动画的缺陷。它可以设置给任何Object，包括那些还没有渲染到屏幕上的对象。这种动画是可扩展的，可以让你自定义任何类型和属性的动画。
+属性动画的实现机制是通过对目标对象进行赋值并修改其属性来实现的。
+#ObjectAnimatorObj">
+<meta property="og:image" content="http://img.blog.csdn.net/20160926140429333">
+<meta property="og:image" content="http://img.blog.csdn.net/20160926143353898">
+<meta property="og:image" content="http://img.blog.csdn.net/20160926160352646">
+<meta property="og:updated_time" content="2017-01-17T04:44:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="qiaop的blog">
-<meta name="twitter:description" content="万军丛中取敌将首级，千万行里改关键代码">
+<meta name="twitter:title" content="Android属性动画系列（一）——ObjectAnimator">
+<meta name="twitter:description" content="Property Animation（属性动画）是Android3.0引入的动画系统，功能非常强大几乎完全可以取代Tween 动画（补间动画），而且弥补了Tween动画的缺陷。它可以设置给任何Object，包括那些还没有渲染到屏幕上的对象。这种动画是可扩展的，可以让你自定义任何类型和属性的动画。
+属性动画的实现机制是通过对目标对象进行赋值并修改其属性来实现的。
+#ObjectAnimatorObj">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160926140429333">
 
 
 
@@ -120,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://www.codepeng.cn/"/>
+  <link rel="canonical" href="http://www.codepeng.cn/2017/01/14/Android属性动画系列（一）——ObjectAnimator/"/>
 
 
 
 
 
-  <title> qiaop的blog </title>
+  <title> Android属性动画系列（一）——ObjectAnimator | qiaop的blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -172,9 +183,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,151 +274,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.codepeng.cn/2017/01/14/2017年第一篇/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="qiaop">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar2.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="qiaop的blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="qiaop的blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/14/2017年第一篇/" itemprop="url">
-                  2017年第一篇
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-14T13:28:00+08:00">
-                2017-01-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/01/14/2017年第一篇/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/14/2017年第一篇/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2017/01/14/2017年第一篇/" class="leancloud_visitors" data-flag-title="2017年第一篇">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="过年了"><a href="#过年了" class="headerlink" title="过年了"></a>过年了</h3><blockquote>
-<p>快过年了…给爹妈买了些年货送回去…快到家老远就看到老爹在扫猪圈…要说老爷子在乡下也没什么事，猪圈整理的干干净净…我和媳妇偷偷的走过去，准备给老头一个惊喜…只见我爹扫完，翻身就骑上了一头花猪，把扫把往手里一礅，腿使劲一夹，冲着对面的猪大声咆哮道“虞姬，本王来救你”…… 我去，媳妇当时就笑喷了…我爹这才发现我们，翻身下了猪，脸色大囧的道“从小的霸王梦”…</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
 
   
 
@@ -442,10 +309,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/01/14/Android属性动画系列（一）——ObjectAnimator/" itemprop="url">
-                  Android属性动画系列（一）——ObjectAnimator
-                </a>
+                Android属性动画系列（一）——ObjectAnimator
               
             
           </h1>
@@ -539,9 +403,7 @@
       
 
       
-        
-          
-            <p>Property Animation（属性动画）是Android3.0引入的动画系统，功能非常强大几乎完全可以取代Tween 动画（补间动画），而且弥补了Tween动画的缺陷。它可以设置给任何Object，包括那些还没有渲染到屏幕上的对象。这种动画是可扩展的，可以让你自定义任何类型和属性的动画。</p>
+        <p>Property Animation（属性动画）是Android3.0引入的动画系统，功能非常强大几乎完全可以取代Tween 动画（补间动画），而且弥补了Tween动画的缺陷。它可以设置给任何Object，包括那些还没有渲染到屏幕上的对象。这种动画是可扩展的，可以让你自定义任何类型和属性的动画。</p>
 <p><strong>属性动画的实现机制是通过对目标对象进行赋值并修改其属性来实现的。</strong></p>
 <p>#ObjectAnimator<br>ObjectAnimator继承自ValueAnimator（后面再讲），ObjectAnimator可能是属性动画中最常用最实用的一个类，常用的方法有：ofFloat()，ofInt()，ofObject()，ofArgb()，ofPropertyValuesHolder()。</p>
 <p>##ObjectAnimator基本使用方法</p>
@@ -595,37 +457,84 @@
 <figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">pointView = (PointView) findViewById(R.id.pointView);</div><div class="line">pointView.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</div><div class="line">		ObjectAnimator animator = ObjectAnimator.ofInt(pointView, <span class="string">"pointRadius"</span>, <span class="number">0</span>, <span class="number">500</span>, <span class="number">100</span>);</div><div class="line">		animator.setDuration(<span class="number">2000</span>);</div><div class="line">		animator.start();</div><div class="line">	&#125;);</div></pre></td></tr></table></figure>
 <p><img src="http://img.blog.csdn.net/20160926160352646" alt="自定义ObjecAnimator属性"></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+        </div>
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/14/2017年第一篇/" rel="prev" title="2017年第一篇">
+                2017年第一篇 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style"><span class="jiathis_txt">分享：</span>
+<a class="jiathis_button_cqq"></a>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_weixin"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_fb"></a>
+<a class="jiathis_button_twitter"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:true,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2124040" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
           
           </div>
@@ -633,6 +542,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/01/14/Android属性动画系列（一）——ObjectAnimator/"
+           data-title="Android属性动画系列（一）——ObjectAnimator" data-url="http://www.codepeng.cn/2017/01/14/Android属性动画系列（一）——ObjectAnimator/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -652,8 +569,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar2.jpg"
@@ -738,6 +664,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现一个组合动画"><span class="nav-number">1.</span> <span class="nav-text">实现一个组合动画</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AnimatorSet"><span class="nav-number">1.1.</span> <span class="nav-text">AnimatorSet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PropertyValuesHolder"><span class="nav-number">1.2.</span> <span class="nav-text">PropertyValuesHolder</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
@@ -844,6 +786,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
