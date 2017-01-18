@@ -12,3 +12,4 @@ Disallow: /vendors/
 Disallow: /fancybox/
 
 Sitemap: http://www.codepeng.cn/sitemap.xml
+Sitemap: http://www.codepeng.cn/baidusitemap.xml
