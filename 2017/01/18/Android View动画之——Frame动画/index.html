@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="life," />
+  <meta name="keywords" content="Android动画," />
 
 
 
@@ -86,19 +86,18 @@
 
 
 
-<meta name="description" content="过年了
-快过年了…给爹妈买了些年货送回去…快到家老远就看到老爹在扫猪圈…要说老爷子在乡下也没什么事，猪圈整理的干干净净…我和媳妇偷偷的走过去，准备给老头一个惊喜…只见我爹扫完，翻身就骑上了一头花猪，把扫把往手里一礅，腿使劲一夹，冲着对面的猪大声咆哮道“虞姬，本王来救你”…… 我去，媳妇当时就笑喷了…我爹这才发现我们，翻身下了猪，脸色大囧的道“从小的霸王梦”…">
+<meta name="description" content="Drawable Animation,Drawable动画也叫Frame动画，是加载一系列的drawable资源然后逐帧地显示出来的动画，就像放幻灯片一样，其实Drawable Animation也属于View Animation。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2017年第一篇">
-<meta property="og:url" content="http://www.codepeng.cn/2017/01/14/2017年第一篇/index.html">
+<meta property="og:title" content="View动画之——Frame动画">
+<meta property="og:url" content="http://www.codepeng.cn/2017/01/18/Android View动画之——Frame动画/index.html">
 <meta property="og:site_name" content="codepeng的blog">
-<meta property="og:description" content="过年了
-快过年了…给爹妈买了些年货送回去…快到家老远就看到老爹在扫猪圈…要说老爷子在乡下也没什么事，猪圈整理的干干净净…我和媳妇偷偷的走过去，准备给老头一个惊喜…只见我爹扫完，翻身就骑上了一头花猪，把扫把往手里一礅，腿使劲一夹，冲着对面的猪大声咆哮道“虞姬，本王来救你”…… 我去，媳妇当时就笑喷了…我爹这才发现我们，翻身下了猪，脸色大囧的道“从小的霸王梦”…">
-<meta property="og:updated_time" content="2017-01-17T04:31:39.000Z">
+<meta property="og:description" content="Drawable Animation,Drawable动画也叫Frame动画，是加载一系列的drawable资源然后逐帧地显示出来的动画，就像放幻灯片一样，其实Drawable Animation也属于View Animation。">
+<meta property="og:image" content="http://img.blog.csdn.net/20160921161733248">
+<meta property="og:updated_time" content="2017-01-18T07:49:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2017年第一篇">
-<meta name="twitter:description" content="过年了
-快过年了…给爹妈买了些年货送回去…快到家老远就看到老爹在扫猪圈…要说老爷子在乡下也没什么事，猪圈整理的干干净净…我和媳妇偷偷的走过去，准备给老头一个惊喜…只见我爹扫完，翻身就骑上了一头花猪，把扫把往手里一礅，腿使劲一夹，冲着对面的猪大声咆哮道“虞姬，本王来救你”…… 我去，媳妇当时就笑喷了…我爹这才发现我们，翻身下了猪，脸色大囧的道“从小的霸王梦”…">
+<meta name="twitter:title" content="View动画之——Frame动画">
+<meta name="twitter:description" content="Drawable Animation,Drawable动画也叫Frame动画，是加载一系列的drawable资源然后逐帧地显示出来的动画，就像放幻灯片一样，其实Drawable Animation也属于View Animation。">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160921161733248">
 
 
 
@@ -126,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://www.codepeng.cn/2017/01/14/2017年第一篇/"/>
+  <link rel="canonical" href="http://www.codepeng.cn/2017/01/18/Android View动画之——Frame动画/"/>
 
 
 
 
 
-  <title> 2017年第一篇 | codepeng的blog </title>
+  <title> View动画之——Frame动画 | codepeng的blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -280,7 +279,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.codepeng.cn/2017/01/14/2017年第一篇/">
+  <link itemprop="mainEntityOfPage" href="http://www.codepeng.cn/2017/01/18/Android View动画之——Frame动画/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="codepeng">
@@ -304,7 +303,7 @@
             
             
               
-                2017年第一篇
+                View动画之——Frame动画
               
             
           </h1>
@@ -319,8 +318,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-14T13:28:00+08:00">
-                2017-01-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-18T11:54:00+08:00">
+                2017-01-18
               </time>
             
 
@@ -330,6 +329,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -338,8 +359,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/01/14/2017年第一篇/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/14/2017年第一篇/" itemprop="commentCount"></span>
+                <a href="/2017/01/18/Android View动画之——Frame动画/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/18/Android View动画之——Frame动画/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -349,7 +370,7 @@
 
           
           
-             <span id="/2017/01/14/2017年第一篇/" class="leancloud_visitors" data-flag-title="2017年第一篇">
+             <span id="/2017/01/18/Android View动画之——Frame动画/" class="leancloud_visitors" data-flag-title="View动画之——Frame动画">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -376,9 +397,17 @@
       
 
       
-        <h3 id="过年了"><a href="#过年了" class="headerlink" title="过年了"></a>过年了</h3><blockquote>
-<p>快过年了…给爹妈买了些年货送回去…快到家老远就看到老爹在扫猪圈…要说老爷子在乡下也没什么事，猪圈整理的干干净净…我和媳妇偷偷的走过去，准备给老头一个惊喜…只见我爹扫完，翻身就骑上了一头花猪，把扫把往手里一礅，腿使劲一夹，冲着对面的猪大声咆哮道“虞姬，本王来救你”…… 我去，媳妇当时就笑喷了…我爹这才发现我们，翻身下了猪，脸色大囧的道“从小的霸王梦”…</p>
-</blockquote>
+        <p>Drawable Animation,Drawable动画也叫Frame动画，是加载一系列的drawable资源然后逐帧地显示出来的动画，就像放幻灯片一样，其实Drawable Animation也属于View Animation。</p>
+<a id="more"></a>
+<h2 id="Frame-Animation使用"><a href="#Frame-Animation使用" class="headerlink" title="Frame Animation使用"></a>Frame Animation使用</h2><p>Frame Animation也可以使用Java代码方式和xml两种方式，但是推荐使用xml方式。</p>
+<h3 id="xml方式"><a href="#xml方式" class="headerlink" title="xml方式"></a>xml方式</h3><p>首先在资源文件res/drawable目录下新建一个文件，例如 drawable_animation.xml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</div><div class="line">&lt;animation-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    android:oneshot=&quot;false&quot;</div><div class="line">    android:variablePadding=&quot;false&quot;&gt;</div><div class="line">    &lt;item</div><div class="line">        android:drawable=&quot;@drawable/f0&quot;</div><div class="line">        android:duration=&quot;100&quot; /&gt;</div><div class="line">    &lt;item</div><div class="line">        android:drawable=&quot;@drawable/f1&quot;</div><div class="line">        android:duration=&quot;100&quot; /&gt;</div><div class="line">    &lt;item</div><div class="line">        android:drawable=&quot;@drawable/f2&quot;</div><div class="line">        android:duration=&quot;100&quot; /&gt;</div><div class="line">    &lt;item</div><div class="line">        android:drawable=&quot;@drawable/f3&quot;</div><div class="line">        android:duration=&quot;100&quot; /&gt;</div><div class="line">    &lt;item</div><div class="line">        android:drawable=&quot;@drawable/f4&quot;</div><div class="line">        android:duration=&quot;100&quot; /&gt;</div><div class="line"></div><div class="line">&lt;/animation-list&gt;</div></pre></td></tr></table></figure>
+<p>以<strong>animation-list</strong>为根元素，以<strong>item</strong>表示要轮换显示的图片，<strong>duration</strong>属性表示各项显示的时间。<br><strong>android:oneshot=”false”</strong> 是循环播放，为<strong>true</strong>的话则播放到最后一张图片就会停止播放；<br><strong>android:variablePadding=”false”</strong>此属性的意思是padding是否随着Drawable的变化而变化，默认值是false，不建议开启此选项。</p>
+<p>播放动画</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">ImageView imageView;</div><div class="line">AnimationDrawable animationDrawable;</div><div class="line"></div><div class="line">@Override</div><div class="line">protected void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">    super.onCreate(savedInstanceState);</div><div class="line">    setContentView(R.layout.activity_main);</div><div class="line">    imageView = (ImageView) findViewById(R.id.imageView);</div><div class="line">    imageView.setBackgroundResource(R.drawable.drawable_animation);</div><div class="line">    animationDrawable = (AnimationDrawable) imageView.getBackground();</div><div class="line">    imageView.setOnClickListener(new View.OnClickListener() &#123;</div><div class="line">        @Override</div><div class="line">        public void onClick(View v) &#123;</div><div class="line">            animationDrawable.start();</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>注意</strong><br>最好不要在<strong>onCreate()</strong>方法里开始动画， 因为AnimationDrawable 可能还没有完全附着在Window上，如果你要马上执行动画可以在 <strong>onWindowFocusChanged()</strong>里开始动画。</p>
+<h3 id="Java代码方式"><a href="#Java代码方式" class="headerlink" title="Java代码方式"></a>Java代码方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">imageView = (ImageView) findViewById(R.id.imageView);</div><div class="line">animationDrawable = new AnimationDrawable();</div><div class="line">Drawable drawable1 = getResources().getDrawable(R.drawable.f0);</div><div class="line">Drawable drawable2 = getResources().getDrawable(R.drawable.f1);</div><div class="line">Drawable drawable3 = getResources().getDrawable(R.drawable.f2);</div><div class="line">Drawable drawable4 = getResources().getDrawable(R.drawable.f3);</div><div class="line">Drawable drawable5 = getResources().getDrawable(R.drawable.f4);</div><div class="line">animationDrawable.addFrame(drawable1,100);</div><div class="line">animationDrawable.addFrame(drawable2,100);</div><div class="line">animationDrawable.addFrame(drawable3,100);</div><div class="line">animationDrawable.addFrame(drawable4,100);</div><div class="line">animationDrawable.addFrame(drawable5,100);</div><div class="line">imageView.setBackgroundDrawable(animationDrawable);</div><div class="line">animationDrawable.start();</div></pre></td></tr></table></figure>
+<p>看看效果：<br><img src="http://img.blog.csdn.net/20160921161733248" alt="drawable动画"><br>这个人好像没穿衣服</p>
 
       
     </div>
@@ -423,7 +452,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/life/" rel="tag"># life</a>
+            <a href="/tags/Android动画/" rel="tag"># Android动画</a>
           
         </div>
       
@@ -432,14 +461,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/01/18/Android View动画之——Tween动画/" rel="next" title="View动画之——Tween动画">
+                <i class="fa fa-chevron-left"></i> View动画之——Tween动画
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/17/Android属性动画系列（一）——ObjectAnimator/" rel="prev" title="Android属性动画系列（一）——ObjectAnimator">
-                Android属性动画系列（一）——ObjectAnimator <i class="fa fa-chevron-right"></i>
+              <a href="/2017/01/18/Android TabLayout使用以及自定义TabLayout的item/" rel="prev" title="TabLayout使用以及自定义TabLayout的item">
+                TabLayout使用以及自定义TabLayout的item <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -488,8 +521,8 @@ var jiathis_config={
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/01/14/2017年第一篇/"
-           data-title="2017年第一篇" data-url="http://www.codepeng.cn/2017/01/14/2017年第一篇/">
+      <div class="ds-thread" data-thread-key="2017/01/18/Android View动画之——Frame动画/"
+           data-title="View动画之——Frame动画" data-url="http://www.codepeng.cn/2017/01/18/Android View动画之——Frame动画/">
       </div>
     
   </div>
@@ -609,7 +642,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#过年了"><span class="nav-number">1.</span> <span class="nav-text">过年了</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Frame-Animation使用"><span class="nav-number">1.</span> <span class="nav-text">Frame Animation使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#xml方式"><span class="nav-number">1.1.</span> <span class="nav-text">xml方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java代码方式"><span class="nav-number">1.2.</span> <span class="nav-text">Java代码方式</span></a></li></ol></li></ol></div>
             
 
           </div>
