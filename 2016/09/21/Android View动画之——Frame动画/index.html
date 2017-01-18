@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Android,csdn," />
+  <meta name="keywords" content="Android动画," />
 
 
 
@@ -86,24 +86,18 @@
 
 
 
-<meta name="description" content="作为一个Android应用开发工程师，Android系统的启动流程还是需要了解一下的。前面我们讲了计算机的启动流程和Linux系统的启动流程，而Android作为一个基于Linux内核的系统，要了解清楚它的启动流程前面两位的流程也需要了解一下的。">
+<meta name="description" content="Drawable Animation,Drawable动画也叫Frame动画，是加载一系列的drawable资源然后逐帧地显示出来的动画，就像放幻灯片一样，其实Drawable Animation也属于View Animation。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android系统启动流程">
-<meta property="og:url" content="http://www.codepeng.cn/2017/01/17/Android系统启动流程/index.html">
+<meta property="og:title" content="View动画之——Frame动画">
+<meta property="og:url" content="http://www.codepeng.cn/2016/09/21/Android View动画之——Frame动画/index.html">
 <meta property="og:site_name" content="codepeng的blog">
-<meta property="og:description" content="作为一个Android应用开发工程师，Android系统的启动流程还是需要了解一下的。前面我们讲了计算机的启动流程和Linux系统的启动流程，而Android作为一个基于Linux内核的系统，要了解清楚它的启动流程前面两位的流程也需要了解一下的。">
-<meta property="og:image" content="http://img.blog.csdn.net/20160824094449225">
-<meta property="og:image" content="http://img.blog.csdn.net/20160824101524443">
-<meta property="og:image" content="http://img.blog.csdn.net/20160824101604455">
-<meta property="og:image" content="http://img.blog.csdn.net/20160824102956824">
-<meta property="og:image" content="http://img.blog.csdn.net/20160824103926408">
-<meta property="og:image" content="http://img.blog.csdn.net/20160824104133770">
-<meta property="og:image" content="http://img.blog.csdn.net/20160824104409345">
-<meta property="og:updated_time" content="2017-01-17T08:04:41.000Z">
+<meta property="og:description" content="Drawable Animation,Drawable动画也叫Frame动画，是加载一系列的drawable资源然后逐帧地显示出来的动画，就像放幻灯片一样，其实Drawable Animation也属于View Animation。">
+<meta property="og:image" content="http://img.blog.csdn.net/20160921161733248">
+<meta property="og:updated_time" content="2017-01-18T06:07:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android系统启动流程">
-<meta name="twitter:description" content="作为一个Android应用开发工程师，Android系统的启动流程还是需要了解一下的。前面我们讲了计算机的启动流程和Linux系统的启动流程，而Android作为一个基于Linux内核的系统，要了解清楚它的启动流程前面两位的流程也需要了解一下的。">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20160824094449225">
+<meta name="twitter:title" content="View动画之——Frame动画">
+<meta name="twitter:description" content="Drawable Animation,Drawable动画也叫Frame动画，是加载一系列的drawable资源然后逐帧地显示出来的动画，就像放幻灯片一样，其实Drawable Animation也属于View Animation。">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160921161733248">
 
 
 
@@ -131,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://www.codepeng.cn/2017/01/17/Android系统启动流程/"/>
+  <link rel="canonical" href="http://www.codepeng.cn/2016/09/21/Android View动画之——Frame动画/"/>
 
 
 
 
 
-  <title> Android系统启动流程 | codepeng的blog </title>
+  <title> View动画之——Frame动画 | codepeng的blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -285,7 +279,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.codepeng.cn/2017/01/17/Android系统启动流程/">
+  <link itemprop="mainEntityOfPage" href="http://www.codepeng.cn/2016/09/21/Android View动画之——Frame动画/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="codepeng">
@@ -309,7 +303,7 @@
             
             
               
-                Android系统启动流程
+                View动画之——Frame动画
               
             
           </h1>
@@ -324,8 +318,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-17T15:51:59+08:00">
-                2017-01-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-21T15:34:00+08:00">
+                2016-09-21
               </time>
             
 
@@ -365,8 +359,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/01/17/Android系统启动流程/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/17/Android系统启动流程/" itemprop="commentCount"></span>
+                <a href="/2016/09/21/Android View动画之——Frame动画/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/21/Android View动画之——Frame动画/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -376,7 +370,7 @@
 
           
           
-             <span id="/2017/01/17/Android系统启动流程/" class="leancloud_visitors" data-flag-title="Android系统启动流程">
+             <span id="/2016/09/21/Android View动画之——Frame动画/" class="leancloud_visitors" data-flag-title="View动画之——Frame动画">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -403,57 +397,17 @@
       
 
       
-        <p>作为一个Android应用开发工程师，Android系统的启动流程还是需要了解一下的。<br>前面我们讲了<a href="http://blog.csdn.net/qiao0809/article/details/52292143" target="_blank" rel="external">计算机的启动流程</a>和<a href="http://blog.csdn.net/qiao0809/article/details/52292499" target="_blank" rel="external">Linux系统的启动流程</a>，而Android作为一个基于Linux内核的系统，要了解清楚它的启动流程前面两位的流程也需要了解一下的。</p>
+        <p>Drawable Animation,Drawable动画也叫Frame动画，是加载一系列的drawable资源然后逐帧地显示出来的动画，就像放幻灯片一样，其实Drawable Animation也属于View Animation。</p>
 <a id="more"></a>
-<p>好了，下面直接进入主题：</p>
-<p><strong>流程图</strong></p>
-<p><img src="http://img.blog.csdn.net/20160824094449225" alt="这里写图片描述"></p>
-<p>借助图片我们了解到，从Boot ROM开始到 init进程，这四个步骤是属于Linux的启动，从init进程才开始真正进入Android的世界。<br>我们逐步分析一下，希望读者对应几张图来理解：</p>
-<h2 id="Step-1-开启电源执行boot-ROM"><a href="#Step-1-开启电源执行boot-ROM" class="headerlink" title="Step 1. 开启电源执行boot ROM"></a>Step 1. 开启电源执行boot ROM</h2><p>才开机时，CPU 处于未初始化状态，还没有设定内部时钟，仅仅只有内部 RAM 可用。当电源稳定后会开始执行 BOOT ROM 代码，这是一小块代码被硬编码在 CPU ASIC 中。</p>
-<p><img src="http://img.blog.csdn.net/20160824101524443" alt="开启电源执行Boot ROM"></p>
-<ol>
-<li>boot ROM 代码会引导 boot 媒介使用系统寄存器映射到 ASIC 中一些物理区域，这是为了确定哪里能找到 boot loader 的第一阶段</li>
-<li>一旦 boot 媒介顺序确定，boot ROM 会试着装载 boot loader 的第一阶段到内部 RAM 中，一旦 boot loader 就位，boot ROM 代码会跳到并执行 boot loader</li>
-</ol>
-<h2 id="Step-2-Bootloader"><a href="#Step-2-Bootloader" class="headerlink" title="Step 2. Bootloader"></a>Step 2. Bootloader</h2><p>boot loader 是一个特殊的独立于 Linux 内核的程序，它用来初始化内存和装载内核到 RAM 中，桌面系统的 boot loader 程序有 GRUB，嵌入式系统常用 uBoot，<br>设备制造商常常使用自己专有的 boot loader 程序。</p>
-<p><img src="http://img.blog.csdn.net/20160824101604455" alt="Bootloader"></p>
-<ol>
-<li>boot loader 第一阶段会检测和设置外部 RAM</li>
-<li>一旦外部 RAM 可用，系统会准备装载主 boot loader，把它放到外部 RAM 中</li>
-<li>boot loader 第二阶段是运行的第一个重要程序，它包含了设置文件系统，内存，网络支持和其他的代码。在一个移动电话上，也可能是负责加载调制解调器的CPU代码和设定低级别的内存保护和安全选项</li>
-<li>一旦 boot loader 完成这些特殊任务，开始寻找 linux 内核，它会从 boot 媒介上装载 linux 内核（或者其他地方，这取决于系统配置），把它放到 RAM 中，它也会在内存中为内核替换一些在内核启动时读取的启动参数</li>
-<li>一旦 boot loader 完成会跳到 linux 内核，通常通过解压程序解压内核文件，内核将取得系统权限</li>
-</ol>
-<h2 id="Step-3-The-Linux-kernel"><a href="#Step-3-The-Linux-kernel" class="headerlink" title="Step 3. The Linux kernel"></a>Step 3. The Linux kernel</h2><p>Linux 内核在 Android 上跟在其他系统上的启动方式一样，它将设置系统运行需要的一切，初始化中断控制器，设定内存保护，高速缓存和调度</p>
-<p><img src="http://img.blog.csdn.net/20160824102956824" alt="Linux kernel"></p>
-<ol>
-<li>一旦内存管理单元和高速缓存初始化完成，系统将可以使用虚拟内存和启动用户空间进程</li>
-<li>内核在根目录寻找初始化程序（代码对应Android open source tree:system/core/init），启动它作为初始化用户空间进程<h2 id="Step-4-The-init-process"><a href="#Step-4-The-init-process" class="headerlink" title="Step 4. The init process"></a>Step 4. The init process</h2>init进程是所有其他系统进程的 “祖母 ”，系统的每一个其他进程将从该进程中或者该进程的子进程中启动</li>
-</ol>
-<p><img src="http://img.blog.csdn.net/20160824103926408" alt="The init process"></p>
-<ol>
-<li>init进程会寻找 init.rc 文件，init.rc 脚本文件描述了系统服务，文件系统和其他需要设定的参数，该文件在代码：system/core/rootdir</li>
-<li>init进程解析 init 脚本，启动系统服务进程</li>
-</ol>
-<p>init程序最核心的工作主要有3点：</p>
-<ul>
-<li>创建和挂载一些系统目录/设备节点，设置权限，如：/dev, /proc, and /sys</li>
-<li>解析 init.rc 和 init.<hardware>.rc，并启动属性服务，以及一系列的服务和进程。</hardware></li>
-<li>显示boot logo，默认是“Android”字样</li>
-</ul>
-<p>其中，最重要的步骤是第二步，一系列的Android服务在这时被启动起来，其实Android系统的启动最重要的过程也就是各个系统服务的启动，因为系统所有的功能都是依赖这些服务来完成的，比如启动应用程序，拨打电话，使用WIFI或者蓝牙，播放音视频等等，只要这些服务都能正常地启动起来并且正常工作，整个Android系统也就完成了自己的启动。</p>
-<p>这些服务包含2部分，一部分是本地服务，另一部分是Android服务，所有的这些服务都会向ServiceManager进程注册，由它统一管理，这些服务的启动过程介绍如下：</p>
-<p>###（1）本地服务<br>本地服务是指运行在C++层的系统守护进程，一部分本地服务是init进程直接启动的，它们定义在init.rc脚本和init.<hardware>.rc中，如 ueventd、servicemanager、debuggerd、rild、mediaserver等。还有一部分本地服务，是由这些本地服务进一步创建的，如mediaserver服务会启动AudioFlinger, MediaPlayerService， 以及 CameraService 等本地服务。</hardware></p>
-<p>我们可以通过查看init.rc和init.<hardware>.rc文件找出具体有哪些本地服务被init进程直接启动了，这些文件的位置：system/core/rootdir/</hardware></p>
-<p>注意，每一个由init直接启动的本地服务都是一个独立的Linux进程，在系统启动以后，我们通过adb shell命令进入手机后，输入top命令就可以查看到这些本地进程的存在。</p>
-<p>###（2）Android服务<br>init进程会执行app_process程序，创建Zygote进程，它是Android系统最重要的进程，所有后续的Android应用程序都是由它fork出来的。</p>
-<p>Zygote进程会首先fork出”SystemServer”进程，”SystemServer”进程的全部任务就是将所有的Android核心服务启动起来。</p>
-<h2 id="Step-5-Zygote-and-Dalvik-ART"><a href="#Step-5-Zygote-and-Dalvik-ART" class="headerlink" title="Step 5. Zygote and Dalvik(ART)"></a>Step 5. Zygote and Dalvik(ART)</h2><p>Zygote 被init进程启动，开始运行和初始化 dalvik 虚拟机</p>
-<p><img src="http://img.blog.csdn.net/20160824104133770" alt="Zygote and Dalvik"></p>
-<h2 id="Step-6-The-system-server"><a href="#Step-6-The-system-server" class="headerlink" title="Step 6. The system server"></a>Step 6. The system server</h2><p>系统服务是在系统中运行的第一个 java 组件，它会启动所有的 android 服务，比如：电话服务，蓝牙服务，每个服务的启动被直接写在 SystemServer.java 这个类的 run 方法里面<br>代码： frameworks/base/services/java/com/android/server/SystemServer.java</p>
-<p><img src="http://img.blog.csdn.net/20160824104409345" alt="The system server"></p>
-<h2 id="Step-7-Boot-completed"><a href="#Step-7-Boot-completed" class="headerlink" title="Step 7. Boot completed"></a>Step 7. Boot completed</h2><p> 一旦系统服务启动并运行，android 系统启动就完成了，同时发出 ACTION_BOOT_COMPLETED 广播</p>
-<hr>
+<h2 id="Frame-Animation使用"><a href="#Frame-Animation使用" class="headerlink" title="Frame Animation使用"></a>Frame Animation使用</h2><p>Frame Animation也可以使用Java代码方式和xml两种方式，但是推荐使用xml方式。</p>
+<h3 id="xml方式"><a href="#xml方式" class="headerlink" title="xml方式"></a>xml方式</h3><p>首先在资源文件res/drawable目录下新建一个文件，例如 drawable_animation.xml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</div><div class="line">&lt;animation-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    android:oneshot=&quot;false&quot;</div><div class="line">    android:variablePadding=&quot;false&quot;&gt;</div><div class="line">    &lt;item</div><div class="line">        android:drawable=&quot;@drawable/f0&quot;</div><div class="line">        android:duration=&quot;100&quot; /&gt;</div><div class="line">    &lt;item</div><div class="line">        android:drawable=&quot;@drawable/f1&quot;</div><div class="line">        android:duration=&quot;100&quot; /&gt;</div><div class="line">    &lt;item</div><div class="line">        android:drawable=&quot;@drawable/f2&quot;</div><div class="line">        android:duration=&quot;100&quot; /&gt;</div><div class="line">    &lt;item</div><div class="line">        android:drawable=&quot;@drawable/f3&quot;</div><div class="line">        android:duration=&quot;100&quot; /&gt;</div><div class="line">    &lt;item</div><div class="line">        android:drawable=&quot;@drawable/f4&quot;</div><div class="line">        android:duration=&quot;100&quot; /&gt;</div><div class="line"></div><div class="line">&lt;/animation-list&gt;</div></pre></td></tr></table></figure>
+<p>以<strong>animation-list</strong>为根元素，以<strong>item</strong>表示要轮换显示的图片，<strong>duration</strong>属性表示各项显示的时间。<br><strong>android:oneshot=”false”</strong> 是循环播放，为<strong>true</strong>的话则播放到最后一张图片就会停止播放；<br><strong>android:variablePadding=”false”</strong>此属性的意思是padding是否随着Drawable的变化而变化，默认值是false，不建议开启此选项。</p>
+<p>播放动画</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">ImageView imageView;</div><div class="line">AnimationDrawable animationDrawable;</div><div class="line"></div><div class="line">@Override</div><div class="line">protected void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">    super.onCreate(savedInstanceState);</div><div class="line">    setContentView(R.layout.activity_main);</div><div class="line">    imageView = (ImageView) findViewById(R.id.imageView);</div><div class="line">    imageView.setBackgroundResource(R.drawable.drawable_animation);</div><div class="line">    animationDrawable = (AnimationDrawable) imageView.getBackground();</div><div class="line">    imageView.setOnClickListener(new View.OnClickListener() &#123;</div><div class="line">        @Override</div><div class="line">        public void onClick(View v) &#123;</div><div class="line">            animationDrawable.start();</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>注意</strong><br>最好不要在<strong>onCreate()</strong>方法里开始动画， 因为AnimationDrawable 可能还没有完全附着在Window上，如果你要马上执行动画可以在 <strong>onWindowFocusChanged()</strong>里开始动画。</p>
+<h3 id="Java代码方式"><a href="#Java代码方式" class="headerlink" title="Java代码方式"></a>Java代码方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">imageView = (ImageView) findViewById(R.id.imageView);</div><div class="line">animationDrawable = new AnimationDrawable();</div><div class="line">Drawable drawable1 = getResources().getDrawable(R.drawable.f0);</div><div class="line">Drawable drawable2 = getResources().getDrawable(R.drawable.f1);</div><div class="line">Drawable drawable3 = getResources().getDrawable(R.drawable.f2);</div><div class="line">Drawable drawable4 = getResources().getDrawable(R.drawable.f3);</div><div class="line">Drawable drawable5 = getResources().getDrawable(R.drawable.f4);</div><div class="line">animationDrawable.addFrame(drawable1,100);</div><div class="line">animationDrawable.addFrame(drawable2,100);</div><div class="line">animationDrawable.addFrame(drawable3,100);</div><div class="line">animationDrawable.addFrame(drawable4,100);</div><div class="line">animationDrawable.addFrame(drawable5,100);</div><div class="line">imageView.setBackgroundDrawable(animationDrawable);</div><div class="line">animationDrawable.start();</div></pre></td></tr></table></figure>
+<p>看看效果：<br><img src="http://img.blog.csdn.net/20160921161733248" alt="drawable动画"><br>这个人好像没穿衣服</p>
 
       
     </div>
@@ -498,9 +452,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Android/" rel="tag"># Android</a>
-          
-            <a href="/tags/csdn/" rel="tag"># csdn</a>
+            <a href="/tags/Android动画/" rel="tag"># Android动画</a>
           
         </div>
       
@@ -509,8 +461,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/17/Android属性动画（三）——TypeEvaluator（估值器）和Interpolator（插值器）/" rel="next" title="Android属性动画（三）——TypeEvaluator（估值器）和Interpolator（插值器）">
-                <i class="fa fa-chevron-left"></i> Android属性动画（三）——TypeEvaluator（估值器）和Interpolator（插值器）
+              <a href="/2016/09/20/Android View动画之——Tween动画/" rel="next" title="View动画之——Tween动画">
+                <i class="fa fa-chevron-left"></i> View动画之——Tween动画
               </a>
             
           </div>
@@ -518,6 +470,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/07/Android TabLayout使用以及自定义TabLayout的item/" rel="prev" title="TabLayout使用以及自定义TabLayout的item">
+                TabLayout使用以及自定义TabLayout的item <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -565,8 +521,8 @@ var jiathis_config={
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/01/17/Android系统启动流程/"
-           data-title="Android系统启动流程" data-url="http://www.codepeng.cn/2017/01/17/Android系统启动流程/">
+      <div class="ds-thread" data-thread-key="2016/09/21/Android View动画之——Frame动画/"
+           data-title="View动画之——Frame动画" data-url="http://www.codepeng.cn/2016/09/21/Android View动画之——Frame动画/">
       </div>
     
   </div>
@@ -686,7 +642,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Step-1-开启电源执行boot-ROM"><span class="nav-number">1.</span> <span class="nav-text">Step 1. 开启电源执行boot ROM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step-2-Bootloader"><span class="nav-number">2.</span> <span class="nav-text">Step 2. Bootloader</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step-3-The-Linux-kernel"><span class="nav-number">3.</span> <span class="nav-text">Step 3. The Linux kernel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step-4-The-init-process"><span class="nav-number">4.</span> <span class="nav-text">Step 4. The init process</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step-5-Zygote-and-Dalvik-ART"><span class="nav-number">5.</span> <span class="nav-text">Step 5. Zygote and Dalvik(ART)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step-6-The-system-server"><span class="nav-number">6.</span> <span class="nav-text">Step 6. The system server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step-7-Boot-completed"><span class="nav-number">7.</span> <span class="nav-text">Step 7. Boot completed</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Frame-Animation使用"><span class="nav-number">1.</span> <span class="nav-text">Frame Animation使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#xml方式"><span class="nav-number">1.1.</span> <span class="nav-text">xml方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java代码方式"><span class="nav-number">1.2.</span> <span class="nav-text">Java代码方式</span></a></li></ol></li></ol></div>
             
 
           </div>
