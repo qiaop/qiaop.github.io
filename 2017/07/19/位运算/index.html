@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.codepeng.cn">
-  <title>Tag: 集群搭建 | codepeng的blog</title>
+  <title>位运算 | codepeng的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="万军丛中取敌将首级，千万行里改关键代码">
-<meta property="og:type" content="website">
-<meta property="og:title" content="codepeng的blog">
-<meta property="og:url" content="http://www.codepeng.cn/tags/集群搭建/index.html">
+  <meta name="description" content="位操作是程序设计中对位模式按位或二进制数的一元和二元操作。在许多古老的微处理器上，位运算比加减运算略快，通常位运算比乘除法运算要快很多。在现代架构中，情况并非如此：位运算的运算速度通常与加法运算相同（仍然快于乘法运算）。
+
+按位运算就把数字转换为机器语言——二进制的数字来运算的一种运算形式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="位运算">
+<meta property="og:url" content="http://www.codepeng.cn/2017/07/19/位运算/index.html">
 <meta property="og:site_name" content="codepeng的blog">
-<meta property="og:description" content="万军丛中取敌将首级，千万行里改关键代码">
+<meta property="og:description" content="位操作是程序设计中对位模式按位或二进制数的一元和二元操作。在许多古老的微处理器上，位运算比加减运算略快，通常位运算比乘除法运算要快很多。在现代架构中，情况并非如此：位运算的运算速度通常与加法运算相同（仍然快于乘法运算）。
+
+按位运算就把数字转换为机器语言——二进制的数字来运算的一种运算形式">
+<meta property="og:updated_time" content="2017-07-19T05:51:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="codepeng的blog">
-<meta name="twitter:description" content="万军丛中取敌将首级，千万行里改关键代码">
+<meta name="twitter:title" content="位运算">
+<meta name="twitter:description" content="位操作是程序设计中对位模式按位或二进制数的一元和二元操作。在许多古老的微处理器上，位运算比加减运算略快，通常位运算比乘除法运算要快很多。在现代架构中，情况并非如此：位运算的运算速度通常与加法运算相同（仍然快于乘法运算）。
+
+按位运算就把数字转换为机器语言——二进制的数字来运算的一种运算形式">
   
     <link rel="alternative" href="/atom.xml" title="codepeng的blog" type="application/atom+xml">
   
@@ -179,121 +186,284 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-位运算" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/31/Sparka安装部署/" class="archive-article-date">
-  	<time datetime="2016-03-31T11:35:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-31</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/31/Sparka安装部署/">Spark集群搭建</a>
+    <h1 class="article-title" itemprop="name">
+      位运算
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/07/19/位运算/" class="archive-article-date">
+  	<time datetime="2017-07-19T02:12:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+    <div class="article-moreinfo">
+        <div class="lastModifiedDate">
+            <span>最后更新：</span>
+            <time datetime="2017-07-19T05:51:50.000Z" itemprop="dateLastModified">
+            2017-07-19
+            </time>
+        </div>
+        <div class="copyright">
+            <span>许可协议：</span>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>
+        </div>
+    </div>
+        <blockquote>
+<p>位操作是程序设计中对位模式按位或二进制数的一元和二元操作。在许多古老的微处理器上，位运算比加减运算略快，通常位运算比乘除法运算要快很多。在现代架构中，情况并非如此：位运算的运算速度通常与加法运算相同（仍然快于乘法运算）。</p>
+</blockquote>
+<p><strong>按位运算就把数字转换为机器语言——二进制的数字来运算的一种运算形式</strong></p>
+<a id="more"></a>
+<h1 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h1><table>
+<thead>
+<tr>
+<th>操作符</th>
+<th>描述</th>
+<th>规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&amp;</td>
+<td>按位与</td>
+<td>两个相应的二进位都为1，该位的结果值才为1，否则为0</td>
+</tr>
+<tr>
+<td>\</td>
+<td></td>
+<td>按位或</td>
+<td>两个相应的二进位中只要有一个为1，该位的结果值为1</td>
+</tr>
+<tr>
+<td>^</td>
+<td>按位异或</td>
+<td>两个相应的二进位中不同则该位为1，否则该位为0</td>
+</tr>
+<tr>
+<td>~</td>
+<td>取反</td>
+<td>一元运算符，对一个二进制数的每一位执行逻辑反操作。使数字1成为0，0成为1</td>
+</tr>
+<tr>
+<td>>&gt;或&lt;&lt;</td>
+<td>移位</td>
+<td>将一个二进制数中的每一位全部都向一个方向移动指定位，溢出的部分将被舍弃，而空缺的部分填入一定的值。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意：</strong></p>
+<ul>
+<li>位操作只能用于整型和字符型数据</li>
+<li>只有~取反是一元运算符，其它都是二元运算符</li>
+</ul>
+<h2 id="按位与（AND）"><a href="#按位与（AND）" class="headerlink" title="按位与（AND）"></a>按位与（AND）</h2><p>按位与处理两个长度相同的二进制数，两个相应的二进位都为1，该位的结果值才为1，否则为0。例如：5&amp;3</p>
+<pre><code>    0101
+AND 0011
+  = 0001
+</code></pre><h2 id="按位或（OR）"><a href="#按位或（OR）" class="headerlink" title="按位或（OR）"></a>按位或（OR）</h2><p>按位或处理两个长度相同的二进制数，两个相应的二进位中只要有一个为1，该位的结果值为1。例如：5|3</p>
+<pre><code>   0101
+OR 0011
+ = 0111
+</code></pre><p>按位或能够将每一位看做旗帜；在二进制数中的每一位可以表示不同的布尔变量。应用按位或操作可以将二进制数的某一位设为1。例如：</p>
+<pre><code>0010（十进制2）
+</code></pre><p>能够看做包含4个旗帜的组合。第1，2，4旗帜为0；第3个旗帜为1。利用按位或可以将第1个旗帜设置为1，而其他旗帜不变。</p>
+<pre><code>   0010（十进制2）
+OR 1000（十进制8）
+ = 1010（十进制10）
+</code></pre><p>这一技巧通常用来保存程序中的大量布尔变量。</p>
+<h2 id="按位异或（XOR）"><a href="#按位异或（XOR）" class="headerlink" title="按位异或（XOR）"></a>按位异或（XOR）</h2><p>按位异或运算，对等长二进制模式按位或二进制数的每一位执行逻辑异按位或操作。操作的结果是如果某位不同则该位为1，否则该位为0。例如：</p>
+<pre><code>    0101
+XOR 0011
+  = 0110
+</code></pre><p>按位异或也可以用于在比特集合中切换旗帜。给出一个比特模式，</p>
+<pre><code>0010
+</code></pre><p>第一和第三位能够通过按位异或运算使用同时切换。</p>
+<pre><code>    0010
+XOR 1010
+  = 1000
+</code></pre><p>这一技巧可用于操作表示布尔变量的比特模式。</p>
+<h2 id="取反（NOT）"><a href="#取反（NOT）" class="headerlink" title="取反（NOT）"></a>取反（NOT）</h2><p>取反是一元运算符，对一个二进制数的每一位执行逻辑反操作。使数字1成为0，0成为1。例如：</p>
+<pre><code>NOT 0111
+  = 1000
+</code></pre><h2 id="移位"><a href="#移位" class="headerlink" title="移位"></a>移位</h2><p>移位是一个二元运算符，用来将一个二进制数中的每一位全部都向一个方向移动指定位，溢出的部分将被舍弃，而空缺的部分填入一定的值。</p>
+<p>我们知道正数在计算机中是用二进制表示的，负数在计算机中使用补码表示的。<br><strong>对于移位操作，分为算术移位和逻辑移位，它们在左移操作中都一样，低位补0即可，但在右移中逻辑移位的高位补0而算术移位的高位是补符号位</strong></p>
+<h4 id="左移位：-lt-lt"><a href="#左移位：-lt-lt" class="headerlink" title="左移位：&lt;&lt;"></a>左移位：&lt;&lt;</h4><p>左移操作时将运算数的二进制码整体左移指定位数，左移之后的空位用0补充。</p>
+<pre><code>0000 0000 0000 0000 0000 0000 0000 0101           然后左移2位后，低位补0：
+
+0000 0000 0000 0000 0000 0000 0001 0100           换算成10进制为20
+</code></pre><h4 id="右移位：-gt-gt"><a href="#右移位：-gt-gt" class="headerlink" title="右移位：&gt;&gt;"></a>右移位：&gt;&gt;</h4><p>右移操作是将运算数的二进制码整体右移指定位数，右移之后的空位用符号位补充，如果是正数用0补充，负数用1补充。</p>
+<p>5&gt;&gt;3</p>
+<pre><code>0000 0000 0000 0000 0000 0000 0000 0101                  右移3位后，高位0补位
+0000 0000 0000 0000 0000 0000 0000 0000               结果为0
+</code></pre><p>-5&gt;&gt;3</p>
+<pre><code>1111 1111 1111 1111 1111 1111 1111 1011            右移三位，高位1补位
+1111 1111 1111 1111 1111 1111 1111 1111            结果为-1
+</code></pre><h3 id="在Java中"><a href="#在Java中" class="headerlink" title="在Java中"></a>在Java中</h3><h4 id="无符号右移：-gt-gt-gt"><a href="#无符号右移：-gt-gt-gt" class="headerlink" title="无符号右移：&gt;&gt;&gt;"></a>无符号右移：&gt;&gt;&gt;</h4><p>右移过程最高位一律补0，也就是算术右移</p>
+<h4 id="和＝合并起来"><a href="#和＝合并起来" class="headerlink" title="和＝合并起来"></a>和＝合并起来</h4><p>&lt;&lt;= 、 &gt;&gt;= 和 &gt;&gt;&gt;=。例如 a &gt;&gt;= 2; 表示将a右移两位后的值重新赋给a</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/pay/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/pay/wechatpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">集群搭建</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">base</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Hadoop/" class="article-tag-list-link color2">Hadoop</a>
+        			<a href="/categories/base/" class="article-tag-list-link color5">base</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.codepeng.cn/2017/07/19/位运算/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/30/Hadoop集群环境搭建详细步骤/" class="archive-article-date">
-  	<time datetime="2016-03-30T11:55:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/30/Hadoop集群环境搭建详细步骤/">Hadoop集群环境搭建详细步骤</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">集群搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Hadoop/" class="article-tag-list-link color2">Hadoop</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/07/17/正则表达式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">正则表达式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://www.codepeng.cn/2017/07/19/位运算/", 
+    sourceId: "位运算",
+    productKey: "7aaed2075387460c93e4293197dae8e5",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-    
+  
 
+  
 
           </div>
         </div>
@@ -315,9 +485,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
