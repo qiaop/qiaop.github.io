@@ -9,24 +9,21 @@
   <title>Spark集群搭建 | codepeng的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一、准备工作1、三台机器，配置hosts，并确保java环境jdk1.7.0_72，scala环境scala-2.11.4123192.168.5.231   ubuntu231192.168.5.232   ubuntu232192.168.5.233   ubuntu233
-2、ubuntu231选择作为主节点Master下载spark-1.3.1-bin-hadoop2.6安装包
-二、解压解">
+2、ubuntu231选择作为主节点Master下载spark-1.3.1-bin-hadoop2.6安装包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spark集群搭建">
 <meta property="og:url" content="http://www.codepeng.cn/2016/03/31/Sparka安装部署/index.html">
 <meta property="og:site_name" content="codepeng的blog">
 <meta property="og:description" content="一、准备工作1、三台机器，配置hosts，并确保java环境jdk1.7.0_72，scala环境scala-2.11.4123192.168.5.231   ubuntu231192.168.5.232   ubuntu232192.168.5.233   ubuntu233
-2、ubuntu231选择作为主节点Master下载spark-1.3.1-bin-hadoop2.6安装包
-二、解压解">
+2、ubuntu231选择作为主节点Master下载spark-1.3.1-bin-hadoop2.6安装包">
 <meta property="og:image" content="http://img.blog.csdn.net/20160330144709926?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 <meta property="og:image" content="http://img.blog.csdn.net/20160330144806404?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 <meta property="og:image" content="http://img.blog.csdn.net/20160330144829943?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:updated_time" content="2017-03-12T07:41:17.000Z">
+<meta property="og:updated_time" content="2017-07-20T07:09:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spark集群搭建">
 <meta name="twitter:description" content="一、准备工作1、三台机器，配置hosts，并确保java环境jdk1.7.0_72，scala环境scala-2.11.4123192.168.5.231   ubuntu231192.168.5.232   ubuntu232192.168.5.233   ubuntu233
-2、ubuntu231选择作为主节点Master下载spark-1.3.1-bin-hadoop2.6安装包
-二、解压解">
+2、ubuntu231选择作为主节点Master下载spark-1.3.1-bin-hadoop2.6安装包">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20160330144709926?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
   
     <link rel="alternative" href="/atom.xml" title="codepeng的blog" type="application/atom+xml">
@@ -213,8 +210,8 @@ var _hmt = _hmt || [];
     <div class="article-moreinfo">
         <div class="lastModifiedDate">
             <span>最后更新：</span>
-            <time datetime="2017-03-12T07:41:17.000Z" itemprop="dateLastModified">
-            2017-03-12
+            <time datetime="2017-07-20T07:09:52.000Z" itemprop="dateLastModified">
+            2017-07-20
             </time>
         </div>
         <div class="copyright">
@@ -224,6 +221,7 @@ var _hmt = _hmt || [];
     </div>
         <h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><h3 id="1、三台机器，配置hosts，并确保java环境jdk1-7-0-72，scala环境scala-2-11-4"><a href="#1、三台机器，配置hosts，并确保java环境jdk1-7-0-72，scala环境scala-2-11-4" class="headerlink" title="1、三台机器，配置hosts，并确保java环境jdk1.7.0_72，scala环境scala-2.11.4"></a>1、三台机器，配置hosts，并确保java环境jdk1.7.0_72，scala环境scala-2.11.4</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">192.168.5.231   ubuntu231</div><div class="line">192.168.5.232   ubuntu232</div><div class="line">192.168.5.233   ubuntu233</div></pre></td></tr></table></figure>
 <h3 id="2、ubuntu231选择作为主节点Master"><a href="#2、ubuntu231选择作为主节点Master" class="headerlink" title="2、ubuntu231选择作为主节点Master"></a>2、ubuntu231选择作为主节点Master</h3><p>下载spark-1.3.1-bin-hadoop2.6安装包</p>
+<a id="more"></a>
 <h2 id="二、解压"><a href="#二、解压" class="headerlink" title="二、解压"></a>二、解压</h2><p>解压安装包到指定路径<br>这里的全路径是 /home/spark</p>
 <h2 id="三、ssh免密配置（已经配置过就不用再配置）"><a href="#三、ssh免密配置（已经配置过就不用再配置）" class="headerlink" title="三、ssh免密配置（已经配置过就不用再配置）"></a>三、ssh免密配置（已经配置过就不用再配置）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa</div><div class="line">$ ssh-copy-id -i ~/.ssh/id_rsa.pub 要免密码的机器的IP</div></pre></td></tr></table></figure>
 <h2 id="四、环境变量配置"><a href="#四、环境变量配置" class="headerlink" title="四、环境变量配置"></a>四、环境变量配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">spark@ubuntu231:~$ vi .profile </div><div class="line">export SCALA_HOME=/home/spark/scala-2.11.4</div><div class="line">export SPARK_HOME=/home/spark/spark-1.3.1-bin-hadoop2.6</div></pre></td></tr></table></figure>
@@ -500,6 +498,14 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">集群搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">base</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">skill</a>
               </li>
              
@@ -508,15 +514,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">base</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">集群搭建</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">安装</a>
+                <a href="javascript:void(0)" class="js-tag color4">View基础知识</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -528,7 +526,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">View基础知识</a>
+                <a href="javascript:void(0)" class="js-tag color3">安装</a>
               </li>
             
             <div class="clearfix"></div>
