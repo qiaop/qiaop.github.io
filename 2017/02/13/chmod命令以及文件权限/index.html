@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.codepeng.cn">
-  <title>Archives: 2017/1 | codepeng的blog</title>
+  <title>文件权限以及chmod命令使用 | codepeng的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="万军丛中取敌将首级，千万行里改关键代码">
-<meta property="og:type" content="website">
-<meta property="og:title" content="codepeng的blog">
-<meta property="og:url" content="http://www.codepeng.cn/archives/2017/01/index.html">
+  <meta name="description" content="在Linux系统或者OS X系统中我们对一个文件执行操作的时候经常会出现提示：
+Permission denied
+意思是没有权限执行这个操作。那首先我们看一下文件的权限">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文件权限以及chmod命令使用">
+<meta property="og:url" content="http://www.codepeng.cn/2017/02/13/chmod命令以及文件权限/index.html">
 <meta property="og:site_name" content="codepeng的blog">
-<meta property="og:description" content="万军丛中取敌将首级，千万行里改关键代码">
+<meta property="og:description" content="在Linux系统或者OS X系统中我们对一个文件执行操作的时候经常会出现提示：
+Permission denied
+意思是没有权限执行这个操作。那首先我们看一下文件的权限">
+<meta property="og:updated_time" content="2017-07-21T08:02:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="codepeng的blog">
-<meta name="twitter:description" content="万军丛中取敌将首级，千万行里改关键代码">
+<meta name="twitter:title" content="文件权限以及chmod命令使用">
+<meta name="twitter:description" content="在Linux系统或者OS X系统中我们对一个文件执行操作的时候经常会出现提示：
+Permission denied
+意思是没有权限执行这个操作。那首先我们看一下文件的权限">
   
     <link rel="alternative" href="/atom.xml" title="codepeng的blog" type="application/atom+xml">
   
@@ -179,465 +186,279 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-chmod命令以及文件权限" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      文件权限以及chmod命令使用
+    </h1>
+  
+
+        
+        <a href="/2017/02/13/chmod命令以及文件权限/" class="archive-article-date">
+  	<time datetime="2017-02-13T12:12:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-13</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+    <div class="article-moreinfo">
+        <div class="lastModifiedDate">
+            <span>最后更新：</span>
+            <time datetime="2017-07-21T08:02:44.000Z" itemprop="dateLastModified">
+            2017-07-21
+            </time>
+        </div>
+        <div class="copyright">
+            <span>许可协议：</span>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>
+        </div>
+    </div>
+        <p>在Linux系统或者OS X系统中我们对一个文件执行操作的时候经常会出现提示：</p>
+<pre><code>Permission denied
+</code></pre><p>意思是没有权限执行这个操作。<br>那首先我们看一下文件的权限</p>
+<a id="more"></a>
+<h2 id="文件的权限"><a href="#文件的权限" class="headerlink" title="文件的权限"></a>文件的权限</h2><h3 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h3><p>有三种不同类型的用户可对文件或目录进行访问：文件所有者，同组用户、其他用户。所有者一般是文件的创建者。所有者可以允许同组用户有权访问文件，还可以将文件的访问权限赋予系统中的其他用户。在这种情况下，系统中每一位用户都能访问该用户拥有的文件或目录。</p>
+<h3 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h3><p>每一文件或目录的访问权限都有三组，每组用三位表示，分别为文件属主的读、写和执行权限；与属主同组的用户的读、写和执行权限；系统中其他用户的读、写和执行权限。</p>
+<p>我们使用ls -l命令可以查看当前目录下所有文件的详细信息。</p>
+<pre><code>qiaopengdeMacBook-Air:python qiaopeng$ ls -l
+total 24
+-rwxr-xr-x  1 qiaopeng  staff  121  7 21 14:31 def.py
+-rwxr-xr-x  1 qiaopeng  staff   91  7 21 14:28 hanshu.py
+-rwxr-xr-x  1 qiaopeng  staff   67  7 18 17:24 helloworld.py
+</code></pre><p>以def.py为例，</p>
+<p>第一列共有10个位置，第一个字符指定了文件类型，在通常意义上，一个目录也是一个文件。如果第一个字符是横线，表示一个非目录的文件，如果是d，表示是一个目录。</p>
+<p>从第二个字符开始到第十个字符一共9个字符，3个字符为一组，分别表示了三组用户对文件或者母的权限。权限字符用横线表示空许可。r代表只读，w代表写，x代表可执行。</p>
+<p>例如：</p>
+<pre><code>-rwxr-xr-x
+</code></pre><p>表示def.py是一个普通文件，def.py的所有者有读写和执行的权限，与def.py所有者同组的用户有读和执行的权限，其他用户也有读和执行的权限。</p>
+<h2 id="chmod命令使用"><a href="#chmod命令使用" class="headerlink" title="chmod命令使用"></a>chmod命令使用</h2><h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><pre><code>chmod [-cfvR] [--help] [--version] mode file...
+</code></pre><h3 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h3><p>mode : 权限设定字串</p>
+<p>file : 目标文件</p>
+<p>其他参数说明：</p>
+<ul>
+<li>-c : 若该文件权限确实已经更改，才显示其更改动作</li>
+<li>-f : 若该文件权限无法被更改也不要显示错误讯息</li>
+<li>-v : 显示权限变更的详细资料</li>
+<li>-R : 对目前目录下的所有文件与子目录进行相同的权限变更(即以递回的方式逐个变更)</li>
+<li>–help : 显示辅助说明</li>
+<li>–version : 显示版本</li>
+</ul>
+<h3 id="文字设定法"><a href="#文字设定法" class="headerlink" title="文字设定法"></a>文字设定法</h3><pre><code>[ugoa...][[+-=][rwxX]...][,...]
+</code></pre><p>其中：</p>
+<ul>
+<li>u 表示该文件的拥有者</li>
+<li>g 表示与该文件的拥有者属于同一个群体(group)者</li>
+<li>o 表示其他以外的人</li>
+<li>a 表示这三者皆是。</li>
+<li>+ 表示增加权限、- 表示取消权限、= 表示唯一设定权限。</li>
+<li>r 表示可读取</li>
+<li>w 表示可写入</li>
+<li>x 表示可执行</li>
+<li>X 表示只有当该文件是个子目录或者该文件已经被设定过为可执行。</li>
+</ul>
+<p>实例：</p>
+<pre><code>chmod a+x def.py                
+</code></pre><p>文件属主（u） 增加执行权限；与文件属主同组用户（g） 增加执行权限；其他用户（o） 增加执行权限。</p>
+<h3 id="八进制语法"><a href="#八进制语法" class="headerlink" title="八进制语法"></a>八进制语法</h3><p>chmod的八进制语法的数字说明：</p>
+<pre><code>r 4
+w 2
+x 1
+- 0
+</code></pre><ul>
+<li>权限用数字表达：权限位的数字加起来的总和。如rwx ，也就是4+2+1 ，应该是7。<br>rw- ，也就是4+2+0 ，应该是6。<br>r-x ，也就是4+0+1 ，应该是5。</li>
+</ul>
+<p>例如修改文件def.py的权限:</p>
+<pre><code>$ chmod 664 def.py
+$ ls -l
+$ -rw-rw-r--  1 qiaopeng  staff  121  7 21 14:31 def.py
+</code></pre><h4 id="增加文件所有用户组可执行权限"><a href="#增加文件所有用户组可执行权限" class="headerlink" title="增加文件所有用户组可执行权限"></a>增加文件所有用户组可执行权限</h4><pre><code>$ chmod a+x def.py
+$ ls -l
+$ -rwxrwxr-x  1 qiaopeng  staff  121  7 21 14:31 def.py
+</code></pre><h4 id="删除文件权限"><a href="#删除文件权限" class="headerlink" title="删除文件权限"></a>删除文件权限</h4><pre><code>$ chmod a-x def.py
+$ ls -l
+$ -rw-rw-r--  1 qiaopeng  staff  121  7 21 14:31 def.py
+</code></pre><h4 id="同时修改不同用户权限"><a href="#同时修改不同用户权限" class="headerlink" title="同时修改不同用户权限"></a>同时修改不同用户权限</h4><pre><code>$ chmod u+x,g-x,o+w def.py
+$ ls -l
+$ -rwxrw-rw-  1 qiaopeng  staff  121  7 21 14:31 def.py
+</code></pre><h4 id="使用“-”设置权限"><a href="#使用“-”设置权限" class="headerlink" title="使用“=”设置权限"></a>使用“=”设置权限</h4><pre><code>$ chmod u=r def.py
+$ ls -l
+$ -r--rw-rw-  1 qiaopeng  staff  121  7 21 14:31 def.py
+</code></pre><p>给文件所有者（u）只设置可读权限。</p>
+<h4 id="R参数使用"><a href="#R参数使用" class="headerlink" title="-R参数使用"></a>-R参数使用</h4><pre><code>$ chmod u+x myfile
+$ ls -l
+$ -r-xrw-rw-  1 qiaopeng  staff  121  7 21 14:31 def.py
+$ -r-xr-xr-x  1 qiaopeng  staff   91  7 21 14:28 hanshu.py
+$ -rwxr-xr-x  1 qiaopeng  staff   67  7 18 17:24 helloworld.py
+</code></pre><p>给myfile目录下所有文件的文件所有者（u）增加可执行权限。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/pay/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/pay/wechatpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/18/Android设置drawableTop图片大小/" class="archive-article-date">
-  	<time datetime="2017-01-18T03:56:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/18/Android设置drawableTop图片大小/">Android设置drawableTop图片大小</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">skill</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">base</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
+        			<a href="/categories/base/" class="article-tag-list-link color5">base</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.codepeng.cn/2017/02/13/chmod命令以及文件权限/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/18/Android View动画之——Frame动画/" class="archive-article-date">
-  	<time datetime="2017-01-18T03:54:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-18</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/18/Android View动画之——Frame动画/">View动画之——Frame动画</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Android动画</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/18/Android View动画之——Tween动画/" class="archive-article-date">
-  	<time datetime="2017-01-18T03:53:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/18/Android View动画之——Tween动画/">View动画之——Tween动画</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Android动画</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/17/Android系统启动流程/" class="archive-article-date">
-  	<time datetime="2017-01-17T07:51:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/17/Android系统启动流程/">Android系统启动流程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">csdn</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/17/Android属性动画（三）——TypeEvaluator（估值器）和Interpolator（插值器）/" class="archive-article-date">
-  	<time datetime="2017-01-17T07:36:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/17/Android属性动画（三）——TypeEvaluator（估值器）和Interpolator（插值器）/">Android属性动画（三）——TypeEvaluator（估值器）和Interpolator（插值器）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">csdn</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/17/Android属性动画（二）——ValueAnimator/" class="archive-article-date">
-  	<time datetime="2017-01-17T07:32:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/17/Android属性动画（二）——ValueAnimator/">Android属性动画（二）——ValueAnimator</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">csdn</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/17/Android属性动画系列（一）——ObjectAnimator/" class="archive-article-date">
-  	<time datetime="2017-01-17T04:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/17/Android属性动画系列（一）——ObjectAnimator/">Android属性动画系列（一）——ObjectAnimator</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/16/Android TabLayout使用以及自定义TabLayout的item/" class="archive-article-date">
-  	<time datetime="2017-01-16T11:36:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/16/Android TabLayout使用以及自定义TabLayout的item/">TabLayout使用以及自定义TabLayout的item</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SupportDesign</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/14/2017年第一篇/" class="archive-article-date">
-  	<time datetime="2017-01-14T05:28:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/14/2017年第一篇/">2017年第一篇</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">life</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+    <a href="/2017/03/13/Android消息机制/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Android消息机制
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/01/18/Android设置drawableTop图片大小/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android设置drawableTop图片大小</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://www.codepeng.cn/2017/02/13/chmod命令以及文件权限/", 
+    sourceId: "chmod命令以及文件权限",
+    productKey: "7aaed2075387460c93e4293197dae8e5",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-    
+  
 
+  
 
           </div>
         </div>
@@ -659,8 +480,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
