@@ -6,24 +6,42 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.codepeng.cn">
-  <title>进程与线程的区别 | codepeng的blog</title>
+  <title>封装rxjava,retrofit,okhttp的Android网络基础框架 | codepeng的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="进程与线程的区别进程是资源分配的基本单位，线程是调度的基本单位
-进程进程是具有一定独立功能的程序，它是系统进行资源分配和调度的一个独立单位，重点在系统调度和单独的单位，也就是说进程是可以独立运行的一段程序。
-线程**线程进程的一个实体，是CPU调度和分派的基本单位，他是比进程更小的能独立运行的基本单位，线程自己基本上不拥有系统资源，但它可以访问隶属进程的资源。">
+  <meta name="description" content="封装rxjava,retrofit,okhttp的Android网络基础框架项目地址
+包含的功能
+主要使用okhttp进行网络通信，封装okhttp日志打印
+封装Cookie维持
+封装使用Gson作为默认数据解析转化器
+统一处理网络回调错误码
+封装线程切换，进行网络请求不必考虑线程问题
+封装ApiSubscriber，可设置是否显示ProgressDialog
+使用rxlifecycle2进行生命">
 <meta property="og:type" content="article">
-<meta property="og:title" content="进程与线程的区别">
-<meta property="og:url" content="http://www.codepeng.cn/2016/06/03/进程与线程的区别/index.html">
+<meta property="og:title" content="封装rxjava,retrofit,okhttp的Android网络基础框架">
+<meta property="og:url" content="http://www.codepeng.cn/2017/08/09/封装rxjava,retrofit,okhttp的Android网络基础框架/index.html">
 <meta property="og:site_name" content="codepeng的blog">
-<meta property="og:description" content="进程与线程的区别进程是资源分配的基本单位，线程是调度的基本单位
-进程进程是具有一定独立功能的程序，它是系统进行资源分配和调度的一个独立单位，重点在系统调度和单独的单位，也就是说进程是可以独立运行的一段程序。
-线程**线程进程的一个实体，是CPU调度和分派的基本单位，他是比进程更小的能独立运行的基本单位，线程自己基本上不拥有系统资源，但它可以访问隶属进程的资源。">
-<meta property="og:updated_time" content="2017-03-03T06:25:14.000Z">
+<meta property="og:description" content="封装rxjava,retrofit,okhttp的Android网络基础框架项目地址
+包含的功能
+主要使用okhttp进行网络通信，封装okhttp日志打印
+封装Cookie维持
+封装使用Gson作为默认数据解析转化器
+统一处理网络回调错误码
+封装线程切换，进行网络请求不必考虑线程问题
+封装ApiSubscriber，可设置是否显示ProgressDialog
+使用rxlifecycle2进行生命">
+<meta property="og:updated_time" content="2017-08-09T07:04:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="进程与线程的区别">
-<meta name="twitter:description" content="进程与线程的区别进程是资源分配的基本单位，线程是调度的基本单位
-进程进程是具有一定独立功能的程序，它是系统进行资源分配和调度的一个独立单位，重点在系统调度和单独的单位，也就是说进程是可以独立运行的一段程序。
-线程**线程进程的一个实体，是CPU调度和分派的基本单位，他是比进程更小的能独立运行的基本单位，线程自己基本上不拥有系统资源，但它可以访问隶属进程的资源。">
+<meta name="twitter:title" content="封装rxjava,retrofit,okhttp的Android网络基础框架">
+<meta name="twitter:description" content="封装rxjava,retrofit,okhttp的Android网络基础框架项目地址
+包含的功能
+主要使用okhttp进行网络通信，封装okhttp日志打印
+封装Cookie维持
+封装使用Gson作为默认数据解析转化器
+统一处理网络回调错误码
+封装线程切换，进行网络请求不必考虑线程问题
+封装ApiSubscriber，可设置是否显示ProgressDialog
+使用rxlifecycle2进行生命">
   
     <link rel="alternative" href="/atom.xml" title="codepeng的blog" type="application/atom+xml">
   
@@ -192,20 +210,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-进程与线程的区别" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-封装rxjava,retrofit,okhttp的Android网络基础框架" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      进程与线程的区别
+      封装rxjava,retrofit,okhttp的Android网络基础框架
     </h1>
   
 
         
-        <a href="/2016/06/03/进程与线程的区别/" class="archive-article-date">
-  	<time datetime="2016-06-03T12:16:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-03</time>
+        <a href="/2017/08/09/封装rxjava,retrofit,okhttp的Android网络基础框架/" class="archive-article-date">
+  	<time datetime="2017-08-09T06:49:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-09</time>
 </a>
         
       </header>
@@ -215,8 +233,8 @@ var _hmt = _hmt || [];
     <div class="article-moreinfo">
         <div class="lastModifiedDate">
             <span>最后更新：</span>
-            <time datetime="2017-03-03T06:25:14.000Z" itemprop="dateLastModified">
-            2017-03-03
+            <time datetime="2017-08-09T07:04:00.000Z" itemprop="dateLastModified">
+            2017-08-09
             </time>
         </div>
         <div class="copyright">
@@ -224,14 +242,31 @@ var _hmt = _hmt || [];
             <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>
         </div>
     </div>
-        <h2 id="进程与线程的区别"><a href="#进程与线程的区别" class="headerlink" title="进程与线程的区别"></a>进程与线程的区别</h2><p><strong>进程是资源分配的基本单位，线程是调度的基本单位</strong></p>
-<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><p>进程是具有一定独立功能的程序，它是<strong>系统进行资源分配和调度的一个独立单位</strong>，重点在系统调度和单独的单位，也就是说进程是可以独立运行的一段程序。</p>
-<h3 id="线程"><a href="#线程" class="headerlink" title="线程**"></a>线程**</h3><p>线程进程的一个实体，是<strong>CPU调度和分派的基本单位</strong>，他是比进程更小的能独立运行的基本单位，线程自己基本上不拥有系统资源，但它可以访问隶属进程的资源。</p>
+        <h2 id="封装rxjava-retrofit-okhttp的Android网络基础框架"><a href="#封装rxjava-retrofit-okhttp的Android网络基础框架" class="headerlink" title="封装rxjava,retrofit,okhttp的Android网络基础框架"></a>封装rxjava,retrofit,okhttp的Android网络基础框架</h2><p><a href="https://github.com/qiaop/basicapp" target="_blank" rel="external">项目地址</a></p>
+<h3 id="包含的功能"><a href="#包含的功能" class="headerlink" title="包含的功能"></a>包含的功能</h3><ul>
+<li>主要使用okhttp进行网络通信，封装okhttp日志打印</li>
+<li>封装Cookie维持</li>
+<li>封装使用Gson作为默认数据解析转化器</li>
+<li>统一处理网络回调错误码</li>
+<li>封装线程切换，进行网络请求不必考虑线程问题</li>
+<li>封装ApiSubscriber，可设置是否显示ProgressDialog</li>
+<li>使用rxlifecycle2进行生命周期的处理</li>
+</ul>
+<p>基本上满足开发的一般需求。</p>
 <a id="more"></a>
-<h3 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h3><h4 id="调度"><a href="#调度" class="headerlink" title="调度"></a>调度</h4><p>在引入线程的操作系统中，把线程作为CPU调度和分派的基本单位，进程则作为资源拥有的基本单位。这样可以显著地提高系统的并发性。同一进程中线程的切换不会引起进程切换，从而避免了昂贵的系统调用，但是由一个进程中的线程切换到另一进程中的线程时，依然会引起进程切换。</p>
-<h4 id="并发性"><a href="#并发性" class="headerlink" title="并发性"></a>并发性</h4><p>在引入线程的操作系统中，不仅进程之间可以并发执行，并且在一个进程中的多个线程之间也可以并发执行，因而使操作系统具有更好的并发性，从而能更有效地使用系统资源和提高系统的吞吐量。</p>
-<h4 id="拥有资源"><a href="#拥有资源" class="headerlink" title="拥有资源"></a>拥有资源</h4><p>进程是拥有系统资源的一个独立单位，它可以拥有自己的资源。一般地说，线程不拥有系统资源（也有一点必不可少的资源），但它可以访问其隶属进程的资源。亦即一个进程的代码段、数据段以及系统资源（如一打开的文件、I/O设备等），可供同一进程的其他线程共享。</p>
-<h4 id="系统开销"><a href="#系统开销" class="headerlink" title="系统开销"></a>系统开销</h4><p>由于在创建或撤销进程时，系统都要为之分配或回收资源，如内存空间、I/O设备等。因此，操作系统所付出的开销将显著地大于在创建或撤销线程时的开销。类似地，在进行进程切换时，涉及到整个当前进程CPU环境的保存环境的设置以及新被调度运行进程的CPU环境的设置。而切换线程只需保存和设置少量寄存器的内容，并不涉及存储器管理方面的操作。可见，进程切换的开销也远大于线程切换的开销。此外，同一进程中的多个线程具有相同的地址空间，致使它们之间的同步和通信的实现也变得比较同意。在有的系统中，线程的切换、同步和通信都无需操作系统内核的干预。</p>
+<h3 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h3><p>ApiService<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ApiService</span> </span>&#123;</div><div class="line">    </div><div class="line">    <span class="meta">@GET</span>(<span class="string">"query"</span>)</div><div class="line">    Observable&lt;Result&lt;List&lt;Message&gt;&gt;&gt; getMessage(<span class="meta">@Query</span>(<span class="string">"type"</span>) String type, <span class="meta">@Query</span>(<span class="string">"postid"</span>) String postid);</div><div class="line">	&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">RxAppCompatActivity</span> </span>&#123;</div><div class="line"></div><div class="line">    Button button;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">        button = (Button) findViewById(R.id.button2);</div><div class="line">        </div><div class="line">        RetrofitHelper.creatApi(ApiService.class).getMessage(<span class="string">"yuantong"</span>,<span class="string">"200382770316"</span>)</div><div class="line">                .compose(MainActivity.<span class="keyword">this</span>.&lt;Result&lt;List&lt;Message&gt;&gt;&gt;bindUntilEvent(ActivityEvent.DESTROY))</div><div class="line">                .compose(SchedulerTransformer.&lt;Result&lt;List&lt;Message&gt;&gt;&gt;transformer())</div><div class="line">                .map(<span class="keyword">new</span> ServerResponseFun&lt;List&lt;Message&gt;&gt;())</div><div class="line">                .onErrorResumeNext(<span class="keyword">new</span> HttpResponseFunc&lt;List&lt;Message&gt;&gt;())</div><div class="line">                .subscribe(<span class="keyword">new</span> ApiSubscriber&lt;List&lt;Message&gt;&gt;(MainActivity.<span class="keyword">this</span>,<span class="keyword">true</span>,<span class="keyword">false</span>) &#123;</div><div class="line">                    <span class="meta">@Override</span></div><div class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(@NonNull List&lt;Message&gt; messages)</span> </span>&#123;</div><div class="line">                        button.setText(messages.toString());</div><div class="line">                    &#125;</div><div class="line">                &#125;);</div><div class="line"></div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h4><p><code>compose(MainActivity.this.&lt;Result&lt;List&lt;Message&gt;&gt;&gt;bindUntilEvent(ActivityEvent.DESTROY))</code><br>生命周期的处理，Destory时停止网络请求</p>
+<p><code>compose(SchedulerTransformer.&lt;Result&lt;List&lt;Message&gt;&gt;&gt;transformer())</code><br>线程切换，子线程进行网络请求，主线程处理请求结果</p>
+<p><code>map(new ServerResponseFun&lt;List&lt;Message&gt;&gt;())</code><br>服务器返回码处理，如果不等于200进行错误处理</p>
+<p><code>onErrorResumeNext(new HttpResponseFunc&lt;List&lt;Message&gt;&gt;())</code><br>http请求错误统一处理</p>
+<h4 id="ApiSubscriber"><a href="#ApiSubscriber" class="headerlink" title="ApiSubscriber"></a>ApiSubscriber</h4><p>ApiSubscriber对网络请求时需要弹出ProgressDialog和请求错误时弹出Toast进行了封装。</p>
+<ul>
+<li>可以设置是否显示dialog</li>
+<li>可以设置是否可以取消</li>
+<li>可以设置ProgressDialog提示语</li>
+<li>可以自定义ProgressDialog</li>
+</ul>
 
       
 
@@ -271,13 +306,36 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">rxjava</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">retrofit</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">okhttp</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Java/" class="article-tag-list-link color5">Java</a>
+        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
         		</li>
       		
 		</ul>
@@ -332,7 +390,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.codepeng.cn/2016/06/03/进程与线程的区别/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.codepeng.cn/2017/08/09/封装rxjava,retrofit,okhttp的Android网络基础框架/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -346,18 +404,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/01/14/2017年第一篇/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          2017年第一篇
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/03/31/Sparka安装部署/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Spark集群搭建</div>
+    <a href="/2017/08/07/python爬虫入门实战/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python爬虫入门实战</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -373,8 +422,8 @@ var _hmt = _hmt || [];
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://www.codepeng.cn/2016/06/03/进程与线程的区别/", 
-    sourceId: "进程与线程的区别",
+    url: "http://www.codepeng.cn/2017/08/09/封装rxjava,retrofit,okhttp的Android网络基础框架/", 
+    sourceId: "封装rxjava,retrofit,okhttp的Android网络基础框架",
     productKey: "7aaed2075387460c93e4293197dae8e5",
     target: "cloud-tie-wrapper"
   };
