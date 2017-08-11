@@ -8,7 +8,7 @@
   <link rel="dns-prefetch" href="http://www.codepeng.cn">
   <title>封装rxjava,retrofit,okhttp的Android网络基础框架 | codepeng的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="封装rxjava,retrofit,okhttp的Android网络基础框架项目地址
+  <meta name="description" content="项目地址
 包含的功能
 主要使用okhttp进行网络通信，封装okhttp日志打印
 封装Cookie维持
@@ -16,12 +16,14 @@
 统一处理网络回调错误码
 封装线程切换，进行网络请求不必考虑线程问题
 封装ApiSubscriber，可设置是否显示ProgressDialog
-使用rxlifecycle2进行生命">
+使用rxlifecycle2进行生命周期的处理
+
+基本上满足开发的一般需求。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="封装rxjava,retrofit,okhttp的Android网络基础框架">
 <meta property="og:url" content="http://www.codepeng.cn/2017/08/09/封装rxjava,retrofit,okhttp的Android网络基础框架/index.html">
 <meta property="og:site_name" content="codepeng的blog">
-<meta property="og:description" content="封装rxjava,retrofit,okhttp的Android网络基础框架项目地址
+<meta property="og:description" content="项目地址
 包含的功能
 主要使用okhttp进行网络通信，封装okhttp日志打印
 封装Cookie维持
@@ -29,11 +31,13 @@
 统一处理网络回调错误码
 封装线程切换，进行网络请求不必考虑线程问题
 封装ApiSubscriber，可设置是否显示ProgressDialog
-使用rxlifecycle2进行生命">
-<meta property="og:updated_time" content="2017-08-09T07:04:00.000Z">
+使用rxlifecycle2进行生命周期的处理
+
+基本上满足开发的一般需求。">
+<meta property="og:updated_time" content="2017-08-11T08:32:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="封装rxjava,retrofit,okhttp的Android网络基础框架">
-<meta name="twitter:description" content="封装rxjava,retrofit,okhttp的Android网络基础框架项目地址
+<meta name="twitter:description" content="项目地址
 包含的功能
 主要使用okhttp进行网络通信，封装okhttp日志打印
 封装Cookie维持
@@ -41,7 +45,9 @@
 统一处理网络回调错误码
 封装线程切换，进行网络请求不必考虑线程问题
 封装ApiSubscriber，可设置是否显示ProgressDialog
-使用rxlifecycle2进行生命">
+使用rxlifecycle2进行生命周期的处理
+
+基本上满足开发的一般需求。">
   
     <link rel="alternative" href="/atom.xml" title="codepeng的blog" type="application/atom+xml">
   
@@ -233,8 +239,8 @@ var _hmt = _hmt || [];
     <div class="article-moreinfo">
         <div class="lastModifiedDate">
             <span>最后更新：</span>
-            <time datetime="2017-08-09T07:04:00.000Z" itemprop="dateLastModified">
-            2017-08-09
+            <time datetime="2017-08-11T08:32:36.000Z" itemprop="dateLastModified">
+            2017-08-11
             </time>
         </div>
         <div class="copyright">
@@ -242,7 +248,7 @@ var _hmt = _hmt || [];
             <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>
         </div>
     </div>
-        <h2 id="封装rxjava-retrofit-okhttp的Android网络基础框架"><a href="#封装rxjava-retrofit-okhttp的Android网络基础框架" class="headerlink" title="封装rxjava,retrofit,okhttp的Android网络基础框架"></a>封装rxjava,retrofit,okhttp的Android网络基础框架</h2><p><a href="https://github.com/qiaop/basicapp" target="_blank" rel="external">项目地址</a></p>
+        <p><a href="https://github.com/qiaop/basicapp" target="_blank" rel="external">项目地址</a></p>
 <h3 id="包含的功能"><a href="#包含的功能" class="headerlink" title="包含的功能"></a>包含的功能</h3><ul>
 <li>主要使用okhttp进行网络通信，封装okhttp日志打印</li>
 <li>封装Cookie维持</li>
@@ -404,6 +410,15 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
+    <a href="/2017/08/11/Android Architecture Components 1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Android Architecture Components 详解(一)Handling Lifecycles
+        
+      </div>
+    </a>
+  
   
     <a href="/2017/08/07/python爬虫入门实战/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">python爬虫入门实战</div>
@@ -516,19 +531,27 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SupportDesign</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Android</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">life</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Architecture</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SupportDesign</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Android动画</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -540,11 +563,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">base</a>
+                <a href="javascript:void(0)" class="js-tag color1">skill</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">skill</a>
+                <a href="javascript:void(0)" class="js-tag color5">base</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -557,10 +580,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Mac OS X</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
               </li>
              
               <li class="article-tag-list-item">

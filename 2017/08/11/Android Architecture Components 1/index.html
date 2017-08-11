@@ -6,24 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.codepeng.cn">
-  <title>文件权限以及chmod命令使用 | codepeng的blog</title>
+  <title>Android Architecture Components 详解(一)Handling Lifecycles | codepeng的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在Linux系统或者OS X系统中我们对一个文件执行操作的时候经常会出现提示：
-Permission denied
-意思是没有权限执行这个操作。那首先我们看一下文件的权限">
+  <meta name="description" content="Adding Components to your Project
+注意：架构组件目前仍然是alpha版本。 在1.0版本之前可能有更改。架构组件可从Google的Maven存储库获得。 要使用它们，请按照下列步骤操作：
+
+添加Google Maven repository默认情况下，Android Studio项目未配置为访问此存储库。
+要将其添加到项目中，请打开项目的build.gradle文">
 <meta property="og:type" content="article">
-<meta property="og:title" content="文件权限以及chmod命令使用">
-<meta property="og:url" content="http://www.codepeng.cn/2017/02/13/chmod命令以及文件权限/index.html">
+<meta property="og:title" content="Android Architecture Components 详解(一)Handling Lifecycles">
+<meta property="og:url" content="http://www.codepeng.cn/2017/08/11/Android Architecture Components 1/index.html">
 <meta property="og:site_name" content="codepeng的blog">
-<meta property="og:description" content="在Linux系统或者OS X系统中我们对一个文件执行操作的时候经常会出现提示：
-Permission denied
-意思是没有权限执行这个操作。那首先我们看一下文件的权限">
-<meta property="og:updated_time" content="2017-07-21T08:02:44.000Z">
+<meta property="og:description" content="Adding Components to your Project
+注意：架构组件目前仍然是alpha版本。 在1.0版本之前可能有更改。架构组件可从Google的Maven存储库获得。 要使用它们，请按照下列步骤操作：
+
+添加Google Maven repository默认情况下，Android Studio项目未配置为访问此存储库。
+要将其添加到项目中，请打开项目的build.gradle文">
+<meta property="og:image" content="http://www.codepeng.cn/images/post/android/lifecycle-states.png">
+<meta property="og:updated_time" content="2017-08-11T08:32:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文件权限以及chmod命令使用">
-<meta name="twitter:description" content="在Linux系统或者OS X系统中我们对一个文件执行操作的时候经常会出现提示：
-Permission denied
-意思是没有权限执行这个操作。那首先我们看一下文件的权限">
+<meta name="twitter:title" content="Android Architecture Components 详解(一)Handling Lifecycles">
+<meta name="twitter:description" content="Adding Components to your Project
+注意：架构组件目前仍然是alpha版本。 在1.0版本之前可能有更改。架构组件可从Google的Maven存储库获得。 要使用它们，请按照下列步骤操作：
+
+添加Google Maven repository默认情况下，Android Studio项目未配置为访问此存储库。
+要将其添加到项目中，请打开项目的build.gradle文">
+<meta name="twitter:image" content="http://www.codepeng.cn/images/post/android/lifecycle-states.png">
   
     <link rel="alternative" href="/atom.xml" title="codepeng的blog" type="application/atom+xml">
   
@@ -192,20 +200,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-chmod命令以及文件权限" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Android Architecture Components 1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      文件权限以及chmod命令使用
+      Android Architecture Components 详解(一)Handling Lifecycles
     </h1>
   
 
         
-        <a href="/2017/02/13/chmod命令以及文件权限/" class="archive-article-date">
-  	<time datetime="2017-02-13T12:12:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-13</time>
+        <a href="/2017/08/11/Android Architecture Components 1/" class="archive-article-date">
+  	<time datetime="2017-08-11T06:49:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-11</time>
 </a>
         
       </header>
@@ -215,8 +223,8 @@ var _hmt = _hmt || [];
     <div class="article-moreinfo">
         <div class="lastModifiedDate">
             <span>最后更新：</span>
-            <time datetime="2017-07-21T08:02:44.000Z" itemprop="dateLastModified">
-            2017-07-21
+            <time datetime="2017-08-11T08:32:10.000Z" itemprop="dateLastModified">
+            2017-08-11
             </time>
         </div>
         <div class="copyright">
@@ -224,83 +232,89 @@ var _hmt = _hmt || [];
             <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>
         </div>
     </div>
-        <p>在Linux系统或者OS X系统中我们对一个文件执行操作的时候经常会出现提示：</p>
-<pre><code>Permission denied
-</code></pre><p>意思是没有权限执行这个操作。<br>那首先我们看一下文件的权限</p>
+        <h1 id="Adding-Components-to-your-Project"><a href="#Adding-Components-to-your-Project" class="headerlink" title="Adding Components to your Project"></a>Adding Components to your Project</h1><blockquote>
+<p>注意：架构组件目前仍然是alpha版本。 在1.0版本之前可能有更改。<br>架构组件可从Google的Maven存储库获得。 要使用它们，请按照下列步骤操作：</p>
+</blockquote>
+<h2 id="添加Google-Maven-repository"><a href="#添加Google-Maven-repository" class="headerlink" title="添加Google Maven repository"></a>添加Google Maven repository</h2><p>默认情况下，Android Studio项目未配置为访问此存储库。</p>
+<p>要将其添加到项目中，请打开项目的build.gradle文件（而不是您的应用程序或模块的文件），并添加突出显示的行，如下所示：</p>
+<pre><code>allprojects {
+    repositories {
+        jcenter()
+        maven { url &apos;https://maven.google.com&apos; }
+    }
+}
+</code></pre><h2 id="添加Architecture-Components"><a href="#添加Architecture-Components" class="headerlink" title="添加Architecture Components"></a>添加Architecture Components</h2><p>打开您的应用程序或模块的<code>build.gradle</code>文件，并将所需的组件添加为依赖关系：</p>
+<ul>
+<li>使用Lifecycles, LiveData, 和 ViewModel添加：<ul>
+<li>compile “android.arch.lifecycle:runtime:1.0.0-alpha5”</li>
+<li>compile “android.arch.lifecycle:extensions:1.0.0-alpha5”</li>
+<li>annotationProcessor “android.arch.lifecycle:compiler:1.0.0-alpha5”</li>
+</ul>
+</li>
+<li>使用 Room，添加：<ul>
+<li>compile “android.arch.persistence.room:runtime:1.0.0-alpha5”</li>
+<li>annotationProcessor “android.arch.persistence.room:compiler:1.0.0-alpha5”</li>
+<li>使用 testing Room migrations，添加：<ul>
+<li>testCompile “android.arch.persistence.room:testing:1.0.0-alpha5”</li>
+</ul>
+</li>
+<li>使用  Room RxJava support，添加：<ul>
+<li>compile “android.arch.persistence.room:rxjava2:1.0.0-alpha5”</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="Handling-Lifecycles"><a href="#Handling-Lifecycles" class="headerlink" title="Handling Lifecycles"></a>Handling Lifecycles</h1><p><a href="https://developer.android.com/topic/libraries/architecture/lifecycle.html" target="_blank" rel="external">原文地址</a>需要翻墙</p>
+<p>android.arch.lifecycle包提供了类和接口，可以让您构建生命周期感知组件，这些组件可以根据Activity或Fragment的当前生命周期自动调整其行为。</p>
+<blockquote>
+<p>注意：要将android.arch.lifecycle导入到您的Android项目中，请参阅Adding Components to your Project</p>
+</blockquote>
 <a id="more"></a>
-<h2 id="文件的权限"><a href="#文件的权限" class="headerlink" title="文件的权限"></a>文件的权限</h2><h3 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h3><p>有三种不同类型的用户可对文件或目录进行访问：文件所有者，同组用户、其他用户。所有者一般是文件的创建者。所有者可以允许同组用户有权访问文件，还可以将文件的访问权限赋予系统中的其他用户。在这种情况下，系统中每一位用户都能访问该用户拥有的文件或目录。</p>
-<h3 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h3><p>每一文件或目录的访问权限都有三组，每组用三位表示，分别为文件属主的读、写和执行权限；与属主同组的用户的读、写和执行权限；系统中其他用户的读、写和执行权限。</p>
-<p>我们使用ls -l命令可以查看当前目录下所有文件的详细信息。</p>
-<pre><code>qiaopengdeMacBook-Air:python qiaopeng$ ls -l
-total 24
--rwxr-xr-x  1 qiaopeng  staff  121  7 21 14:31 def.py
--rwxr-xr-x  1 qiaopeng  staff   91  7 21 14:28 hanshu.py
--rwxr-xr-x  1 qiaopeng  staff   67  7 18 17:24 helloworld.py
-</code></pre><p>以def.py为例，</p>
-<p>第一列共有10个位置，第一个字符指定了文件类型，在通常意义上，一个目录也是一个文件。如果第一个字符是横线，表示一个非目录的文件，如果是d，表示是一个目录。</p>
-<p>从第二个字符开始到第十个字符一共9个字符，3个字符为一组，分别表示了三组用户对文件或者母的权限。权限字符用横线表示空许可。r代表只读，w代表写，x代表可执行。</p>
-<p>例如：</p>
-<pre><code>-rwxr-xr-x
-</code></pre><p>表示def.py是一个普通文件，def.py的所有者有读写和执行的权限，与def.py所有者同组的用户有读和执行的权限，其他用户也有读和执行的权限。</p>
-<h2 id="chmod命令使用"><a href="#chmod命令使用" class="headerlink" title="chmod命令使用"></a>chmod命令使用</h2><h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><pre><code>chmod [-cfvR] [--help] [--version] mode file...
-</code></pre><h3 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h3><p>mode : 权限设定字串</p>
-<p>file : 目标文件</p>
-<p>其他参数说明：</p>
-<ul>
-<li>-c : 若该文件权限确实已经更改，才显示其更改动作</li>
-<li>-f : 若该文件权限无法被更改也不要显示错误讯息</li>
-<li>-v : 显示权限变更的详细资料</li>
-<li>-R : 对目前目录下的所有文件与子目录进行相同的权限变更(即以递回的方式逐个变更)</li>
-<li>–help : 显示辅助说明</li>
-<li>–version : 显示版本</li>
+<p>Android Framework中定义的大多数应用程序组件都附有生命周期。 这些生命周期由您的进程中运行的操作系统或框架代码进行管理。 它们是Android如何工作的核心，您的应用程序必须尊重它们。 不这样做可能会触发内存泄漏甚至应用程序崩溃。</p>
+<p>想象一下，我们有一个Activity，显示屏幕上的设备位置。 常见的实现可能如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyLocationListener</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyLocationListener</span><span class="params">(Context context, Callback callback)</span> </span>&#123;</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">start</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">// connect to system location service</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">stop</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">// disconnect from system location service</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> MyLocationListener myLocationListener;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(...)</span> </span>&#123;</div><div class="line">        myLocationListener = <span class="keyword">new</span> MyLocationListener(<span class="keyword">this</span>, (location) -&gt; &#123;</div><div class="line">            <span class="comment">// update UI</span></div><div class="line">        &#125;);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onStart</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onStart();</div><div class="line">        myLocationListener.start();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onStop</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onStop();</div><div class="line">        myLocationListener.stop();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>即使这个示例看起来不错，在一个真实的应用程序中，最终会遇到这样太多的调用，而<code>onStart（）</code>和<code>onStop（）</code>方法变得非常大。</p>
+<p>此外，一些组件不能仅仅在<code>onStart（）</code>中启动。 如果我们需要在启动位置观察器之前检查一些配置怎么办？ 在某些情况下，可以在Activity Stop后检查完成，这意味着<code>myLocationListener.start（）</code>在调用<code>myLocationListener.stop（）</code>之后调用，会导致一直保持连接。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> MyLocationListener myLocationListener;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(...)</span> </span>&#123;</div><div class="line">        myLocationListener = <span class="keyword">new</span> MyLocationListener(<span class="keyword">this</span>, location -&gt; &#123;</div><div class="line">            <span class="comment">// update UI</span></div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onStart</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onStart();</div><div class="line">        Util.checkUserStatus(result -&gt; &#123;</div><div class="line">            <span class="comment">// what if this callback is invoked AFTER activity is stopped?</span></div><div class="line">            <span class="keyword">if</span> (result) &#123;</div><div class="line">                myLocationListener.start();</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onStop</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onStop();</div><div class="line">        myLocationListener.stop();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>android.arch.lifecycle</code>包提供了类和接口，帮助您以弹性和隔离的方式解决这些问题。</p>
+<h2 id="Lifecycle"><a href="#Lifecycle" class="headerlink" title="Lifecycle"></a>Lifecycle</h2><p><code>Lifecycle</code>是一个类，它保存有关组件生命周期状态的信息（如Activity或Fragment），并允许其他对象观察此状态。</p>
+<p><code>Lifecycle</code>使用两个主要枚举来跟踪其关联组件的生命周期状态。</p>
+<p>Event</p>
+<p><em>　　</em>从Framwork和<code>Lifecycle</code>类分发的生命周期事件。 这些事件映射到Activity和Fragment中的回调事件。</p>
+<p>State</p>
+<p><em>　　</em>由Lifecycle对象跟踪的组件的当前状态。</p>
+<p><img src="/images/post/android/lifecycle-states.png" alt=""></p>
+<p>将状态视为图形和事件的节点作为这些节点之间的边缘。</p>
+<p>类可以通过向其方法添加注解来监视组件的生命周期状态。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyObserver</span> <span class="keyword">implements</span> <span class="title">LifecycleObserver</span> </span>&#123;</div><div class="line">    <span class="meta">@OnLifecycleEvent</span>(Lifecycle.Event.ON_RESUME)</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResume</span><span class="params">()</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@OnLifecycleEvent</span>(Lifecycle.Event.ON_PAUSE)</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onPause</span><span class="params">()</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">aLifecycleOwner.getLifecycle().addObserver(<span class="keyword">new</span> MyObserver());</div></pre></td></tr></table></figure>
+<h2 id="LifecycleOwner"><a href="#LifecycleOwner" class="headerlink" title="LifecycleOwner"></a>LifecycleOwner</h2><p>LifecycleOwner是一个单一的方法接口，表示该类有一个Lifecycle。 它有一个方法，getLifecycle（），它必须由类实现。</p>
+<p>此类从各个类（例如，Activity和Fragment）抽象Lifecycle的所有权，并允许编写可与两者兼容的组件。 任何自定义应用程序类都可以实现LifecycleOwner接口。</p>
+<blockquote>
+<p>注意：由于架构组件处于Alpha阶段，因此Fragment和AppCompatActivity类无法实现（因为我们无法将稳定组件的依赖关系添加到不稳定的API）。 在Lifecycle稳定之前，为了方便起见，提供了LifecycleActivity和LifecycleFragment类。 Lifecycle项目发布后，支持库Fragment和Activity将实现LifecycleOwner接口; 届时将不推荐使用LifecycleActivity和LifecycleFragment。 另请参阅在自定义Activity和Fragment中实现LifecycleOwner。</p>
+</blockquote>
+<p>对于上面的示例，我们可以使MyLocationListener类成为<code>LifecycleObserver</code>，然后使用onCreate中的<code>Lifecycle</code>来初始化它。 这允许MyLocationListener类自给自足，这意味着它可以在必要时进行自己的清理。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyActivity</span> <span class="keyword">extends</span> <span class="title">LifecycleActivity</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> MyLocationListener myLocationListener;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(...)</span> </span>&#123;</div><div class="line">        myLocationListener = <span class="keyword">new</span> MyLocationListener(<span class="keyword">this</span>, getLifecycle(), location -&gt; &#123;</div><div class="line">            <span class="comment">// update UI</span></div><div class="line">        &#125;);</div><div class="line">        Util.checkUserStatus(result -&gt; &#123;</div><div class="line">            <span class="keyword">if</span> (result) &#123;</div><div class="line">                myLocationListener.enable();</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>一个常见的用例是避免在Lifecycle目前处于不良状态时调用某些回调。 例如，如果在Activity state is saved后回调运行fragment transaction，则会触发崩溃，因此我们永远不会想要调用该回调。</p>
+<p>为了简化此用例，Lifecycle类允许其他对象查询当前状态。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyLocationListener</span> <span class="keyword">implements</span> <span class="title">LifecycleObserver</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> enabled = <span class="keyword">false</span>;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyLocationListener</span><span class="params">(Context context, Lifecycle lifecycle, Callback callback)</span> </span>&#123;</div><div class="line">       ...</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@OnLifecycleEvent</span>(Lifecycle.Event.ON_START)</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">start</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (enabled) &#123;</div><div class="line">           <span class="comment">// connect</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">enable</span><span class="params">()</span> </span>&#123;</div><div class="line">        enabled = <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">if</span> (lifecycle.getState().isAtLeast(STARTED)) &#123;</div><div class="line">            <span class="comment">// connect if not connected</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@OnLifecycleEvent</span>(Lifecycle.Event.ON_STOP)</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">stop</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">// disconnect if connected</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>通过这种实现，我们的LocationListener类是完全生命周期感知的; 它可以进行自己的初始化和清理，而不受该活动的管理。 如果我们需要从另一个活动或另一个片段使用我们的LocationListener，我们只需要初始化它。 所有的设置和拆卸操作都由类本身管理。</p>
+<p>可以与Lifecycle一起工作的类称为生命周期感知(lifecycle-aware)组件。 鼓励提供需要使用Android生命周期的类的库提供生命周期感知(lifecycle-aware)组件，以便客户端可以轻松地在客户端上集成这些类，而无需手动生命周期管理。</p>
+<p><code>LiveData</code>是生命周期感知组件的示例。 与<code>ViewModel</code>一起使用<code>LiveData</code>可以在遵循Android生命周期的情况下，更容易地使用数据填充UI。</p>
+<h2 id="Lifecycles最佳用法"><a href="#Lifecycles最佳用法" class="headerlink" title="Lifecycles最佳用法"></a>Lifecycles最佳用法</h2><ul>
+<li>保持您的UI Controller（Activity和Fragment）尽可能瘦。 他们不应该试图获取自己的数据; 而是使用<code>ViewModel</code>来执行此操作，并观察<code>LiveData</code>以将更改反映到视图中。</li>
+<li>尝试编写（data-driven）数据驱动的UI，您的UI控制器的责任是在数据更改时更新视图，或将用户操作通知给ViewModel。</li>
+<li>将您的数据逻辑放在<code>ViewModel</code>类中。 <code>ViewModel</code>应该用作UI控制器和其他应用程序之间的连接器。 请注意，<code>ViewModel</code>不是提取数据（例如，从网络）的责任。 相反，<code>ViewModel</code>应该调用相应的组件来执行此操作，然后将结果提供给UI控制器。</li>
+<li>使用 Data Binding来保持视图和UI控制器之间的clean interface。 这样可以让您的视图更具声明性，并尽可能减少您在Activity和Fragment中编写的更新代码。 如果您更喜欢在Java中执行此操作，请使用像ButterKnife这样的库来避免使用样板代码并进行更好的抽象。</li>
+<li>如果您的UI很复杂，请考虑创建一个Presenter类来处理UI修改。 这通常是过度的，但可能会使您的UI更容易测试。</li>
+<li>不要在ViewModel中引用View或Activity上下文。 如果ViewModel超过Activity（在配置更改的情况下），您的Activity将被泄漏，而不是正确的垃圾回收。</li>
 </ul>
-<h3 id="文字设定法"><a href="#文字设定法" class="headerlink" title="文字设定法"></a>文字设定法</h3><pre><code>[ugoa...][[+-=][rwxX]...][,...]
-</code></pre><p>其中：</p>
-<ul>
-<li>u 表示该文件的拥有者</li>
-<li>g 表示与该文件的拥有者属于同一个群体(group)者</li>
-<li>o 表示其他以外的人</li>
-<li>a 表示这三者皆是。</li>
-<li>+ 表示增加权限、- 表示取消权限、= 表示唯一设定权限。</li>
-<li>r 表示可读取</li>
-<li>w 表示可写入</li>
-<li>x 表示可执行</li>
-<li>X 表示只有当该文件是个子目录或者该文件已经被设定过为可执行。</li>
-</ul>
-<p>实例：</p>
-<pre><code>chmod a+x def.py                
-</code></pre><p>文件属主（u） 增加执行权限；与文件属主同组用户（g） 增加执行权限；其他用户（o） 增加执行权限。</p>
-<h3 id="八进制语法"><a href="#八进制语法" class="headerlink" title="八进制语法"></a>八进制语法</h3><p>chmod的八进制语法的数字说明：</p>
-<pre><code>r 4
-w 2
-x 1
-- 0
-</code></pre><ul>
-<li>权限用数字表达：权限位的数字加起来的总和。如rwx ，也就是4+2+1 ，应该是7。<br>rw- ，也就是4+2+0 ，应该是6。<br>r-x ，也就是4+0+1 ，应该是5。</li>
-</ul>
-<p>例如修改文件def.py的权限:</p>
-<pre><code>$ chmod 664 def.py
-$ ls -l
-$ -rw-rw-r--  1 qiaopeng  staff  121  7 21 14:31 def.py
-</code></pre><h4 id="增加文件所有用户组可执行权限"><a href="#增加文件所有用户组可执行权限" class="headerlink" title="增加文件所有用户组可执行权限"></a>增加文件所有用户组可执行权限</h4><pre><code>$ chmod a+x def.py
-$ ls -l
-$ -rwxrwxr-x  1 qiaopeng  staff  121  7 21 14:31 def.py
-</code></pre><h4 id="删除文件权限"><a href="#删除文件权限" class="headerlink" title="删除文件权限"></a>删除文件权限</h4><pre><code>$ chmod a-x def.py
-$ ls -l
-$ -rw-rw-r--  1 qiaopeng  staff  121  7 21 14:31 def.py
-</code></pre><h4 id="同时修改不同用户权限"><a href="#同时修改不同用户权限" class="headerlink" title="同时修改不同用户权限"></a>同时修改不同用户权限</h4><pre><code>$ chmod u+x,g-x,o+w def.py
-$ ls -l
-$ -rwxrw-rw-  1 qiaopeng  staff  121  7 21 14:31 def.py
-</code></pre><h4 id="使用“-”设置权限"><a href="#使用“-”设置权限" class="headerlink" title="使用“=”设置权限"></a>使用“=”设置权限</h4><pre><code>$ chmod u=r def.py
-$ ls -l
-$ -r--rw-rw-  1 qiaopeng  staff  121  7 21 14:31 def.py
-</code></pre><p>给文件所有者（u）只设置可读权限。</p>
-<h4 id="R参数使用"><a href="#R参数使用" class="headerlink" title="-R参数使用"></a>-R参数使用</h4><pre><code>$ chmod u+x myfile
-$ ls -l
-$ -r-xrw-rw-  1 qiaopeng  staff  121  7 21 14:31 def.py
-$ -r-xr-xr-x  1 qiaopeng  staff   91  7 21 14:28 hanshu.py
-$ -rwxr-xr-x  1 qiaopeng  staff   67  7 18 17:24 helloworld.py
-</code></pre><p>给myfile目录下所有文件的文件所有者（u）增加可执行权限。</p>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="在自定义Activity和Fragment中实现LifecycleOwner"><a href="#在自定义Activity和Fragment中实现LifecycleOwner" class="headerlink" title="在自定义Activity和Fragment中实现LifecycleOwner"></a>在自定义Activity和Fragment中实现LifecycleOwner</h3><p>任何自定义Fragment或Activity都可以通过实现内置的LifecycleRegistryOwner接口（而不是扩展LifecycleFragment或LifecycleActivity）来转换为LifecycleOwner。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyFragment</span> <span class="keyword">extends</span> <span class="title">Fragment</span> <span class="keyword">implements</span> <span class="title">LifecycleRegistryOwner</span> </span>&#123;</div><div class="line">    LifecycleRegistry lifecycleRegistry = <span class="keyword">new</span> LifecycleRegistry(<span class="keyword">this</span>);</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> LifecycleRegistry <span class="title">getLifecycle</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> lifecycleRegistry;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果您有一个要创建LifecycleOwner的自定义类，则可以使用LifecycleRegistry类，但是您需要将事件转发到该类中。 如果Fragment和Activity实现了LifecycleRegistryOwner接口，则此转发将自动完成。</p>
+<hr>
+
+<p>下期Android Architecture Components 详解(二)LiveData</p>
 
       
 
@@ -345,7 +359,11 @@ $ -rwxr-xr-x  1 qiaopeng  staff   67  7 18 17:24 helloworld.py
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">base</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Architecture</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
         		</li>
       		
 		</ul>
@@ -357,7 +375,7 @@ $ -rwxr-xr-x  1 qiaopeng  staff   67  7 18 17:24 helloworld.py
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/base/" class="article-tag-list-link color5">base</a>
+        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
         		</li>
       		
 		</ul>
@@ -412,7 +430,7 @@ $ -rwxr-xr-x  1 qiaopeng  staff   67  7 18 17:24 helloworld.py
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.codepeng.cn/2017/02/13/chmod命令以及文件权限/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.codepeng.cn/2017/08/11/Android Architecture Components 1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -426,18 +444,9 @@ $ -rwxr-xr-x  1 qiaopeng  staff   67  7 18 17:24 helloworld.py
   
 <nav id="article-nav">
   
-    <a href="/2017/03/13/SS服务安装与操作指南/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          SS服务安装与操作指南
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/01/18/Android设置drawableTop图片大小/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android设置drawableTop图片大小</div>
+    <a href="/2017/08/09/封装rxjava,retrofit,okhttp的Android网络基础框架/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">封装rxjava,retrofit,okhttp的Android网络基础框架</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -453,8 +462,8 @@ $ -rwxr-xr-x  1 qiaopeng  staff   67  7 18 17:24 helloworld.py
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://www.codepeng.cn/2017/02/13/chmod命令以及文件权限/", 
-    sourceId: "chmod命令以及文件权限",
+    url: "http://www.codepeng.cn/2017/08/11/Android Architecture Components 1/", 
+    sourceId: "Android Architecture Components 1",
     productKey: "7aaed2075387460c93e4293197dae8e5",
     target: "cloud-tie-wrapper"
   };
