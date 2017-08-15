@@ -4,8 +4,30 @@
 
     
   <url>
+    <loc>http://www.codepeng.cn/2017/08/11/Android%20Architecture%20Components%201/</loc>
+    <lastmod>2017-08-15T03:27:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android Architecture Components 详解(一)Handling Lifecycles</title>
+        <pubTime>2017-08-11T06:49:19.000Z</pubTime>
+        
+        <tag>Architecture</tag>
+         
+        <tag>翻译</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.codepeng.cn/2017/08/15/Android%20Architecture%20Components%202/</loc>
-    <lastmod>2017-08-15T03:24:54.000Z</lastmod>
+    <lastmod>2017-08-15T03:27:43.000Z</lastmod>
     <data>
         <display>
         <title>Android Architecture Components 详解(二)LiveData</title>
@@ -32,28 +54,6 @@
         <display>
         <title>Android Architecture Components 使用</title>
         <pubTime>2017-08-10T06:49:19.000Z</pubTime>
-        
-        <tag>Architecture</tag>
-         
-        <tag>翻译</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.codepeng.cn/2017/08/11/Android%20Architecture%20Components%201/</loc>
-    <lastmod>2017-08-14T08:51:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android Architecture Components 详解(一)Handling Lifecycles</title>
-        <pubTime>2017-08-11T06:49:19.000Z</pubTime>
         
         <tag>Architecture</tag>
          
