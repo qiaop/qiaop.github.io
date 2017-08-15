@@ -6,17 +6,35 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.codepeng.cn">
-  <title>Archives: 2016 | codepeng的blog</title>
+  <title>Android Architecture Components 详解(三)ViewModel | codepeng的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="万军丛中取敌将首级，千万行里改关键代码">
-<meta property="og:type" content="website">
-<meta property="og:title" content="codepeng的blog">
-<meta property="og:url" content="http://www.codepeng.cn/archives/2016/index.html">
+  <meta name="description" content="ViewModel类旨在存储和管理与UI相关的数据，以便数据在诸如屏幕旋转之类的配置更改中保存下来。
+英文原文地址科学上网
+
+注意：要将 ViewModel 导入到您的Android项目中，请参阅adding components to your project
+
+App组件（如activities和fragments）具有由Android Framework管理的生命周期。 Framework可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Architecture Components 详解(三)ViewModel">
+<meta property="og:url" content="http://www.codepeng.cn/2017/08/15/Android Architecture Components 3/index.html">
 <meta property="og:site_name" content="codepeng的blog">
-<meta property="og:description" content="万军丛中取敌将首级，千万行里改关键代码">
+<meta property="og:description" content="ViewModel类旨在存储和管理与UI相关的数据，以便数据在诸如屏幕旋转之类的配置更改中保存下来。
+英文原文地址科学上网
+
+注意：要将 ViewModel 导入到您的Android项目中，请参阅adding components to your project
+
+App组件（如activities和fragments）具有由Android Framework管理的生命周期。 Framework可">
+<meta property="og:image" content="https://developer.android.com/images/topic/libraries/architecture/viewmodel-lifecycle.png">
+<meta property="og:updated_time" content="2017-08-15T08:57:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="codepeng的blog">
-<meta name="twitter:description" content="万军丛中取敌将首级，千万行里改关键代码">
+<meta name="twitter:title" content="Android Architecture Components 详解(三)ViewModel">
+<meta name="twitter:description" content="ViewModel类旨在存储和管理与UI相关的数据，以便数据在诸如屏幕旋转之类的配置更改中保存下来。
+英文原文地址科学上网
+
+注意：要将 ViewModel 导入到您的Android项目中，请参阅adding components to your project
+
+App组件（如activities和fragments）具有由Android Framework管理的生命周期。 Framework可">
+<meta name="twitter:image" content="https://developer.android.com/images/topic/libraries/architecture/viewmodel-lifecycle.png">
   
     <link rel="alternative" href="/atom.xml" title="codepeng的blog" type="application/atom+xml">
   
@@ -185,188 +203,128 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Android Architecture Components 3" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android Architecture Components 详解(三)ViewModel
+    </h1>
+  
+
+        
+        <a href="/2017/08/15/Android Architecture Components 3/" class="archive-article-date">
+  	<time datetime="2017-08-15T08:57:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-15</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+    <div class="article-moreinfo">
+        <div class="lastModifiedDate">
+            <span>最后更新：</span>
+            <time datetime="2017-08-15T08:57:25.000Z" itemprop="dateLastModified">
+            2017-08-15
+            </time>
+        </div>
+        <div class="copyright">
+            <span>许可协议：</span>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>
+        </div>
+    </div>
+        <p>ViewModel类旨在存储和管理与UI相关的数据，以便数据在诸如屏幕旋转之类的配置更改中保存下来。</p>
+<p><a href="https://developer.android.com/topic/libraries/architecture/viewmodel.html" target="_blank" rel="external">英文原文地址</a>科学上网</p>
+<blockquote>
+<p>注意：要将 ViewModel 导入到您的Android项目中，请参阅<a href="http://www.codepeng.cn/2017/08/10/Android%20Architecture%20Components%200/">adding components to your project</a></p>
+</blockquote>
+<p>App组件（如activities和fragments）具有由Android Framework管理的生命周期。 Framework可能会根据完全不受控制的某些用户操作或设备事件来决定销毁或重新创建它们。</p>
+<p>由于这些对象可能被操作系统销毁或重新创建，因此您所拥有的任何数据都可能丢失。 例如，如果您的activity中有用户列表，当配置更改，重新创建activity时，新的activity必须重新获取用户列表。 对于简单的数据，activity可以使用onSaveInstanceState（）方法，并从onCreate（）中的bundle中恢复其数据，但这种方法仅适用于少量数据，如UI状态，而不适用于大量数据，如列表 的用户。</p>
+<a id="more"></a>
+<p>另一个问题是，这些UI控制器（activities，fragments等）经常需要进行一些可能需要一些时间返回的异步调用。 UI控制器需要管理这些调用，并在被销毁时清理它们，以避免潜在的内存泄漏。 这需要大量维护，并且在配置更改的情况下重新创建对象，由于需要重新发出相同的调用，因此浪费资源。</p>
+<p>最后但并非最不重要的是，这些UI控制器已经需要对用户操作做出反应或处理操作系统的通信。 当他们也需要手动处理他们的资源时，它会变得很臃肿，导致“god activities”（或“god fragments”）; 也就是说，一个单独的类尝试自己处理所有的应用程序的工作，而不是将工作委派给其他类。 这也使得测试变得更加困难。</p>
+<p>将视图数据所有权与UI控制器逻辑分离是更简洁和更有效的。 Lifecycles提供了一个名为ViewModel的新类，它是UI控制器的辅助类，负责为UI准备数据。 在配置更改的时候，ViewModel将自动保留，以便其保存的数据立即可用于下一个Activity或Fragment实例。 在我们上面提到的例子中，ViewModel应该是获取和保留用户列表而不是活动或片段的责任。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyViewModel</span> <span class="keyword">extends</span> <span class="title">ViewModel</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> MutableLiveData&lt;List&lt;User&gt;&gt; users;</div><div class="line">    <span class="keyword">public</span> LiveData&lt;List&lt;User&gt;&gt; getUsers() &#123;</div><div class="line">        <span class="keyword">if</span> (users == <span class="keyword">null</span>) &#123;</div><div class="line">            users = <span class="keyword">new</span> MutableLiveData&lt;List&lt;Users&gt;&gt;();</div><div class="line">            loadUsers();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> users;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">loadUsers</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">// do async operation to fetch users</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>现在activity可以这样访问列表：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        MyViewModel model = ViewModelProviders.of(<span class="keyword">this</span>).get(MyViewModel.class);</div><div class="line">        model.getUsers().observe(<span class="keyword">this</span>, users -&gt; &#123;</div><div class="line">            <span class="comment">// update UI</span></div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果activity重新创建，它将收到由上一个activity创建的相同的MyViewModel实例。 当所有者活activity完成时，框架调用ViewModel的onCleared（）方法，以便它可以清理资源。</p>
+<blockquote>
+<p><strong>注意</strong>：由于ViewModel超出了特定的activity和fragment实例，所以它不能引用View或任何可能持有对activity的Context引用的类。 如果ViewModel需要应用程序上下文（例如，找到系统服务），则可以扩展AndroidViewModel类，并在构造函数中接收应用程序的构造函数（由于 Application class extends Context）。</p>
+</blockquote>
+<h2 id="在Fragment之间共享数据"><a href="#在Fragment之间共享数据" class="headerlink" title="在Fragment之间共享数据"></a>在Fragment之间共享数据</h2><p> 非常常见的是，Activity中的两个或多个Fragment需要相互通信。 这非常麻烦的，因为两个Fragment都需要定义一些接口描述，而所有者Activity必须将两者绑定在一起。 此外，两个Fragment都必须处理其他Fragment尚未创建或不可见的情况。</p>
+<p> 通过使用ViewModel对象可以解决这个常见的痛点。 想象一下master-detail Fragment的常见情况，其中我们有一个fragment，用户从列表中选择一个项目，另一个fragment显示所选项目的内容。</p>
+<p> 这些fragment可以在其activity范围共享一个ViewModel来处理此通信。</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SharedViewModel</span> <span class="keyword">extends</span> <span class="title">ViewModel</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> MutableLiveData&lt;Item&gt; selected = <span class="keyword">new</span> MutableLiveData&lt;Item&gt;();</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">select</span><span class="params">(Item item)</span> </span>&#123;</div><div class="line">        selected.setValue(item);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> LiveData&lt;Item&gt; <span class="title">getSelected</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> selected;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MasterFragment</span> <span class="keyword">extends</span> <span class="title">Fragment</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> SharedViewModel model;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        model = ViewModelProviders.of(getActivity()).get(SharedViewModel.class);</div><div class="line">        itemSelector.setOnClickListener(item -&gt; &#123;</div><div class="line">            model.select(item);</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DetailFragment</span> <span class="keyword">extends</span> <span class="title">LifecycleFragment</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        SharedViewModel model = ViewModelProviders.of(getActivity()).get(SharedViewModel.class);</div><div class="line">        model.getSelected().observe(<span class="keyword">this</span>, &#123; item -&gt;</div><div class="line">           <span class="comment">// update UI</span></div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> 请注意，在获取ViewModelProvider时，两个fragment都使用getActivity()。 这意味着他们都将收到相同的SharedViewModel实例，该实例是activity范围内的。</p>
+<p> 这种方法的好处包括：</p>
+<ul>
+<li>activity不需要做任何事情，也不知道有关此通信的任何内容。</li>
+<li>除了SharedViewModel联系之外，fragment不需要彼此了解。 如果其中一个消失，另一个会照常工作。</li>
+<li>每个fragment都有自己的生命周期，不受其他fragment的生命周期的影响。 实际上，在一个fragment替换另一个fragment的UI中，UI工作不会有任何问题。</li>
+</ul>
+<h2 id="ViewModel的生命周期"><a href="#ViewModel的生命周期" class="headerlink" title="ViewModel的生命周期"></a>ViewModel的生命周期</h2><p>当创建一个ViewModel时，它的生命周期会被托管给ViewModelProvider，ViewModel一旦被创建就会常驻于内存，除非特定情形导致其销毁。比如activity finished,或者fragment detach from activity。</p>
+<p><img src="https://developer.android.com/images/topic/libraries/architecture/viewmodel-lifecycle.png" alt=""></p>
+<h2 id="ViewModel-vs-SavedInstanceState"><a href="#ViewModel-vs-SavedInstanceState" class="headerlink" title="ViewModel vs SavedInstanceState"></a>ViewModel vs SavedInstanceState</h2><p>ViewModels提供了一种方便的方法来在配置更改之间保留数据，但如果应用程序被操作系统杀死，则它们不会被保存。</p>
+<p>例如，如果用户离开应用程序并在几小时后回来，那么该进程将被杀死，Android操作系统将从saved state恢复activity。所有框架组件（View，Activity，Fragment）使用saved instance state机制保存其状态，所以大多数时候，您不必做任何事情。您可以使用onSaveInstanceState回调将自定义数据添加到bundle中。</p>
+<p>通过onSaveInstanceState保存的数据保存在系统进程内存中，Android操作系统允许您只保留非常少量的数据，因此它不应该保存应用程序实际数据。你应该谨慎地使用它不容易被UI组件表示的东西。</p>
+<p>例如，如果您的用户界面显示有关国家/地区的信息，则不应将Country对象置于saved instance state。您可以将countryId保存为saved state（除非已由View或Fragment参数保存）。实际的对象应该存在于数据库中，ViewModel可以使用保存的countryId来检索它。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/pay/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/pay/wechatpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/03/进程与线程的区别/" class="archive-article-date">
-  	<time datetime="2016-06-03T12:16:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/03/进程与线程的区别/">进程与线程的区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java/" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/31/Sparka安装部署/" class="archive-article-date">
-  	<time datetime="2016-03-31T11:35:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/31/Sparka安装部署/">Spark集群搭建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">集群搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Hadoop/" class="article-tag-list-link color2">Hadoop</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/30/Hadoop集群环境搭建详细步骤/" class="archive-article-date">
-  	<time datetime="2016-03-30T11:55:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/30/Hadoop集群环境搭建详细步骤/">Hadoop集群环境搭建详细步骤</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">集群搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Hadoop/" class="article-tag-list-link color2">Hadoop</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/03/彻底弄懂View系列--View的位置参数/" class="archive-article-date">
-  	<time datetime="2016-03-03T09:01:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/03/彻底弄懂View系列--View的位置参数/">彻底弄懂View系列--View的位置参数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Architecture</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">View基础知识</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -379,18 +337,118 @@ var _hmt = _hmt || [];
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.codepeng.cn/2017/08/15/Android Architecture Components 3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/08/15/Android Architecture Components 2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android Architecture Components 详解(二)LiveData</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
 
+  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'codepeng-blog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+  
 
           </div>
         </div>
@@ -412,8 +470,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

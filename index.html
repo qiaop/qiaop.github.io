@@ -187,6 +187,100 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Android Architecture Components 3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/15/Android Architecture Components 3/">Android Architecture Components 详解(三)ViewModel</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/15/Android Architecture Components 3/" class="archive-article-date">
+  	<time datetime="2017-08-15T08:57:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ViewModel类旨在存储和管理与UI相关的数据，以便数据在诸如屏幕旋转之类的配置更改中保存下来。</p>
+<p><a href="https://developer.android.com/topic/libraries/architecture/viewmodel.html">英文原文地址</a>科学上网</p>
+<blockquote>
+<p>注意：要将 ViewModel 导入到您的Android项目中，请参阅<a href="http://www.codepeng.cn/2017/08/10/Android%20Architecture%20Components%200/">adding components to your project</a></p>
+</blockquote>
+<p>App组件（如activities和fragments）具有由Android Framework管理的生命周期。 Framework可能会根据完全不受控制的某些用户操作或设备事件来决定销毁或重新创建它们。</p>
+<p>由于这些对象可能被操作系统销毁或重新创建，因此您所拥有的任何数据都可能丢失。 例如，如果您的activity中有用户列表，当配置更改，重新创建activity时，新的activity必须重新获取用户列表。 对于简单的数据，activity可以使用onSaveInstanceState（）方法，并从onCreate（）中的bundle中恢复其数据，但这种方法仅适用于少量数据，如UI状态，而不适用于大量数据，如列表 的用户。</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Architecture</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/15/Android Architecture Components 3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-Android Architecture Components 2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -208,7 +302,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>LiveData是一个数据持有者类，它保留一个值，并允许观察该值。 与常规可观察的不同，LiveData遵循应用程序组件的生命周期，以便Observer可以指定应遵守的Lifecycle。</p>
-<p><a href="https://developer.android.com/topic/libraries/architecture/livedata.html">英文原地址</a>科学上网</p>
+<p><a href="https://developer.android.com/topic/libraries/architecture/livedata.html">英文原文地址</a>科学上网</p>
 <blockquote>
 <p>注意：要将LiveData导入到您的Android项目中，请参阅<a href="http://www.codepeng.cn/2017/08/10/Android%20Architecture%20Components%200/">adding components to your project</a></p>
 </blockquote>
@@ -1035,90 +1129,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/17/正则表达式/">正则表达式</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/17/正则表达式/" class="archive-article-date">
-  	<time datetime="2017-07-17T12:12:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>正则表达式非常常用，不论是在Java还是Python中，各种编程语言都有使用正则表达式的地方，我们平常使用的时候都去谷歌一把，但是要是弄懂正则表达式的规律，自己写一个那就是分分钟的事情。下面就开始学习正则表达式。<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">base</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/17/正则表达式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1248,15 +1258,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">base</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">安装</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Mac OS X</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">base</a>
               </li>
              
               <li class="article-tag-list-item">
