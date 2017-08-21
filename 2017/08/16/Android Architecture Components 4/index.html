@@ -6,17 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.codepeng.cn">
-  <title>codepeng的blog</title>
+  <title>Android Architecture Components 详解(四)Room Persistence Library | codepeng的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="万军丛中取敌将首级，千万行里改关键代码">
-<meta property="og:type" content="website">
-<meta property="og:title" content="codepeng的blog">
-<meta property="og:url" content="http://www.codepeng.cn/index.html">
+  <meta name="description" content="Room在SQLite上提供了一个抽象层，以便流畅地使用SQLite的全部功能进行数据库访问。英文原文地址科学上网
+
+注意：要将 Room 导入到您的Android项目中，请参阅adding components to your project
+
+持久化数据可以让处理大量的结构化数据的应用受益匪浅。最常见的例子是缓存数据。这样当设备没有网络的时候用户依然可以访问数据。在设备重新连接到网络时，用户操">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Architecture Components 详解(四)Room Persistence Library">
+<meta property="og:url" content="http://www.codepeng.cn/2017/08/16/Android Architecture Components 4/index.html">
 <meta property="og:site_name" content="codepeng的blog">
-<meta property="og:description" content="万军丛中取敌将首级，千万行里改关键代码">
+<meta property="og:description" content="Room在SQLite上提供了一个抽象层，以便流畅地使用SQLite的全部功能进行数据库访问。英文原文地址科学上网
+
+注意：要将 Room 导入到您的Android项目中，请参阅adding components to your project
+
+持久化数据可以让处理大量的结构化数据的应用受益匪浅。最常见的例子是缓存数据。这样当设备没有网络的时候用户依然可以访问数据。在设备重新连接到网络时，用户操">
+<meta property="og:image" content="https://developer.android.com/images/topic/libraries/architecture/room_architecture.png">
+<meta property="og:updated_time" content="2017-08-18T09:41:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="codepeng的blog">
-<meta name="twitter:description" content="万军丛中取敌将首级，千万行里改关键代码">
+<meta name="twitter:title" content="Android Architecture Components 详解(四)Room Persistence Library">
+<meta name="twitter:description" content="Room在SQLite上提供了一个抽象层，以便流畅地使用SQLite的全部功能进行数据库访问。英文原文地址科学上网
+
+注意：要将 Room 导入到您的Android项目中，请参阅adding components to your project
+
+持久化数据可以让处理大量的结构化数据的应用受益匪浅。最常见的例子是缓存数据。这样当设备没有网络的时候用户依然可以访问数据。在设备重新连接到网络时，用户操">
+<meta name="twitter:image" content="https://developer.android.com/images/topic/libraries/architecture/room_architecture.png">
   
     <link rel="alternative" href="/atom.xml" title="codepeng的blog" type="application/atom+xml">
   
@@ -185,16 +200,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Android Architecture Components 4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Android Architecture Components 4" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/16/Android Architecture Components 4/">Android Architecture Components 详解(四)Room Persistence Library</a>
+    <h1 class="article-title" itemprop="name">
+      Android Architecture Components 详解(四)Room Persistence Library
     </h1>
   
 
@@ -290,99 +303,36 @@ var _hmt = _hmt || [];
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Architecture</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/16/Android Architecture Components 4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/pay/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/pay/wechatpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-Android Architecture Components 3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/15/Android Architecture Components 3/">Android Architecture Components 详解(三)ViewModel</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/15/Android Architecture Components 3/" class="archive-article-date">
-  	<time datetime="2017-08-15T08:57:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>ViewModel类旨在存储和管理与UI相关的数据，以便数据在诸如屏幕旋转之类的配置更改中保存下来。</p>
-<p><a href="https://developer.android.com/topic/libraries/architecture/viewmodel.html">英文原文地址</a>科学上网</p>
-<blockquote>
-<p>注意：要将 ViewModel 导入到您的Android项目中，请参阅<a href="http://www.codepeng.cn/2017/08/10/Android%20Architecture%20Components%200/">adding components to your project</a></p>
-</blockquote>
-<p>App组件（如activities和fragments）具有由Android Framework管理的生命周期。 Framework可能会根据完全不受控制的某些用户操作或设备事件来决定销毁或重新创建它们。</p>
-<p>由于这些对象可能被操作系统销毁或重新创建，因此您所拥有的任何数据都可能丢失。 例如，如果您的activity中有用户列表，当配置更改，重新创建activity时，新的activity必须重新获取用户列表。 对于简单的数据，activity可以使用onSaveInstanceState（）方法，并从onCreate（）中的bundle中恢复其数据，但这种方法仅适用于少量数据，如UI状态，而不适用于大量数据，如列表 的用户。</p>
-        
-      
-
       
     </div>
     <div class="article-info article-info-index">
@@ -417,777 +367,75 @@ var _hmt = _hmt || [];
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/15/Android Architecture Components 3/">展开全文 >></a>
-        </p>
-      
 
       
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
         
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        
-        
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.codepeng.cn/2017/08/16/Android Architecture Components 4/" alt="微信分享二维码">
     </div>
-</aside>
+</div>
 
-
-
-  
-    <article id="post-Android Architecture Components 2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/15/Android Architecture Components 2/">Android Architecture Components 详解(二)LiveData</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/15/Android Architecture Components 2/" class="archive-article-date">
-  	<time datetime="2017-08-15T03:24:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>LiveData是一个数据持有者类，它保留一个值，并允许观察该值。 与常规可观察的不同，LiveData遵循应用程序组件的生命周期，以便Observer可以指定应遵守的Lifecycle。</p>
-<p><a href="https://developer.android.com/topic/libraries/architecture/livedata.html">英文原文地址</a>科学上网</p>
-<blockquote>
-<p>注意：要将LiveData导入到您的Android项目中，请参阅<a href="http://www.codepeng.cn/2017/08/10/Android%20Architecture%20Components%200/">adding components to your project</a></p>
-</blockquote>
-<p> 如果 Observer的 Lifecycle 在 STARTED 或者 RESUMED 状态，那么 LiveData 认为 Observer在一个活动状态。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Architecture</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/15/Android Architecture Components 2/">展开全文 >></a>
-        </p>
-      
-
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
   
-    <article id="post-Android Architecture Components 1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/11/Android Architecture Components 1/">Android Architecture Components 详解(一)Handling Lifecycles</a>
-    </h1>
   
-
-        
-        <a href="/2017/08/11/Android Architecture Components 1/" class="archive-article-date">
-  	<time datetime="2017-08-11T06:49:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Handling-Lifecycles"><a href="#Handling-Lifecycles" class="headerlink" title="Handling Lifecycles"></a>Handling Lifecycles</h1><p><a href="https://developer.android.com/topic/libraries/architecture/lifecycle.html">英文原文地址</a>科学上网</p>
-<p>android.arch.lifecycle包提供了类和接口，可以让您构建生命周期感知组件，这些组件可以根据Activity或Fragment的当前生命周期自动调整其行为。</p>
-<blockquote>
-<p>注意：要将android.arch.lifecycle导入到您的Android项目中，请参阅Adding Components to your Project</p>
-</blockquote>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Architecture</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/11/Android Architecture Components 1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+    <a href="/2017/08/15/Android Architecture Components 3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android Architecture Components 详解(三)ViewModel</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
-    <article id="post-Android Architecture Components 0" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/10/Android Architecture Components 0/">Android Architecture Components 使用</a>
-    </h1>
-  
+</nav>
 
-        
-        <a href="/2017/08/10/Android Architecture Components 0/" class="archive-article-date">
-  	<time datetime="2017-08-10T06:49:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Adding-Components-to-your-Project"><a href="#Adding-Components-to-your-Project" class="headerlink" title="Adding Components to your Project"></a>Adding Components to your Project</h2><blockquote>
-<p>注意：架构组件目前仍然是alpha版本。 在1.0版本之前可能有更改。<br>架构组件可从Google的Maven存储库获得。 要使用它们，请按照下列步骤操作：</p>
-</blockquote>
-<h2 id="添加Google-Maven-repository"><a href="#添加Google-Maven-repository" class="headerlink" title="添加Google Maven repository"></a>添加Google Maven repository</h2><p>默认情况下，Android Studio项目未配置为访问此存储库。</p>
-<p>要将其添加到项目中，请打开项目的build.gradle文件（而不是您的应用程序或模块的文件），并添加突出显示的行，如下所示：</p>
-<pre><code>allprojects {
-    repositories {
-        jcenter()
-        maven { url &apos;https://maven.google.com&apos; }
-    }
-}
-</code></pre>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Architecture</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/10/Android Architecture Components 0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-封装rxjava,retrofit,okhttp的Android网络基础框架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/09/封装rxjava,retrofit,okhttp的Android网络基础框架/">封装rxjava,retrofit,okhttp的Android网络基础框架</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/09/封装rxjava,retrofit,okhttp的Android网络基础框架/" class="archive-article-date">
-  	<time datetime="2017-08-09T06:49:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://github.com/qiaop/basicapp">项目地址</a></p>
-<h3 id="包含的功能"><a href="#包含的功能" class="headerlink" title="包含的功能"></a>包含的功能</h3><ul>
-<li>主要使用okhttp进行网络通信，封装okhttp日志打印</li>
-<li>封装Cookie维持</li>
-<li>封装使用Gson作为默认数据解析转化器</li>
-<li>统一处理网络回调错误码</li>
-<li>封装线程切换，进行网络请求不必考虑线程问题</li>
-<li>封装ApiSubscriber，可设置是否显示ProgressDialog</li>
-<li>使用rxlifecycle2进行生命周期的处理</li>
-</ul>
-<p>基本上满足开发的一般需求。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">rxjava</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">retrofit</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">okhttp</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/09/封装rxjava,retrofit,okhttp的Android网络基础框架/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-python爬虫入门实战" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/07/python爬虫入门实战/">python爬虫入门实战</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/07/python爬虫入门实战/" class="archive-article-date">
-  	<time datetime="2017-08-07T12:12:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>作为学习python的第一个实战项目。主要功能是爬取糗事百科的文字段子，以及作者信息和点赞评论的数量，将这些数据存储到mysql上。</p>
-<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><ul>
-<li>virtualenv</li>
-<li>pytnon2.7</li>
-<li>mysql</li>
-</ul>
-<h4 id="使用virtualenv"><a href="#使用virtualenv" class="headerlink" title="使用virtualenv"></a>使用virtualenv</h4><p>使用virtualenv是为了与系统的python环境区分开来，可以随意用pip安装一些模块而不会影响到系统的python环境。<a href="http://pythonguidecn.readthedocs.io/zh/latest/dev/virtualenvs.html">这里</a>是一个virtualenv比较好的使用文档，可以参考一下，下面是virtualenv几个常用的命令。</p>
-<p><code>virtualenv -p /usr/local/bin/python3 --no-site-package env</code></p>
-<pre><code>-p选择python版本
---no-site-package 不复制系统第三方包
-</code></pre><p><code>source env/bin/activate</code>激活环境<br><code>deactivate</code>关闭环境</p>
-<h4 id="使用mysql"><a href="#使用mysql" class="headerlink" title="使用mysql"></a>使用mysql</h4><p>mysql服务是安装在一台Ubuntu的阿里云服务器上的，在第一次使用mysql数据库的时候我们要简单配置一下，例如字符编码之类的。下面是一些命令以及简单配置。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/python/" class="article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/07/python爬虫入门实战/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-python-理解汉诺塔" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/27/python-理解汉诺塔/">python 理解汉诺塔</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/27/python-理解汉诺塔/" class="archive-article-date">
-  	<time datetime="2017-07-27T06:20:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>汉诺塔是python中函数递归的一个使用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">def move(n,a,b,c):</div><div class="line">    if n==1:</div><div class="line">        print(a,&apos;-&gt;&apos;,c)</div><div class="line">    else:</div><div class="line">        move(n-1,a,c,b)</div><div class="line">        move(1,a,b,c)</div><div class="line">        move(n-1,b,a,c)</div><div class="line">move(3,&apos;A&apos;,&apos;B&apos;,&apos;C&apos;)</div></pre></td></tr></table></figure>
-<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><blockquote>
-<p>move(N,起点，缓冲区，终点）</p>
-<p>N: 盘子的个数。</p>
-</blockquote>
-<p><strong>汉诺塔永远只有三步</strong>：</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">base</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/python/" class="article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/27/python-理解汉诺塔/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-python-杨辉三角" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/27/python-杨辉三角/">python 杨辉三角</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/27/python-杨辉三角/" class="archive-article-date">
-  	<time datetime="2017-07-27T03:09:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="杨辉三角的python实现"><a href="#杨辉三角的python实现" class="headerlink" title="杨辉三角的python实现"></a>杨辉三角的python实现</h2><p>我们先看<code>杨辉三角</code>python的实现方法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">triangle</span><span class="params">()</span>:</span></div><div class="line">    b = [<span class="number">1</span>]</div><div class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">        <span class="keyword">yield</span> b</div><div class="line">        b = [<span class="number">1</span>] + [b[i] +b[i+<span class="number">1</span>] <span class="keyword">for</span> i <span class="keyword">in</span> range(len(b)<span class="number">-1</span>)]+[<span class="number">1</span>]</div><div class="line">n = <span class="number">0</span></div><div class="line"><span class="keyword">for</span> t <span class="keyword">in</span> triangle():</div><div class="line">    print(t)</div><div class="line">    n = n + <span class="number">1</span></div><div class="line">    <span class="keyword">if</span> n == <span class="number">10</span>:</div><div class="line">        <span class="keyword">break</span></div></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">base</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/python/" class="article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/27/python-杨辉三角/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-Mac OS X上安装TensorFlow" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/24/Mac OS X上安装TensorFlow/">Mac OS X上安装TensorFlow</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/24/Mac OS X上安装TensorFlow/" class="archive-article-date">
-  	<time datetime="2017-07-24T09:31:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://www.tensorflow.org/install/install_mac">原文链接</a></p>
-<p>本指南介绍如何在Mac OS X上安装TensorFlow。</p>
-<h2 id="确定如何安装TensorFlow"><a href="#确定如何安装TensorFlow" class="headerlink" title="确定如何安装TensorFlow"></a>确定如何安装TensorFlow</h2><p>您必须选择安装TensorFlow的机制。 支持的选择如下：</p>
-<ul>
-<li>virtualenv</li>
-<li>“native” pip</li>
-<li>Docker</li>
-<li>从源码安装</li>
-</ul>
-<p><strong>我们建议利用virtualenc安装。</strong><a href="https://virtualenv.pypa.io/en/stable/">Virtualenv</a><br>是与其他Python开发隔离的虚拟Python环境，不会干扰或受到同一台机器上其他Python程序的影响。 在virtualenv安装过程中，您将不仅安装TensorFlow，还可以安装TensorFlow所需的所有软件包。 （这实际上很简单。）要开始使用TensorFlow，只需要“激活”虚拟环境。 总而言之，virtualenv为安装和运行TensorFlow提供了一个安全可靠的机制。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">安装</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac OS X</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/TensorFlow/" class="article-tag-list-link color1">TensorFlow</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/24/Mac OS X上安装TensorFlow/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -1209,11 +457,11 @@ var _hmt = _hmt || [];
 
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
   
 
+  
+
+  
 
           </div>
         </div>
@@ -1234,8 +482,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
