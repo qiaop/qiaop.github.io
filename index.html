@@ -207,19 +207,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-    <div class="article-moreinfo">
-        <div class="lastModifiedDate">
-            <span>最后更新：</span>
-            <time datetime="2017-08-18T09:41:34.000Z" itemprop="dateLastModified">
-            2017-08-18
-            </time>
-        </div>
-        <div class="copyright">
-            <span>许可协议：</span>
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>
-        </div>
-    </div>
-        <p>Room在SQLite上提供了一个抽象层，以便流畅地使用SQLite的全部功能进行数据库访问。<br><a href="https://developer.android.com/topic/libraries/architecture/room.html" target="_blank" rel="external">英文原文地址</a>科学上网</p>
+        <p>Room在SQLite上提供了一个抽象层，以便流畅地使用SQLite的全部功能进行数据库访问。<br><a href="https://developer.android.com/topic/libraries/architecture/room.html">英文原文地址</a>科学上网</p>
 <blockquote>
 <p>注意：要将 Room 导入到您的Android项目中，请参阅<a href="http://www.codepeng.cn/2017/08/10/Android%20Architecture%20Components%200/">adding components to your project</a></p>
 </blockquote>
@@ -230,63 +218,7 @@ var _hmt = _hmt || [];
 <li>需要使用大量样板代码来在SQL查询和Java数据对象之间进行转换。</li>
 </ul>
 <p>Room在提供SQLite抽象层的时候考虑到了这些问题。</p>
-<p>Room有3个主要的组成部分：</p>
-<ul>
-<li><p><strong>Database：</strong>可以使用此组件创建数据库持有者。 注释定义实体列表，类的内容定义数据库中数据访问对象(DAO)的列表。 它也是底层连接的主要接入点。</p>
-<p>  注释类应该是一个扩展RoomDatabase的抽象类。 在运行时，您可以通过调用Room.databaseBuilder()或Room.inMemoryDatabaseBuilder()获取一个实例。</p>
-</li>
-<li><p><strong>Entity:</strong>该组件表示一个保存数据库行的类。 对于每个实体，创建一个数据库表来保存。 您必须通过Database类中的entities数组引用实体类。实体的每个字段都保存在数据库中，除非您使用@Ignore注释它。</p>
-</li>
-</ul>
-<blockquote>
-<p><strong>注意：</strong>实体可以有一个空构造函数（如果DAO类可以访问每个持久化字段），或者一个构造函数的参数包含与实体中的字段匹配的类型和名称。 Room还可以使用全部或部分构造函数，例如只接收一些字段的构造函数。</p>
-</blockquote>
-<ul>
-<li><strong>DAO：</strong>该组件表示作为数据访问对象（DAO）的类或接口。 DAO是Room的主要组件，负责定义访问数据库的方法。 用@Database注释的类必须包含一个具有0个参数的抽象方法，并返回使用@Dao注释的类。 在编译时生成代码时，Room创建一个这个类的实现。</li>
-</ul>
-<blockquote>
-<p><strong>注意</strong>：通过使用DAO类代替查询生成器或直接查询访问数据库，可以分开你的数据库架构的不同组件。 此外，DAO允许您在测试应用程序时轻松地模拟数据库访问。</p>
-</blockquote>
-<p>这些组件及其与应用部分的关系如图1所示：</p>
-<p><img src="https://developer.android.com/images/topic/libraries/architecture/room_architecture.png" alt="图1.Room结构图"></p>
-<p>以下代码片段包含具有1个实体和1个DAO的示例数据库配置：</p>
-<p>User.java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</div><div class="line">    <span class="meta">@PrimaryKey</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> uid;</div><div class="line"></div><div class="line">    <span class="meta">@ColumnInfo</span>(name = <span class="string">"first_name"</span>)</div><div class="line">    <span class="keyword">private</span> String firstName;</div><div class="line"></div><div class="line">    <span class="meta">@ColumnInfo</span>(name = <span class="string">"last_name"</span>)</div><div class="line">    <span class="keyword">private</span> String lastName;</div><div class="line"></div><div class="line">    <span class="comment">// Getters and setters are ignored for brevity,</span></div><div class="line">    <span class="comment">// but they're required for Room to work.</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>UserDao.java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Dao</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserDao</span> </span>&#123;</div><div class="line">    <span class="meta">@Query</span>(<span class="string">"SELECT * FROM user"</span>)</div><div class="line">    <span class="function">List&lt;User&gt; <span class="title">getAll</span><span class="params">()</span></span>;</div><div class="line"></div><div class="line">    <span class="meta">@Query</span>(<span class="string">"SELECT * FROM user WHERE uid IN (:userIds)"</span>)</div><div class="line">    <span class="function">List&lt;User&gt; <span class="title">loadAllByIds</span><span class="params">(<span class="keyword">int</span>[] userIds)</span></span>;</div><div class="line"></div><div class="line">    <span class="meta">@Query</span>(<span class="string">"SELECT * FROM user WHERE first_name LIKE :first AND "</span></div><div class="line">           + <span class="string">"last_name LIKE :last LIMIT 1"</span>)</div><div class="line">    <span class="function">User <span class="title">findByName</span><span class="params">(String first, String last)</span></span>;</div><div class="line"></div><div class="line">    <span class="meta">@Insert</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insertAll</span><span class="params">(User... users)</span></span>;</div><div class="line"></div><div class="line">    <span class="meta">@Delete</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">delete</span><span class="params">(User user)</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>AppDatabase.java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Database</span>(entities = &#123;User.class&#125;, version = <span class="number">1</span>)</div><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">AppDatabase</span> <span class="keyword">extends</span> <span class="title">RoomDatabase</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> UserDao <span class="title">userDao</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>创建上述文件后，使用以下代码获取创建的数据库的实例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">AppDatabase db = Room.databaseBuilder(getApplicationContext(),</div><div class="line">        AppDatabase.class, <span class="string">"database-name"</span>).build();</div></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>注意：</strong>在实例化AppDatabase对象时，应遵循单例设计模式，因为每个RoomDatabase实例都相当昂贵，并且您很少需要访问多个实例。</p>
-</blockquote>
-<h2 id="Entities"><a href="#Entities" class="headerlink" title="Entities"></a>Entities</h2><p>当类被@Entity注释并且在@Database注释的entities属性中引用时，Room会在数据库中为该实体创建一个数据库表。</p>
-<p>默认情况下，Room为实体中定义的每个字段创建一个列。 如果一个实体具有不想持久化的字段，可以使用@Ignore对它们进行注释，如下面的代码片段所示：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</div><div class="line">    <span class="meta">@PrimaryKey</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span> id;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> String firstName;</div><div class="line">    <span class="keyword">public</span> String lastName;</div><div class="line"></div><div class="line">    <span class="meta">@Ignore</span></div><div class="line">    Bitmap picture;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>要持久化一个字段，Room必须可以访问它。你可以定义这个字段为public，或者提供getter和setter方法。如果使用setter和getter方法，请记住，它们基于Room中的Java Bean约定。</p>
-<h2 id="Primary-key"><a href="#Primary-key" class="headerlink" title="Primary key"></a>Primary key</h2><p>每个实体必须至少定义1个字段作为主键。 即使只有1个字段，您仍然需要使用@PrimaryKey注释来注释该字段。 另外，如果您希望Room实体自增长ID，您可以设置@PrimaryKey的autoGenerate属性。 如果实体具有复合主键，则可以使用@Entity注释的primaryKeys属性，如以下代码片段所示：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span>(primaryKeys = &#123;<span class="string">"firstName"</span>, <span class="string">"lastName"</span>&#125;)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> String firstName;</div><div class="line">    <span class="keyword">public</span> String lastName;</div><div class="line"></div><div class="line">    <span class="meta">@Ignore</span></div><div class="line">    Bitmap picture;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>默认情况下，Room使用类名作为数据库表名。 如果希望表具有不同的名称，请设置@Entity注释的tableName属性，如以下代码片段所示：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span>(tableName = <span class="string">"users"</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>注意：</strong>SQLite中的表名不区分大小写。</p>
-</blockquote>
-<p>与tablename属性类似，Room使用字段名作为数据库中的列名。 如果您希望列具有不同的名称，请将@ColumnInfo注释添加到字段中，如以下代码片段所示：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span>(tableName = <span class="string">"users"</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</div><div class="line">    <span class="meta">@PrimaryKey</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span> id;</div><div class="line"></div><div class="line">    <span class="meta">@ColumnInfo</span>(name = <span class="string">"first_name"</span>)</div><div class="line">    <span class="keyword">public</span> String firstName;</div><div class="line"></div><div class="line">    <span class="meta">@ColumnInfo</span>(name = <span class="string">"last_name"</span>)</div><div class="line">    <span class="keyword">public</span> String lastName;</div><div class="line"></div><div class="line">    <span class="meta">@Ignore</span></div><div class="line">    Bitmap picture;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Indices-and-uniqueness"><a href="#Indices-and-uniqueness" class="headerlink" title="Indices and uniqueness"></a>Indices and uniqueness</h2><p>根据访问数据的方式，您可能希望对数据库中的某些字段添加索引，以加快查询速度。 要向实体添加索引，请在@Entity注释中包含indexes属性，列出要包含在索引或组合索引中的列的名称。 以下代码片段演示了此注释过程：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span>(indices = &#123;<span class="meta">@Index</span>(<span class="string">"name"</span>),</div><div class="line">        <span class="meta">@Index</span>(value = &#123;<span class="string">"last_name"</span>, <span class="string">"address"</span>&#125;)&#125;)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</div><div class="line">    <span class="meta">@PrimaryKey</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span> id;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> String firstName;</div><div class="line">    <span class="keyword">public</span> String address;</div><div class="line"></div><div class="line">    <span class="meta">@ColumnInfo</span>(name = <span class="string">"last_name"</span>)</div><div class="line">    <span class="keyword">public</span> String lastName;</div><div class="line"></div><div class="line">    <span class="meta">@Ignore</span></div><div class="line">    Bitmap picture;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>有时，数据库中的某些字段或字段组必须是唯一的。 您可以通过将@Index注释的唯一属性设置为true来强制执行此唯一性属性。 以下代码示例可防止表具有包含firstName和lastName列的相同值集合的两行：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span>(indices = &#123;<span class="meta">@Index</span>(value = &#123;<span class="string">"first_name"</span>, <span class="string">"last_name"</span>&#125;,</div><div class="line">        unique = <span class="keyword">true</span>)&#125;)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</div><div class="line">    <span class="meta">@PrimaryKey</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span> id;</div><div class="line"></div><div class="line">    <span class="meta">@ColumnInfo</span>(name = <span class="string">"first_name"</span>)</div><div class="line">    <span class="keyword">public</span> String firstName;</div><div class="line"></div><div class="line">    <span class="meta">@ColumnInfo</span>(name = <span class="string">"last_name"</span>)</div><div class="line">    <span class="keyword">public</span> String lastName;</div><div class="line"></div><div class="line">    <span class="meta">@Ignore</span></div><div class="line">    Bitmap picture;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Relationships"><a href="#Relationships" class="headerlink" title="Relationships"></a>Relationships</h2><p>因为SQLite是一个关系数据库，您可以指定对象之间的关系。 即使大多数ORM库允许实体对象相互引用，但是Room明确禁止此操作。 有关更多详细信息，请参阅附录：实体之间没有对象引用。</p>
-<p>即使您不能使用直接关系，Room仍允许您在实体之间定义Foreign Key约束。</p>
-<p>例如，如果有另一个名为Book的实体，您可以使用@ForeignKey注释来定义与User实体的关系，如以下代码片段所示：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span>(foreignKeys = <span class="meta">@ForeignKey</span>(entity = User.class,</div><div class="line">                                  parentColumns = <span class="string">"id"</span>,</div><div class="line">                                  childColumns = <span class="string">"user_id"</span>))</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Book</span> </span>&#123;</div><div class="line">    <span class="meta">@PrimaryKey</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span> bookId;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> String title;</div><div class="line"></div><div class="line">    <span class="meta">@ColumnInfo</span>(name = <span class="string">"user_id"</span>)</div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span> userId;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>外键非常强大，允许指定引用实体更新时发生的情况。 例如，如果通过在@ForeignKey注释中包含onDelete = CASCADE来删除用户的相应实例，则可以让SQLite删除用户的所有图书。</p>
-<blockquote>
-<p>注意：SQLite处理@Insert（OnConflict = REPLACE）用一组REMOVE和REPLACE操作代替单个UPDATE操作。 这种替换冲突值的方法可能会影响外键约束。 有关更多详细信息，请参阅ON_CONFLICT的<a href="https://sqlite.org/lang_conflict.html" target="_blank" rel="external">SQLite文档</a>。</p>
-</blockquote>
-<h2 id="Nested-objects"><a href="#Nested-objects" class="headerlink" title="Nested objects"></a>Nested objects</h2>
+        
       
 
       
@@ -1297,15 +1229,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">life</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Architecture</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">翻译</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">life</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1325,11 +1257,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">skill</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">handler</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">skill</a>
+                <a href="javascript:void(0)" class="js-tag color5">集群搭建</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1342,10 +1278,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Mac OS X</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">集群搭建</a>
               </li>
              
               <li class="article-tag-list-item">
