@@ -187,6 +187,105 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-git撤销" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/19/git撤销/">git撤销</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/19/git撤销/" class="archive-article-date">
+  	<time datetime="2017-10-19T07:08:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+    <div class="article-moreinfo">
+        <div class="lastModifiedDate">
+            <span>最后更新：</span>
+            <time datetime="2017-10-20T01:29:16.000Z" itemprop="dateLastModified">
+            2017-10-20
+            </time>
+        </div>
+        <div class="copyright">
+            <span>许可协议：</span>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>
+        </div>
+    </div>
+        <h2 id="git撤销"><a href="#git撤销" class="headerlink" title="git撤销"></a>git撤销</h2><h3 id="撤销工作区更改"><a href="#撤销工作区更改" class="headerlink" title="撤销工作区更改"></a>撤销工作区更改</h3><pre><code>git checkout --filename
+</code></pre><h3 id="撤销add"><a href="#撤销add" class="headerlink" title="撤销add"></a>撤销add</h3><pre><code>git reset HEAD .//撤销全部
+git reset HEAD filename
+</code></pre><h3 id="撤销commit"><a href="#撤销commit" class="headerlink" title="撤销commit"></a>撤销commit</h3><pre><code>git reset --hard commit_id 
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/base/" class="article-tag-list-link color5">base</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/19/git撤销/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-Android Architecture Components 4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1039,107 +1138,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-Mac OS X上安装TensorFlow" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/24/Mac OS X上安装TensorFlow/">Mac OS X上安装TensorFlow</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/24/Mac OS X上安装TensorFlow/" class="archive-article-date">
-  	<time datetime="2017-07-24T09:31:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://www.tensorflow.org/install/install_mac">原文链接</a></p>
-<p>本指南介绍如何在Mac OS X上安装TensorFlow。</p>
-<h2 id="确定如何安装TensorFlow"><a href="#确定如何安装TensorFlow" class="headerlink" title="确定如何安装TensorFlow"></a>确定如何安装TensorFlow</h2><p>您必须选择安装TensorFlow的机制。 支持的选择如下：</p>
-<ul>
-<li>virtualenv</li>
-<li>“native” pip</li>
-<li>Docker</li>
-<li>从源码安装</li>
-</ul>
-<p><strong>我们建议利用virtualenc安装。</strong><a href="https://virtualenv.pypa.io/en/stable/">Virtualenv</a><br>是与其他Python开发隔离的虚拟Python环境，不会干扰或受到同一台机器上其他Python程序的影响。 在virtualenv安装过程中，您将不仅安装TensorFlow，还可以安装TensorFlow所需的所有软件包。 （这实际上很简单。）要开始使用TensorFlow，只需要“激活”虚拟环境。 总而言之，virtualenv为安装和运行TensorFlow提供了一个安全可靠的机制。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">安装</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac OS X</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/TensorFlow/" class="article-tag-list-link color1">TensorFlow</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/24/Mac OS X上安装TensorFlow/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1265,11 +1263,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">base</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">集群搭建</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">base</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
