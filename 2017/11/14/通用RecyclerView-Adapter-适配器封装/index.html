@@ -6,17 +6,39 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.codepeng.cn">
-  <title>Tag: View基础知识 | codepeng的blog</title>
+  <title>通用RecyclerView Adapter 适配器封装 | codepeng的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="万军丛中取敌将首级，千万行里改关键代码">
-<meta property="og:type" content="website">
-<meta property="og:title" content="codepeng的blog">
-<meta property="og:url" content="http://www.codepeng.cn/tags/View基础知识/index.html">
+  <meta name="description" content="RecyclerView虽然很强大，但是在实际的生产使用中，我们往往要写很多重复的代码来完成同样的功能。很多功能都需要在适配器中去完成，例如添加点击事件等等，因此作者旨在封装一个功能完备，使用方便的通用适配器。
+完成功能
+可添加Header
+可添加Footer
+可添加EmptyView（列表空白占位）
+可添加EmptyView点击事件
+可添加点击事件
+绑定数据直接拿Bean">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通用RecyclerView Adapter 适配器封装">
+<meta property="og:url" content="http://www.codepeng.cn/2017/11/14/通用RecyclerView-Adapter-适配器封装/index.html">
 <meta property="og:site_name" content="codepeng的blog">
-<meta property="og:description" content="万军丛中取敌将首级，千万行里改关键代码">
+<meta property="og:description" content="RecyclerView虽然很强大，但是在实际的生产使用中，我们往往要写很多重复的代码来完成同样的功能。很多功能都需要在适配器中去完成，例如添加点击事件等等，因此作者旨在封装一个功能完备，使用方便的通用适配器。
+完成功能
+可添加Header
+可添加Footer
+可添加EmptyView（列表空白占位）
+可添加EmptyView点击事件
+可添加点击事件
+绑定数据直接拿Bean">
+<meta property="og:updated_time" content="2017-11-14T07:29:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="codepeng的blog">
-<meta name="twitter:description" content="万军丛中取敌将首级，千万行里改关键代码">
+<meta name="twitter:title" content="通用RecyclerView Adapter 适配器封装">
+<meta name="twitter:description" content="RecyclerView虽然很强大，但是在实际的生产使用中，我们往往要写很多重复的代码来完成同样的功能。很多功能都需要在适配器中去完成，例如添加点击事件等等，因此作者旨在封装一个功能完备，使用方便的通用适配器。
+完成功能
+可添加Header
+可添加Footer
+可添加EmptyView（列表空白占位）
+可添加EmptyView点击事件
+可添加点击事件
+绑定数据直接拿Bean">
   
     <link rel="alternative" href="/atom.xml" title="codepeng的blog" type="application/atom+xml">
   
@@ -185,76 +207,218 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-通用RecyclerView-Adapter-适配器封装" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/03/彻底弄懂View系列--View的位置参数/" class="archive-article-date">
-  	<time datetime="2016-03-03T09:01:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/03/彻底弄懂View系列--View的位置参数/">彻底弄懂View系列--View的位置参数</a>
+    <h1 class="article-title" itemprop="name">
+      通用RecyclerView Adapter 适配器封装
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/11/14/通用RecyclerView-Adapter-适配器封装/" class="archive-article-date">
+  	<time datetime="2017-11-14T06:08:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+    <div class="article-moreinfo">
+        <div class="lastModifiedDate">
+            <span>最后更新：</span>
+            <time datetime="2017-11-14T07:29:26.000Z" itemprop="dateLastModified">
+            2017-11-14
+            </time>
+        </div>
+        <div class="copyright">
+            <span>许可协议：</span>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>
+        </div>
+    </div>
+        <p>RecyclerView虽然很强大，但是在实际的生产使用中，我们往往要写很多重复的代码来完成同样的功能。很多功能都需要在适配器中去完成，例如添加点击事件等等，因此作者旨在封装一个功能完备，使用方便的通用适配器。</p>
+<h2 id="完成功能"><a href="#完成功能" class="headerlink" title="完成功能"></a>完成功能</h2><ul>
+<li>可添加Header</li>
+<li>可添加Footer</li>
+<li>可添加EmptyView（列表空白占位）</li>
+<li>可添加EmptyView点击事件</li>
+<li>可添加点击事件</li>
+<li>绑定数据直接拿Bean<a id="more"></a>
+<h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2>通过不同的ItemViewType，创建不同的ViewHolder。<br>例如，如果添加了HeaderView，那么就创建HeaderView的ViewHolder。<h3 id="核心方法"><a href="#核心方法" class="headerlink" title="核心方法"></a>核心方法</h3></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line"> public int getItemViewType(int position) &#123;//判断顺序固定</div><div class="line">     if (position == 0 &amp;&amp; mHeaderView != null) return TYPE_HEADER;</div><div class="line">     if (mEmptyView != null &amp;&amp; mList.size() == 0) return TYPE_EMPTY;</div><div class="line">     if (mHeaderView == null &amp;&amp; mFooterView == null) return TYPE_NORMAL;</div><div class="line">     if (mFooterView != null &amp;&amp; position == getItemCount() - 1) return TYPE_FOOTER;</div><div class="line">     return TYPE_NORMAL;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">    public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) &#123;</div><div class="line">        View itemView = null;</div><div class="line">        switch (viewType)&#123;</div><div class="line">            case TYPE_EMPTY:</div><div class="line">                itemView = mEmptyView;</div><div class="line">                break;</div><div class="line">            case TYPE_HEADER:</div><div class="line">                itemView = mHeaderView;</div><div class="line">                break;</div><div class="line">            case TYPE_FOOTER:</div><div class="line">                itemView = mFooterView;</div><div class="line">                break;</div><div class="line">            case TYPE_NORMAL:</div><div class="line">                itemView = LayoutInflater.from(mContext).inflate(itemLayoutId,parent,false);</div><div class="line">                break;</div><div class="line">            default:</div><div class="line">                itemView = mEmptyView;</div><div class="line">                break;</div><div class="line">        &#125;</div><div class="line">        itemView.setOnClickListener(this);</div><div class="line">        return BaseViewHolder.getHolder(itemView,viewType);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>直接继承<code>BaseRecyclerAdapter</code>。</p>
+<ol>
+<li>添加构造方法</li>
+<li>实现<code>onBind</code>方法。</li>
+</ol>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public class MyRecyclerAdapter extends BaseRecyclerAdapter&lt;Bean&gt; &#123;</div><div class="line"></div><div class="line">    public MyRecyclerAdapter(Context mContext, List&lt;Bean&gt; mList, int itemLayoutId) &#123;</div><div class="line">        super(mContext, mList, itemLayoutId);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onBind(BaseViewHolder holder, Bean bean, int position) &#123;</div><div class="line">        TextView title = holder.getView(R.id.notice_title);</div><div class="line">        TextView state = holder.getView(R.id.notice_status);</div><div class="line">        TextView time = holder.getView(R.id.notice_time);</div><div class="line">        title.setText(bean.getTitle());</div><div class="line">        state.setText(bean.getState());</div><div class="line">        time.setText(bean.getTime());</div><div class="line">        </div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>就是这么简单。</p>
+<h2 id="完整代码吗？"><a href="#完整代码吗？" class="headerlink" title="完整代码吗？"></a>完整代码吗？</h2><p> <a href="https://github.com/qiaop/android-base-recycler-adapter" target="_blank" rel="external">github</a>点个star</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/pay/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/pay/wechatpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">View基础知识</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">封装</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
+        			<a href="/categories/android/" class="article-tag-list-link color3">android</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.codepeng.cn/2017/11/14/通用RecyclerView-Adapter-适配器封装/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/10/19/git撤销/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git撤销</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
 
+  
 
           </div>
         </div>
@@ -276,9 +440,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
