@@ -6,18 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.codepeng.cn">
-  <title>SS服务安装与操作指南 | codepeng的blog</title>
+  <title>Tag: 架构 | codepeng的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我觉得还是搬过来放着安全一点。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="SS服务安装与操作指南">
-<meta property="og:url" content="http://www.codepeng.cn/2017/03/13/SS服务安装与操作指南/index.html">
+  <meta name="description" content="万军丛中取敌将首级，千万行里改关键代码">
+<meta property="og:type" content="website">
+<meta property="og:title" content="codepeng的blog">
+<meta property="og:url" content="http://www.codepeng.cn/tags/架构/index.html">
 <meta property="og:site_name" content="codepeng的blog">
-<meta property="og:description" content="我觉得还是搬过来放着安全一点。">
-<meta property="og:updated_time" content="2017-07-20T07:08:57.000Z">
+<meta property="og:description" content="万军丛中取敌将首级，千万行里改关键代码">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SS服务安装与操作指南">
-<meta name="twitter:description" content="我觉得还是搬过来放着安全一点。">
+<meta name="twitter:title" content="codepeng的blog">
+<meta name="twitter:description" content="万军丛中取敌将首级，千万行里改关键代码">
   
     <link rel="alternative" href="/atom.xml" title="codepeng的blog" type="application/atom+xml">
   
@@ -186,213 +185,72 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-SS服务安装与操作指南" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      SS服务安装与操作指南
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/11/08/android 组件化/" class="archive-article-date">
+  	<time datetime="2017-11-08T02:20:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-08</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/11/08/android 组件化/">android 组件化</a>
     </h1>
   
 
-        
-        <a href="/2017/03/13/SS服务安装与操作指南/" class="archive-article-date">
-  	<time datetime="2017-03-13T12:12:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-    <div class="article-moreinfo">
-        <div class="lastModifiedDate">
-            <span>最后更新：</span>
-            <time datetime="2017-07-20T07:08:57.000Z" itemprop="dateLastModified">
-            2017-07-20
-            </time>
-        </div>
-        <div class="copyright">
-            <span>许可协议：</span>
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>
-        </div>
-    </div>
-        <p>我觉得还是搬过来放着安全一点。</p>
-<a id="more"></a>
-<p>apt-get install python-pip<br>apt-get update<br>pip install shadowsocks </p>
-<p>vi /etc/shadowsocks.json</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,             //服务端监听的地址，服务端可填写 0.0.0.0</div><div class="line">    &quot;server_port&quot;:8388,             //服务端的端口</div><div class="line">    &quot;local_address&quot;: &quot;127.0.0.1&quot;,   //本地端监听的地址</div><div class="line">    &quot;local_port&quot;:1080,              //本地端的端口</div><div class="line">    &quot;password&quot;:&quot;xxxxxx&quot;,            //用于加密的密码</div><div class="line">    &quot;timeout&quot;:300,                  //超时时间，单位秒</div><div class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,         //默认 &quot;aes-256-cfb&quot;</div><div class="line">    &quot;fast_open&quot;: false,             //是否使用 TCP_FASTOPEN, true / false</div><div class="line">    &quot;workers&quot;: 1                    //worker 数量，Unix/Linux 可用，如果不理解含义请不要改</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">&quot;server&quot;:&quot;填写你的服务器IP&quot;,</div><div class="line">&quot;local_address&quot;: &quot;127.0.0.1&quot;,</div><div class="line">&quot;local_port&quot;:1080,</div><div class="line">&quot;port_password&quot;:&#123;</div><div class="line">&quot;端口1&quot;:&quot;密码&quot;,</div><div class="line">&quot;端口2&quot;:&quot;密码&quot;,</div><div class="line">&quot;端口3&quot;:&quot;密码&quot;,</div><div class="line">&quot;端口4&quot;:&quot;密码&quot;,</div><div class="line">&quot;端口5&quot;:&quot;密码&quot;</div><div class="line">&#125;,</div><div class="line">&quot;timeout&quot;:300,</div><div class="line">&quot;method&quot;:&quot;aes-256-cfb&quot;,</div><div class="line">&quot;fast_open&quot;: false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>ssserver -c /etc/shadowsocks.json -d start 即可启动 ShadowSocks 服务<br>ssserver -c /etc/shadowsocks.json -d stop 即可关闭 Shadowsocks 服务</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/images/pay/alipay.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/images/pay/wechatpay.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">base</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">架构</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/base/" class="article-tag-list-link color5">base</a>
+        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.codepeng.cn/2017/03/13/SS服务安装与操作指南/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/03/13/SSR服务安装与操作指南/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          SSR服务安装与操作指南
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/02/13/chmod命令以及文件权限/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">文件权限以及chmod命令使用</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
+    
 
-  
 
           </div>
         </div>
@@ -414,9 +272,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
