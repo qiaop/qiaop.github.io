@@ -9,24 +9,24 @@
   <title>git保持fork之后的项目和上游同步 | codepeng的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="当fork了项目一段时间之后，发现上游仓库已经有了更新，那么这时候怎么让自己fork之后的仓库与上游仓库同步呢？
-首先fork一个项目，在自己的账号下clone相应的仓库，然后使用命令：`git remote -v`
-查看当前的远程仓库地址。输出：
-![](/images/post/git/git_fork.png)">
+
+首先fork一个项目，在自己的账号下clone相应的仓库，然后使用命令：  git remote -v  查看当前的远程仓库地址。输出：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git保持fork之后的项目和上游同步">
 <meta property="og:url" content="http://www.codepeng.cn/2017/12/06/git保持fork之后的项目和上游同步/index.html">
 <meta property="og:site_name" content="codepeng的blog">
 <meta property="og:description" content="当fork了项目一段时间之后，发现上游仓库已经有了更新，那么这时候怎么让自己fork之后的仓库与上游仓库同步呢？
-首先fork一个项目，在自己的账号下clone相应的仓库，然后使用命令：`git remote -v`
-查看当前的远程仓库地址。输出：
-![](/images/post/git/git_fork.png)">
-<meta property="og:updated_time" content="2017-12-06T02:25:31.000Z">
+
+首先fork一个项目，在自己的账号下clone相应的仓库，然后使用命令：  git remote -v  查看当前的远程仓库地址。输出：">
+<meta property="og:image" content="http://www.codepeng.cn/images/post/git/git_fork.png">
+<meta property="og:image" content="http://www.codepeng.cn/images/post/git/git_fork_1.png">
+<meta property="og:updated_time" content="2017-12-06T02:27:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git保持fork之后的项目和上游同步">
 <meta name="twitter:description" content="当fork了项目一段时间之后，发现上游仓库已经有了更新，那么这时候怎么让自己fork之后的仓库与上游仓库同步呢？
-首先fork一个项目，在自己的账号下clone相应的仓库，然后使用命令：`git remote -v`
-查看当前的远程仓库地址。输出：
-![](/images/post/git/git_fork.png)">
+
+首先fork一个项目，在自己的账号下clone相应的仓库，然后使用命令：  git remote -v  查看当前的远程仓库地址。输出：">
+<meta name="twitter:image" content="http://www.codepeng.cn/images/post/git/git_fork.png">
   
     <link rel="alternative" href="/atom.xml" title="codepeng的blog" type="application/atom+xml">
   
@@ -218,7 +218,7 @@ var _hmt = _hmt || [];
     <div class="article-moreinfo">
         <div class="lastModifiedDate">
             <span>最后更新：</span>
-            <time datetime="2017-12-06T02:25:31.000Z" itemprop="dateLastModified">
+            <time datetime="2017-12-06T02:27:31.000Z" itemprop="dateLastModified">
             2017-12-06
             </time>
         </div>
@@ -228,16 +228,17 @@ var _hmt = _hmt || [];
         </div>
     </div>
         <p>当fork了项目一段时间之后，发现上游仓库已经有了更新，那么这时候怎么让自己fork之后的仓库与上游仓库同步呢？</p>
-<h3 id="首先fork一个项目，在自己的账号下clone相应的仓库，然后使用命令："><a href="#首先fork一个项目，在自己的账号下clone相应的仓库，然后使用命令：" class="headerlink" title="首先fork一个项目，在自己的账号下clone相应的仓库，然后使用命令："></a>首先fork一个项目，在自己的账号下clone相应的仓库，然后使用命令：</h3><pre><code>`git remote -v`
-查看当前的远程仓库地址。输出：
-![](/images/post/git/git_fork.png)
-</code></pre><a id="more"></a>        
-<h3 id="添加一个别名为-upstream-的上游仓库的地址，使用命令："><a href="#添加一个别名为-upstream-的上游仓库的地址，使用命令：" class="headerlink" title="添加一个别名为 upstream 的上游仓库的地址，使用命令："></a>添加一个别名为 upstream 的上游仓库的地址，使用命令：</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git remote add upstream git@github.com:spardon/flask_web_develope.git</div></pre></td></tr></table></figure>
-
-然后再执行命令`git remote -v`，输出如下：
-![](/images/post/git/git_fork_1.png)    
-</code></pre><h3 id="最后执行以下命令："><a href="#最后执行以下命令：" class="headerlink" title="最后执行以下命令："></a>最后执行以下命令：</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#从上游仓库获取到分支，及相关的提交信息</div><div class="line">git fetch upstream </div><div class="line"></div><div class="line">#切换本地仓库到master分支</div><div class="line">git checkout master</div><div class="line"></div><div class="line">#合并上游仓库的master分支</div><div class="line">git merge upstream/master</div><div class="line"></div><div class="line">#将内容更改push到自己fork的远程仓库</div><div class="line">git push origin master</div></pre></td></tr></table></figure>
-</code></pre><p>当然也可以在页面上操作。</p>
+<ul>
+<li><strong>首先fork一个项目，在自己的账号下clone相应的仓库，然后使用命令：</strong><br>  <code>git remote -v</code><br>  查看当前的远程仓库地址。输出：<br>  <img src="/images/post/git/git_fork.png" alt=""><a id="more"></a>        </li>
+<li><p><strong>添加一个别名为 upstream 的上游仓库的地址，使用命令：</strong></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git remote add upstream git@github.com:spardon/flask_web_develope.git</div></pre></td></tr></table></figure>
+<p>  然后再执行命令<code>git remote -v</code>，输出如下：<br>  <img src="/images/post/git/git_fork_1.png" alt="">    </p>
+</li>
+<li><p><strong>最后执行以下命令：</strong></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#从上游仓库获取到分支，及相关的提交信息</div><div class="line">git fetch upstream </div><div class="line"></div><div class="line">#切换本地仓库到master分支</div><div class="line">git checkout master</div><div class="line"></div><div class="line">#合并上游仓库的master分支</div><div class="line">git merge upstream/master</div><div class="line"></div><div class="line">#将内容更改push到自己fork的远程仓库</div><div class="line">git push origin master</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>当然也可以在页面上操作。</p>
 
       
 
@@ -520,15 +521,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">base</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">安装</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Mac OS X</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">base</a>
               </li>
              
               <li class="article-tag-list-item">
