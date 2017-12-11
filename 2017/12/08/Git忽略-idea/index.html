@@ -6,27 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.codepeng.cn">
-  <title>git撤销 | codepeng的blog</title>
+  <title>Git忽略.idea | codepeng的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="git撤销撤销工作区更改git checkout --filename
-撤销addgit reset HEAD .//撤销全部
-git reset HEAD filename
-撤销commitgit reset --hard commit_id">
+  <meta name="description" content="很多同学在使用Git版本控制的时候，发现idea/下面的文件怎么改.gitignore都不起作用。来看一看吧。
+关键原理git设置忽略必须保证git远程仓库分支上没有这个文件。
+很多人一不小心已经把idea/下面的文件已经提交上去了，那你再怎么改.gitignore都不起作用了。怎么解决呢？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git撤销">
-<meta property="og:url" content="http://www.codepeng.cn/2017/10/19/git撤销/index.html">
+<meta property="og:title" content="Git忽略.idea">
+<meta property="og:url" content="http://www.codepeng.cn/2017/12/08/Git忽略-idea/index.html">
 <meta property="og:site_name" content="codepeng的blog">
-<meta property="og:description" content="git撤销撤销工作区更改git checkout --filename
-撤销addgit reset HEAD .//撤销全部
-git reset HEAD filename
-撤销commitgit reset --hard commit_id">
-<meta property="og:updated_time" content="2017-10-20T01:29:16.000Z">
+<meta property="og:description" content="很多同学在使用Git版本控制的时候，发现idea/下面的文件怎么改.gitignore都不起作用。来看一看吧。
+关键原理git设置忽略必须保证git远程仓库分支上没有这个文件。
+很多人一不小心已经把idea/下面的文件已经提交上去了，那你再怎么改.gitignore都不起作用了。怎么解决呢？">
+<meta property="og:updated_time" content="2017-12-11T01:11:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git撤销">
-<meta name="twitter:description" content="git撤销撤销工作区更改git checkout --filename
-撤销addgit reset HEAD .//撤销全部
-git reset HEAD filename
-撤销commitgit reset --hard commit_id">
+<meta name="twitter:title" content="Git忽略.idea">
+<meta name="twitter:description" content="很多同学在使用Git版本控制的时候，发现idea/下面的文件怎么改.gitignore都不起作用。来看一看吧。
+关键原理git设置忽略必须保证git远程仓库分支上没有这个文件。
+很多人一不小心已经把idea/下面的文件已经提交上去了，那你再怎么改.gitignore都不起作用了。怎么解决呢？">
   
     <link rel="alternative" href="/atom.xml" title="codepeng的blog" type="application/atom+xml">
   
@@ -195,20 +192,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-git撤销" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Git忽略-idea" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      git撤销
+      Git忽略.idea
     </h1>
   
 
         
-        <a href="/2017/10/19/git撤销/" class="archive-article-date">
-  	<time datetime="2017-10-19T07:08:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-19</time>
+        <a href="/2017/12/08/Git忽略-idea/" class="archive-article-date">
+  	<time datetime="2017-12-08T03:16:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-08</time>
 </a>
         
       </header>
@@ -218,8 +215,8 @@ var _hmt = _hmt || [];
     <div class="article-moreinfo">
         <div class="lastModifiedDate">
             <span>最后更新：</span>
-            <time datetime="2017-10-20T01:29:16.000Z" itemprop="dateLastModified">
-            2017-10-20
+            <time datetime="2017-12-11T01:11:34.000Z" itemprop="dateLastModified">
+            2017-12-11
             </time>
         </div>
         <div class="copyright">
@@ -227,11 +224,13 @@ var _hmt = _hmt || [];
             <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>
         </div>
     </div>
-        <h2 id="git撤销"><a href="#git撤销" class="headerlink" title="git撤销"></a>git撤销</h2><h3 id="撤销工作区更改"><a href="#撤销工作区更改" class="headerlink" title="撤销工作区更改"></a>撤销工作区更改</h3><pre><code>git checkout --filename
-</code></pre><h3 id="撤销add"><a href="#撤销add" class="headerlink" title="撤销add"></a>撤销add</h3><pre><code>git reset HEAD .//撤销全部
-git reset HEAD filename
-</code></pre><h3 id="撤销commit"><a href="#撤销commit" class="headerlink" title="撤销commit"></a>撤销commit</h3><pre><code>git reset --hard commit_id 
-</code></pre>
+        <p>很多同学在使用Git版本控制的时候，发现idea/下面的文件怎么改.gitignore都不起作用。来看一看吧。</p>
+<h3 id="关键原理"><a href="#关键原理" class="headerlink" title="关键原理"></a>关键原理</h3><p>git设置忽略必须保证git远程仓库分支上没有这个文件。</p>
+<p>很多人一不小心已经把idea/下面的文件已经提交上去了，那你再怎么改.gitignore都不起作用了。<br>怎么解决呢？<br><a id="more"></a></p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><pre><code>git rm -r --cached .idea
+</code></pre><p>直接运行这个命令，发现问题已经解决了。</p>
+<h3 id="命令解释"><a href="#命令解释" class="headerlink" title="命令解释"></a>命令解释</h3><p>删除暂存区或分支上的文件, 但本地又需要使用, 只是不希望这个文件被版本控制</p>
+
       
 
       
@@ -342,7 +341,7 @@ git reset HEAD filename
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.codepeng.cn/2017/10/19/git撤销/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.codepeng.cn/2017/12/08/Git忽略-idea/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -356,18 +355,9 @@ git reset HEAD filename
   
 <nav id="article-nav">
   
-    <a href="/2017/11/08/android 组件化/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          android 组件化
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/08/16/Android Architecture Components 4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android Architecture Components 详解(四)Room Persistence Library</div>
+    <a href="/2017/12/06/git保持fork之后的项目和上游同步/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git当原仓库更新后如何更新自己的fork</div>
       <i class="icon-circle-right"></i>
     </a>
   
