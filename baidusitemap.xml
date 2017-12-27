@@ -4,6 +4,348 @@
 
     
   <url>
+    <loc>http://www.codepeng.cn/2017/03/13/Android%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6/</loc>
+    <lastmod>2017-12-27T01:46:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android消息机制</title>
+        <pubTime>2017-03-13T12:12:45.000Z</pubTime>
+        
+        <tag>handler</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.codepeng.cn/2017/08/16/Android%20Architecture%20Components%204/</loc>
+    <lastmod>2017-12-27T01:46:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android Architecture Components 详解(四)Room Persistence Library</title>
+        <pubTime>2017-08-16T07:57:19.000Z</pubTime>
+        
+        <tag>Architecture</tag>
+         
+        <tag>翻译</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.codepeng.cn/2017/08/15/Android%20Architecture%20Components%203/</loc>
+    <lastmod>2017-12-27T01:46:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android Architecture Components 详解(三)ViewModel</title>
+        <pubTime>2017-08-15T08:57:19.000Z</pubTime>
+        
+        <tag>Architecture</tag>
+         
+        <tag>翻译</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.codepeng.cn/2017/08/15/Android%20Architecture%20Components%202/</loc>
+    <lastmod>2017-12-27T01:46:05.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android Architecture Components 详解(二)LiveData</title>
+        <pubTime>2017-08-15T03:24:19.000Z</pubTime>
+        
+        <tag>Architecture</tag>
+         
+        <tag>翻译</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.codepeng.cn/2017/08/11/Android%20Architecture%20Components%201/</loc>
+    <lastmod>2017-12-27T01:45:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android Architecture Components 详解(一)Handling Lifecycles</title>
+        <pubTime>2017-08-11T06:49:19.000Z</pubTime>
+        
+        <tag>Architecture</tag>
+         
+        <tag>翻译</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.codepeng.cn/2017/08/10/Android%20Architecture%20Components%200/</loc>
+    <lastmod>2017-12-27T01:45:51.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android Architecture Components 使用</title>
+        <pubTime>2017-08-10T06:49:19.000Z</pubTime>
+        
+        <tag>Architecture</tag>
+         
+        <tag>翻译</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.codepeng.cn/2017/11/08/android%20%E7%BB%84%E4%BB%B6%E5%8C%96/</loc>
+    <lastmod>2017-12-27T01:45:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>android 组件化</title>
+        <pubTime>2017-11-08T02:20:45.000Z</pubTime>
+        
+        <tag>架构</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.codepeng.cn/2017/11/14/%E9%80%9A%E7%94%A8RecyclerView-Adapter-%E9%80%82%E9%85%8D%E5%99%A8%E5%B0%81%E8%A3%85/</loc>
+    <lastmod>2017-12-27T01:45:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>通用RecyclerView Adapter 适配器封装</title>
+        <pubTime>2017-11-14T06:08:59.000Z</pubTime>
+        
+        <tag>封装</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.codepeng.cn/2017/01/18/Android%E8%AE%BE%E7%BD%AEdrawableTop%E5%9B%BE%E7%89%87%E5%A4%A7%E5%B0%8F/</loc>
+    <lastmod>2017-12-27T01:45:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android设置drawableTop图片大小</title>
+        <pubTime>2017-01-18T03:56:00.000Z</pubTime>
+        
+        <tag>skill</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.codepeng.cn/2017/01/16/Android%20TabLayout%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8A%E8%87%AA%E5%AE%9A%E4%B9%89TabLayout%E7%9A%84item/</loc>
+    <lastmod>2017-12-27T01:45:17.000Z</lastmod>
+    <data>
+        <display>
+        <title>TabLayout使用以及自定义TabLayout的item</title>
+        <pubTime>2017-01-16T11:36:50.000Z</pubTime>
+        
+        <tag>SupportDesign</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.codepeng.cn/2017/01/18/Android%20View%E5%8A%A8%E7%94%BB%E4%B9%8B%E2%80%94%E2%80%94Frame%E5%8A%A8%E7%94%BB/</loc>
+    <lastmod>2017-12-27T01:45:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>View动画之——Frame动画</title>
+        <pubTime>2017-01-18T03:54:00.000Z</pubTime>
+        
+        <tag>Android动画</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.codepeng.cn/2017/01/18/Android%20View%E5%8A%A8%E7%94%BB%E4%B9%8B%E2%80%94%E2%80%94Tween%E5%8A%A8%E7%94%BB/</loc>
+    <lastmod>2017-12-27T01:45:05.000Z</lastmod>
+    <data>
+        <display>
+        <title>View动画之——Tween动画</title>
+        <pubTime>2017-01-18T03:53:00.000Z</pubTime>
+        
+        <tag>Android动画</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.codepeng.cn/2017/01/17/Android%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/</loc>
+    <lastmod>2017-12-27T01:44:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android系统启动流程</title>
+        <pubTime>2017-01-17T07:51:59.000Z</pubTime>
+        
+        <tag>csdn</tag>
+         
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.codepeng.cn/2017/08/09/%E5%B0%81%E8%A3%85rxjava,retrofit,okhttp%E7%9A%84Android%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E6%A1%86%E6%9E%B6/</loc>
+    <lastmod>2017-12-27T01:44:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>封装rxjava,retrofit,okhttp的Android网络基础框架</title>
+        <pubTime>2017-08-09T06:49:19.000Z</pubTime>
+        
+        <tag>http</tag>
+         
+        <tag>rxjava</tag>
+         
+        <tag>retrofit</tag>
+         
+        <tag>okhttp</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.codepeng.cn/2016/03/03/%E5%BD%BB%E5%BA%95%E5%BC%84%E6%87%82View%E7%B3%BB%E5%88%97--View%E7%9A%84%E4%BD%8D%E7%BD%AE%E5%8F%82%E6%95%B0/</loc>
+    <lastmod>2017-12-27T01:44:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>彻底弄懂View系列--View的位置参数</title>
+        <pubTime>2016-03-03T09:01:51.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>View基础知识</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.codepeng.cn/2017/01/17/Android%E5%B1%9E%E6%80%A7%E5%8A%A8%E7%94%BB%EF%BC%88%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94TypeEvaluator%EF%BC%88%E4%BC%B0%E5%80%BC%E5%99%A8%EF%BC%89%E5%92%8CInterpolator%EF%BC%88%E6%8F%92%E5%80%BC%E5%99%A8%EF%BC%89/</loc>
+    <lastmod>2017-12-27T01:44:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android属性动画（三）——TypeEvaluator（估值器）和Interpolator（插值器）</title>
+        <pubTime>2017-01-17T07:36:50.000Z</pubTime>
+        
+        <tag>android</tag>
+         
+        <tag>csdn</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.codepeng.cn/2017/01/17/Android%E5%B1%9E%E6%80%A7%E5%8A%A8%E7%94%BB%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94ValueAnimator/</loc>
     <lastmod>2017-12-27T01:40:28.000Z</lastmod>
     <data>
@@ -46,328 +388,6 @@
 
     
   <url>
-    <loc>http://www.codepeng.cn/2017/03/13/Android%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6/</loc>
-    <lastmod>2017-12-27T01:38:11.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android消息机制</title>
-        <pubTime>2017-03-13T12:12:45.000Z</pubTime>
-        
-        <tag>handler</tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://www.codepeng.cn/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.codepeng.cn/2017/08/16/Android%20Architecture%20Components%204/</loc>
-    <lastmod>2017-12-27T01:38:03.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android Architecture Components 详解(四)Room Persistence Library</title>
-        <pubTime>2017-08-16T07:57:19.000Z</pubTime>
-        
-        <tag>Architecture</tag>
-         
-        <tag>翻译</tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://www.codepeng.cn/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.codepeng.cn/2017/08/15/Android%20Architecture%20Components%203/</loc>
-    <lastmod>2017-12-27T01:37:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android Architecture Components 详解(三)ViewModel</title>
-        <pubTime>2017-08-15T08:57:19.000Z</pubTime>
-        
-        <tag>Architecture</tag>
-         
-        <tag>翻译</tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://www.codepeng.cn/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.codepeng.cn/2017/08/15/Android%20Architecture%20Components%202/</loc>
-    <lastmod>2017-12-27T01:37:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android Architecture Components 详解(二)LiveData</title>
-        <pubTime>2017-08-15T03:24:19.000Z</pubTime>
-        
-        <tag>Architecture</tag>
-         
-        <tag>翻译</tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://www.codepeng.cn/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.codepeng.cn/2017/08/11/Android%20Architecture%20Components%201/</loc>
-    <lastmod>2017-12-27T01:37:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android Architecture Components 详解(一)Handling Lifecycles</title>
-        <pubTime>2017-08-11T06:49:19.000Z</pubTime>
-        
-        <tag>Architecture</tag>
-         
-        <tag>翻译</tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://www.codepeng.cn/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.codepeng.cn/2017/08/10/Android%20Architecture%20Components%200/</loc>
-    <lastmod>2017-12-27T01:37:35.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android Architecture Components 使用</title>
-        <pubTime>2017-08-10T06:49:19.000Z</pubTime>
-        
-        <tag>Architecture</tag>
-         
-        <tag>翻译</tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://www.codepeng.cn/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.codepeng.cn/2017/11/14/%E9%80%9A%E7%94%A8RecyclerView-Adapter-%E9%80%82%E9%85%8D%E5%99%A8%E5%B0%81%E8%A3%85/</loc>
-    <lastmod>2017-12-27T01:37:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>通用RecyclerView Adapter 适配器封装</title>
-        <pubTime>2017-11-14T06:08:59.000Z</pubTime>
-        
-        <tag>封装</tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://www.codepeng.cn/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.codepeng.cn/2017/01/18/Android%E8%AE%BE%E7%BD%AEdrawableTop%E5%9B%BE%E7%89%87%E5%A4%A7%E5%B0%8F/</loc>
-    <lastmod>2017-12-27T01:36:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android设置drawableTop图片大小</title>
-        <pubTime>2017-01-18T03:56:00.000Z</pubTime>
-        
-        <tag>skill</tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://www.codepeng.cn/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.codepeng.cn/2017/01/16/Android%20TabLayout%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8A%E8%87%AA%E5%AE%9A%E4%B9%89TabLayout%E7%9A%84item/</loc>
-    <lastmod>2017-12-27T01:36:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>TabLayout使用以及自定义TabLayout的item</title>
-        <pubTime>2017-01-16T11:36:50.000Z</pubTime>
-        
-        <tag>SupportDesign</tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://www.codepeng.cn/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.codepeng.cn/2017/01/18/Android%20View%E5%8A%A8%E7%94%BB%E4%B9%8B%E2%80%94%E2%80%94Frame%E5%8A%A8%E7%94%BB/</loc>
-    <lastmod>2017-12-27T01:36:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>View动画之——Frame动画</title>
-        <pubTime>2017-01-18T03:54:00.000Z</pubTime>
-        
-        <tag>Android动画</tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://www.codepeng.cn/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.codepeng.cn/2017/01/18/Android%20View%E5%8A%A8%E7%94%BB%E4%B9%8B%E2%80%94%E2%80%94Tween%E5%8A%A8%E7%94%BB/</loc>
-    <lastmod>2017-12-27T01:36:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>View动画之——Tween动画</title>
-        <pubTime>2017-01-18T03:53:00.000Z</pubTime>
-        
-        <tag>Android动画</tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://www.codepeng.cn/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.codepeng.cn/2017/01/17/Android%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/</loc>
-    <lastmod>2017-12-27T01:36:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android系统启动流程</title>
-        <pubTime>2017-01-17T07:51:59.000Z</pubTime>
-        
-        <tag>csdn</tag>
-         
-        <tag>Android</tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://www.codepeng.cn/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.codepeng.cn/2017/01/17/Android%E5%B1%9E%E6%80%A7%E5%8A%A8%E7%94%BB%EF%BC%88%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94TypeEvaluator%EF%BC%88%E4%BC%B0%E5%80%BC%E5%99%A8%EF%BC%89%E5%92%8CInterpolator%EF%BC%88%E6%8F%92%E5%80%BC%E5%99%A8%EF%BC%89/</loc>
-    <lastmod>2017-12-27T01:36:17.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android属性动画（三）——TypeEvaluator（估值器）和Interpolator（插值器）</title>
-        <pubTime>2017-01-17T07:36:50.000Z</pubTime>
-        
-        <tag>android</tag>
-         
-        <tag>csdn</tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://www.codepeng.cn/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.codepeng.cn/2016/03/03/%E5%BD%BB%E5%BA%95%E5%BC%84%E6%87%82View%E7%B3%BB%E5%88%97--View%E7%9A%84%E4%BD%8D%E7%BD%AE%E5%8F%82%E6%95%B0/</loc>
-    <lastmod>2017-12-27T01:35:49.000Z</lastmod>
-    <data>
-        <display>
-        <title>彻底弄懂View系列--View的位置参数</title>
-        <pubTime>2016-03-03T09:01:51.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>View基础知识</tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://www.codepeng.cn/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.codepeng.cn/2017/08/09/%E5%B0%81%E8%A3%85rxjava,retrofit,okhttp%E7%9A%84Android%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E6%A1%86%E6%9E%B6/</loc>
-    <lastmod>2017-12-27T01:34:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>封装rxjava,retrofit,okhttp的Android网络基础框架</title>
-        <pubTime>2017-08-09T06:49:19.000Z</pubTime>
-        
-        <tag>http</tag>
-         
-        <tag>rxjava</tag>
-         
-        <tag>retrofit</tag>
-         
-        <tag>okhttp</tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://www.codepeng.cn/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.codepeng.cn/2017/12/08/Git%E5%BF%BD%E7%95%A5-idea/</loc>
     <lastmod>2017-12-11T01:11:34.000Z</lastmod>
     <data>
@@ -401,26 +421,6 @@
            
              
               <breadCrumb title="base" url="http://www.codepeng.cn/categories/base/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.codepeng.cn/2017/11/08/android%20%E7%BB%84%E4%BB%B6%E5%8C%96/</loc>
-    <lastmod>2017-11-17T06:33:45.000Z</lastmod>
-    <data>
-        <display>
-        <title>android 组件化</title>
-        <pubTime>2017-11-08T02:20:45.000Z</pubTime>
-        
-        <tag>架构</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://www.codepeng.cn/categories/Android/"/>
           
         </display>
     </data>
