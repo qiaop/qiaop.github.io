@@ -1,0 +1,118 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: codepeng的blog
+subtitle: 万军丛中取敌将首级，千万行里改关键代码
+description: 万军丛中取敌将首级，千万行里改关键代码
+author: codepeng
+avatar: /images/avatar3.jpg
+language: zh-Hans
+timezone: Asia/Shanghai
+
+since: 2016
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://www.codepeng.cn/
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: yilia
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo:
+    github: git@github.com:qiaop/qiaop.github.io.git
+    coding: git@git.coding.net:qiaop/qiaop.git
+  message: blog commit
+  name: qiaop
+  branch: master
+jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: false
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+#百度分析
+baidu_analytics: d56087b7dc30e075c0dddd7f9c5aad8c
+#多说评论
+#duoshuo_shortname: codepeng
+# jiathis分享
+#jiathis: true
+#add_this_id: ra-587db58f8e704ab8
+# 百度分享服务
+#baidushare: true
+# 多说分享服务
+#duoshuo_share: true
+#google分析
+google_analytics: UA-90415118-1
+include:
+  - .nojekyll
+#sitemap
+sitemap:
+    path: sitemap.xml
+baidusitemap:
+	path: baidusitemap.xml
