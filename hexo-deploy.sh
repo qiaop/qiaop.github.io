@@ -1,15 +1,15 @@
 #!/usr/bin/env sh
-git add .
-echo "git add ."
+git add . &&
+echo "git add ." &&
 
-git commit -m "publish post"
+git commit -m "publish post" &&
 
-echo "git commit "
+echo "git commit " &&
 
-git push origin hexo
+git push origin hexo &&
 
-echo "git push origin hexo"
+echo "git push origin hexo" &&
 
-echo "start deploy"
+echo "start deploy" &&
 
 hexo deploy
