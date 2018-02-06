@@ -70,6 +70,9 @@ theme: yilia
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+admin:
+  deployCommand: './hexo-deploy.sh'
+
 deploy:
   type: git
   repo:
