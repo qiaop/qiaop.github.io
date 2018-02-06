@@ -12,5 +12,10 @@ wait
 echo "git push origin hexo" &&
 
 echo "start deploy" &&
-
+hexo g
+echo "hexo g"
+wait
 hexo deploy
+wait
+echo "deploy success"
+
